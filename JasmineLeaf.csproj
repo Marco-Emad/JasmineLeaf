@@ -16,4 +16,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\healthy\" />
+    <Folder Include="wwwroot\images\stage1\" />
+  </ItemGroup>
+
 </Project>

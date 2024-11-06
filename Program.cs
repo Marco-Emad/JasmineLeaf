@@ -1,3 +1,7 @@
+using JasmineLeaf.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 namespace JasmineLeaf
 {
 	public class Program
@@ -8,6 +12,14 @@ namespace JasmineLeaf
 
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
+
+
+			// Add DbContext with the connection string
+			builder.Services.AddDbContext<LeafContext>(options =>
+				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+			// Additional services can go here
+			// e.g., builder.Services.AddIdentity(), builder.Services.AddScoped(), etc.
 
 			var app = builder.Build();
 

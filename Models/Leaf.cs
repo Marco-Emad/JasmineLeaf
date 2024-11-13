@@ -6,7 +6,7 @@
 
 		public string Name { get; set; }
 
-		public byte[] Image { get; set; }  // Binary data for the image
+		public string Image { get; set; }
 
 		public string Stage { get; set; }
 

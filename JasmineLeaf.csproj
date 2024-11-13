@@ -17,8 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\healthy\" />
-    <Folder Include="wwwroot\images\stage1\" />
+    <Folder Include="wwwroot\images\Healthy\" />
+    <Folder Include="wwwroot\temp\" />
+    <Folder Include="wwwroot\images\Stage1\" />
   </ItemGroup>
 
 </Project>

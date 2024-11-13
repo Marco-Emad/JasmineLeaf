@@ -6,6 +6,7 @@
 # Ignore build output folders
 bin/
 obj/
+wwwroot/temp
 
 # Ignore user-specific files
 *.user

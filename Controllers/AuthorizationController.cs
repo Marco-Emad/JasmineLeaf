@@ -1,84 +1,91 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using System.Net.Mail;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using JasmineLeaf.Models;
+using NETCore.MailKit.Core;
 
 namespace JasmineLeaf.Controllers
 {
     public class AuthorizationController : Controller
     {
-        private readonly string _adminEmail = "marcoemad42@yahoo.com";
-        private readonly string _appUrl = "https://localhost:44362"; // Replace with your app URL
-        private readonly SmtpEmailService _emailService;
-        public AuthorizationController(SmtpEmailService emailService)
+        //private readonly string _adminEmail = "marcoemad42@yahoo.com";
+        //private readonly string _appUrl = "https://localhost:44362"; // Replace with your app URL
+        //private readonly ILogger<AuthorizationController> _logger;
+        //private readonly IEmailService _emailService;
+        //public AuthorizationController(IEmailService emailService, ILogger<AuthorizationController> logger)
+        //{
+        //    _emailService = emailService;
+        //    _logger = logger;
+        //}
+
+        [HttpPost]
+        public IActionResult RequestAuthorization()
         {
-            _emailService = emailService;
-        }
+            // Replace with your SMTP configuration and email logic
+            string userEmail = "marcoemad42@yahoo.com"; // Your email
+            string subject = "Authorization Request for Download";
 
-        public async Task<IActionResult> RequestAuthorization()
-        {
-            var approveLink = Url.Action("ApproveAuthorization", "Authorization", null, HttpContext.Request.Scheme);
-            var denyLink = Url.Action("DenyAuthorization", "Authorization", null, HttpContext.Request.Scheme);
-            var message = $"A user has requested download authorization.<br><a href='{approveLink}'>Approve</a> | <a href='{denyLink}'>Deny</a>";
+            string acceptUrl = Url.Action("GrantAuthorization", "Authorization", new { token = "sample_token" }, Request.Scheme);
+            string declineUrl = Url.Action("DenyAuthorization", "Authorization", null, Request.Scheme);
 
-            await _emailService.SendEmailAsync("your-email@example.com", "Download Authorization Request", message);
+            string body = $@"
+            A visitor has requested authorization to download images.
+            <br><br>
+            Accept: <a href='{acceptUrl}'>Grant Access</a><br>
+            Decline: <a href='{declineUrl}'>Deny Access</a>";
 
-            return RedirectToAction("AuthorizationRequested");
-        }
+            bool emailSent = SendEmail(userEmail, subject, body);
 
-        // Action to handle the "Get Authorized" request
-        [HttpGet]
-        public IActionResult Request()
-        {
-            string authorizeUrl = $"{_appUrl}/Authorization/Authorize";
-            string denyUrl = $"{_appUrl}/Authorization/Deny";
-
-            SendAuthorizationRequestEmail(authorizeUrl, denyUrl);
-
-            return Json(new { message = "Authorization request sent!" });
-        }
-
-        private void SendAuthorizationRequestEmail(string authorizeUrl, string denyUrl)
-        {
-            using (var client = new SmtpClient("smtp.example.com")) // Use your SMTP configuration
+            if (emailSent)
             {
-                var message = new MailMessage();
-                message.To.Add(_adminEmail);
-                message.Subject = "Authorization Request";
-                message.Body = $"A user is requesting download authorization. \n\n" +
-                               $"Authorize: {authorizeUrl}\n" +
-                               $"Deny: {denyUrl}";
-
-                client.Send(message);
+                return Json(new { success = true, message = "Authorization request sent. Please check your email." });
+            }
+            else
+            {
+                return Json(new { success = false, message = "Failed to send authorization request. Try again later." });
             }
         }
 
-        // Endpoint to authorize a download
-        [HttpGet]
-        public IActionResult Authorize()
+        private bool SendEmail(string to, string subject, string body)
         {
-            SetAuthorizationCookie();
-            return Content("Authorization granted! The user can now download files.");
-        }
-
-        // Endpoint to deny a download request
-        [HttpGet]
-        public IActionResult Deny()
-        {
-            return Content("Authorization denied. The user will not be able to download files.");
-        }
-
-        private void SetAuthorizationCookie()
-        {
-            CookieOptions options = new CookieOptions
+            try
             {
-                Expires = DateTime.Now.AddDays(7),
-                HttpOnly = true
-            };
-            Response.Cookies.Append("DownloadAuthorization", "Authorized", options);
+                var smtpClient = new SmtpClient("smtp.mail.yahoo.com")
+                {
+                    Port = 465,
+                    Credentials = new NetworkCredential("macmax160@yahoo.com", "marcoemad*2295955"),
+                    EnableSsl = true,
+                };
+
+                var mailMessage = new MailMessage
+                {
+                    From = new MailAddress("macmax160@yahoo.com"),
+                    Subject = subject,
+                    Body = body,
+                    IsBodyHtml = true,
+                };
+                mailMessage.To.Add(to);
+
+                smtpClient.Send(mailMessage);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message); // Log error
+                return false;
+            }
         }
+
+        public IActionResult GrantAuthorization(string token)
+        {
+            // Logic to generate and store a cookie or token
+            Response.Cookies.Append("Authorization", token, new CookieOptions { Expires = DateTime.Now.AddDays(7) });
+            return Content("Access granted. The visitor can now download images.");
+        }
+
+        public IActionResult DenyAuthorization()
+        {
+            return Content("Access denied. The visitor will not be able to download images.");
+        }
+
     }
-
-
 }

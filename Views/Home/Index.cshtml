@@ -48,8 +48,10 @@
 
         <!-- Authorize Button-->
         <div class="container mt-4">
-            <h3>Get Download Authorize Here
-            <button onclick="requestAuthorization()" class="btn btn-primary">Get Authorized</button>
+            <h3>
+                Get Download Authorize Here
+                <button id="getAuthorized" onclick="requestAuthorization()">Get Authorized</button>
+                <div id="authStatus"></div>
             </h3>
         </div>
 
@@ -88,8 +90,17 @@
 <!-- Authorize Button Script -->
 <script>
     function requestAuthorization() {
-        fetch('/Authorization/Request')
+        fetch('/Authorization/RequestAuthorization', { // Updated URL
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        })
             .then(response => response.json())
-            .then(data => alert(data.message));
+            .then(data => {
+                document.getElementById('authStatus').innerText = data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('authStatus').innerText = 'An error occurred. Please try again later.';
+            });
     }
 </script>

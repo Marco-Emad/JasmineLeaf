@@ -33,7 +33,8 @@
                             <a href="https://onlinelibrary.wiley.com/doi/10.1155/2024/5057538" target="_blank" rel="noopener noreferrer">
                                 Shwetha,V., et all."A customer Backbone UNet Framework with DCGAN Augmentation for Efficient Segmentation of Leaf Spot Diseases in Jasmine Plant." Journal of Computer Networks and Communications 2024
                             </a>
-                        </li><br />
+                        </li>
+                        <br />
 
                         <li>
                             <a href="https://www.sciencedirect.com/science/article/pii/S2589721724000035" target="_blank" rel="noopener noreferrer">
@@ -44,6 +45,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Authorize Button-->
+        <div class="container mt-4">
+            <h3>Get Download Authorize Here
+            <button onclick="requestAuthorization()" class="btn btn-primary">Get Authorized</button>
+            </h3>
+        </div>
+
 
         <!-- Buttons for downloading the stages -->
         <div class="container mt-4">
@@ -75,3 +84,12 @@
 
     </div>
 </div>
+
+<!-- Authorize Button Script -->
+<script>
+    function requestAuthorization() {
+        fetch('/Authorization/Request')
+            .then(response => response.json())
+            .then(data => alert(data.message));
+    }
+</script>

@@ -15,6 +15,12 @@ namespace JasmineLeaf.Controllers
 
         public IActionResult DownloadStage(string stage)
         {
+            // Check if the user authorized to download
+            //if (!Request.Cookies.ContainsKey("DownloadAuthorization"))
+            //{
+            //    return Unauthorized("You do not have permission to download files.");
+            //}
+
             string stageFolderPath = Path.Combine(_environment.WebRootPath, "images", stage);
 
             if (!Directory.Exists(stageFolderPath))
@@ -39,6 +45,12 @@ namespace JasmineLeaf.Controllers
 
         public IActionResult DownloadAllStages()
         {
+            // Check if the user authorized to download
+            //if (!Request.Cookies.ContainsKey("DownloadAuthorization"))
+            //{
+            //    return Unauthorized("You do not have permission to download files.");
+            //}
+
             string tempFolderPath = Path.Combine(_environment.WebRootPath, "temp");
 
             // Ensure the temp folder exists

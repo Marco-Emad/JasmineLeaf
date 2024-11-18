@@ -18,10 +18,9 @@ namespace JasmineLeaf
 			builder.Services.AddDbContext<LeafContext>(options =>
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-			// Additional services can go here
-			// e.g., builder.Services.AddIdentity(), builder.Services.AddScoped(), etc.
-
-			var app = builder.Build();
+            builder.Services.AddSingleton<SmtpEmailService>();
+            
+            var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -37,8 +36,10 @@ namespace JasmineLeaf
 			app.UseRouting();
 
 			app.UseAuthorization();
+            
 
-			app.MapControllerRoute(
+
+            app.MapControllerRoute(
 				name: "default",
 				pattern: "{controller=Home}/{action=Index}/{id?}");
 

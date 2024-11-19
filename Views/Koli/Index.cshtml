@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Koli DataSet";
+}
+
+<div class="container mt-5">
+    <div class="row">
+
+        <!-- Card for Data Description -->
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    Data Description
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Koli DataSet Description here
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Citations -->
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    Citations
+                </div>
+                <div class="card-body">
+                    <ul class="card-text">
+                        <li>
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                link
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Buttons for downloading the stages -->
+        <div class="container mt-4">
+            <h3>Download All Images At Once</h3>
+            <a asp-controller="Koli" asp-action="DownloadAllStages" class="btn btn-primary">
+                All Images
+            </a>
+        </div>
+
+        <div class="container mt-4">
+            <h3>or Download Images by Stage</h3>
+            <div class="d-flex gap-2">
+                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Healthy" class="btn btn-primary">
+                    Healthy
+                </a>
+                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage1" class="btn btn-primary">
+                    Stage 1
+                </a>
+                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage2" class="btn btn-primary">
+                    Stage 2
+                </a>
+                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage3" class="btn btn-primary">
+                    Stage 3
+                </a>
+                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage4" class="btn btn-primary">
+                    Stage 4
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

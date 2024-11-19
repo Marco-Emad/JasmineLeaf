@@ -18,11 +18,6 @@ namespace JasmineLeaf
 			builder.Services.AddDbContext<LeafContext>(options =>
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddSingleton<SmtpEmailService>();
-            // Add logging services
-            builder.Logging.ClearProviders();
-            builder.Logging.AddConsole(); // You can add other logging providers like Debug, EventLog, etc.
-
             var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
@@ -39,8 +34,6 @@ namespace JasmineLeaf
 			app.UseRouting();
 
 			app.UseAuthorization();
-            
-
 
             app.MapControllerRoute(
 				name: "default",

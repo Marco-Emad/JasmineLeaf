@@ -4,6 +4,7 @@
 
 <div class="container mt-5">
     <div class="row">
+
         <!-- Card for Data Description -->
         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
             <div class="card">
@@ -46,15 +47,6 @@
             </div>
         </div>
 
-        <!-- Authorize Button-->
-        <div class="container mt-4">
-            <h3>
-                Get Download Authorize Here
-                <button id="getAuthorized" onclick="requestAuthorization()">Get Authorized</button>
-                <div id="authStatus"></div>
-            </h3>
-        </div>
-
 
         <!-- Buttons for downloading the stages -->
         <div class="container mt-4">
@@ -63,6 +55,7 @@
                 All Images
             </a>
         </div>
+
         <div class="container mt-4">
             <h3>or Download Images by Stage</h3>
             <div class="d-flex gap-2">
@@ -86,21 +79,3 @@
 
     </div>
 </div>
-
-<!-- Authorize Button Script -->
-<script>
-    function requestAuthorization() {
-        fetch('/Authorization/RequestAuthorization', { // Updated URL
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' }
-        })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('authStatus').innerText = data.message;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('authStatus').innerText = 'An error occurred. Please try again later.';
-            });
-    }
-</script>

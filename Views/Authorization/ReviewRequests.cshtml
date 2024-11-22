@@ -1,0 +1,41 @@
+﻿@model List<Request>
+
+@{
+    ViewData["Title"] = "Review Pending Requests";
+}
+
+<h2>Pending Requests</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Status</th>
+            <th>Requested At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.UserId</td>
+                <td>@request.Status</td>
+                <td>@request.RequestedAt</td>
+                <td>
+                    <div class="d-flex justify-content-start align-items-center gap-2">
+                        <form method="post" asp-action="ApproveRequest" asp-controller="Authorization">
+                            <input type="hidden" name="requestId" value="@request.Id" />
+                            <button type="submit" class="btn btn-success">Approve</button>
+                        </form>
+
+                        <form method="post" asp-action="RejectedRequest" asp-controller="Authorization">
+                            <input type="hidden" name="requestId" value="@request.Id" />
+                            <button type="submit" class="btn btn-danger">Reject</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

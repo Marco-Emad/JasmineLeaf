@@ -1,21 +1,39 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JasmineLeaf.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.IO.Compression;
 
 namespace JasmineLeaf.Controllers
 {
     public class LeafController : Controller
     {
+        private readonly LeafContext _context;
         private readonly IWebHostEnvironment _environment;
         private readonly List<string> _stages = new List<string> { "Healthy", "Stage1", "Stage2", "Stage3", "Stage4" };
 
-        public LeafController(IWebHostEnvironment environment)
+        public LeafController(IWebHostEnvironment environment, LeafContext context)
         {
             _environment = environment;
+            _context = context;
         }
-        
+        public bool IsDownloadAuthorized()
+        {
+            var userId = Request.Cookies["UserId"];
+            if (string.IsNullOrEmpty(userId))
+                return false;
+
+            var request = _context.Requests.FirstOrDefault(r => r.UserId == userId);
+            if (request == null || request.Status != "Approved")
+                return false;
+
+            return true;
+        }
         public IActionResult DownloadStage(string stage)
         {
-            
+            if (!IsDownloadAuthorized())
+            {
+                return Unauthorized("You are not authorized to download these images.");
+            }
 
             string stageFolderPath = Path.Combine(_environment.WebRootPath, "images", stage);
 
@@ -41,6 +59,11 @@ namespace JasmineLeaf.Controllers
 
         public IActionResult DownloadAllStages()
         {
+            if (!IsDownloadAuthorized())
+            {
+                return Unauthorized("You are not authorized to download these images.");
+            }
+
             string tempFolderPath = Path.Combine(_environment.WebRootPath, "temp");
 
             // Ensure the temp folder exists
@@ -85,6 +108,7 @@ namespace JasmineLeaf.Controllers
             return File(fileBytes, "application/zip", "All_Stages_Images.zip");
         }
 
+        // empty for now
         public IActionResult Index()
         {
             return View();

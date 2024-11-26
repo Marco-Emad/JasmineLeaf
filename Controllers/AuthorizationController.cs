@@ -108,7 +108,7 @@ namespace JasmineLeaf.Controllers
             _context.SaveChanges();
 
 
-            return RedirectToAction("ReviewRequests");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -121,7 +121,7 @@ namespace JasmineLeaf.Controllers
             request.ReviewedAt = DateTime.Now;
             _context.SaveChanges();
 
-            return RedirectToAction("ReviewRequests");
+            return RedirectToAction("Index", "Home");
         }
 
         //private void SendNotification(string userId, string message)

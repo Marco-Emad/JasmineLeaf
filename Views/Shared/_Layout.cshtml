@@ -3,45 +3,78 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - JasmineLeaf</title>
+    <title>@ViewData["Title"] - Dr.Shwetha</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/JasmineLeaf.styles.css" asp-append-version="true" />
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
+
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">JasmineLeaf</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Dr.Shwetha DataSets</a>
+                @* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button> *@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Leaf DataSet</a>
+                            <a class="nav-link text-dark" asp-controller="Leaf" asp-action="Index">Leaf DataSet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Koli" asp-action="Index">Koli DataSet</a>
+                            <a class="nav-link text-dark" asp-controller="Koli" asp-action="Index">Koli DataSet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Proccessed Images</a>
+                            <a class="nav-link text-dark" asp-controller="" asp-action="">Proccessed Images</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Source Code</a>
+                            <a class="nav-link text-dark" asp-controller="" asp-action="">Source Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger" asp-area="" asp-controller="Authorization" asp-action="RequestDownload">Request To Download</a>
+                            @if (ViewData["UserStatus"]?.ToString() != "Approved")
+                            {
+                                <button class="btn btn-link nav-link text-danger" onclick="requestDownload()">Request To Download</button>
+                            }
+
                         </li>
+
                         @* <li class="nav-item mr-5">
-                            <h3 class="nav-link text-dark">@UserStatus</h3>
+                        <h3 class="nav-link text-dark">@UserStatus</h3>
                         </li> *@
                     </ul>
                 </div>
+
+                <!-- Modal pop-up message -->
+                <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Download Request Status</h5>
+                                @* <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button> *@
+                            </div>
+                            <div class="modal-body" id="modalMessage">
+                                <!-- Message will be dynamically inserted here -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </nav>
     </header>
@@ -54,9 +87,36 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - JasmineLeaf - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - Dr.Shwetha V - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <!-- Status Message Popup -->
+    <script>
+        function requestDownload() {
+            fetch('/Authorization/RequestDownload', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+                .then(response => response.json()) // Parse the JSON response
+                .then(data => {
+                    // Insert the response message into the modal body
+                    document.getElementById('modalMessage').innerText = data.message;
+
+                    // Show the modal
+                    $('#responseModal').modal('show');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('modalMessage').innerText =
+                        'An unexpected error occurred. Please try again later.';
+                    $('#responseModal').modal('show');
+                });
+        }
+    </script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

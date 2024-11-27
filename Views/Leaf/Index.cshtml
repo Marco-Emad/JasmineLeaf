@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Leaf DataSet";
+}
+
+<div class="container mt-5">
+    <div>
+        <h2>@ViewData["UserStatus"]</h2>
+    </div>
+    <div class="row">
+
+        <!-- Card for Data Description -->
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    Data Description
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        To develop the datatest for diseased leaf images, collabration was established with experts from Krishi Vigyan Kendra,
+                        Karnataka, India. Digital cameras were employed to capture a total of 2000 images. These images represent four stages
+                        of Alternaria leaf blight spot diseases, with 450 images for stage-1,550 images for stage-2,500 images for stage-3,
+                        and 500 images for stage-4
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Citations -->
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    Citations
+                </div>
+                <div class="card-body">
+                    <ul class="card-text">
+                        <li>
+                            <a href="https://onlinelibrary.wiley.com/doi/10.1155/2024/5057538" target="_blank" rel="noopener noreferrer">
+                                Shwetha,V., et all."A customer Backbone UNet Framework with DCGAN Augmentation for Efficient Segmentation of Leaf Spot Diseases in Jasmine Plant." Journal of Computer Networks and Communications 2024
+                            </a>
+                        </li>
+                        <br />
+
+                        <li>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2589721724000035" target="_blank" rel="noopener noreferrer">
+                                Shwetha,V., Arnav Bhagwat, and Vijaya Laxmi."LeafSpotNet: A deep learning framework for detecting leaf spot diseases in Jasmine plants."
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Buttons for downloading the stages -->
+        <div class="container mt-4">
+            <h3>Download All Images At Once</h3>
+            <a asp-controller="Leaf" asp-action="DownloadAllStages" class="btn btn-primary">
+                All Images
+            </a>
+        </div>
+
+        <div class="container mt-4">
+            <h3>or Download Images by Stage</h3>
+            <div class="d-flex gap-2">
+                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Healthy" class="btn btn-primary">
+                    Healthy
+                </a>
+                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage1" class="btn btn-primary">
+                    Stage 1
+                </a>
+                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage2" class="btn btn-primary">
+                    Stage 2
+                </a>
+                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage3" class="btn btn-primary">
+                    Stage 3
+                </a>
+                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage4" class="btn btn-primary">
+                    Stage 4
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -25,7 +25,7 @@ namespace JasmineLeaf.Controllers
         public IActionResult RequestDownload()
         {
             //remove expired cookies from database
-            var expirationDate = DateTime.Now.AddDays(-7); // Assume 7-day cookie expiration
+            var expirationDate = DateTime.Now.AddDays(-7); // 7-day cookie expiration
             var expiredRequests = _context.Requests.Where(r => r.RequestedAt < expirationDate);
             try
             {
@@ -59,9 +59,9 @@ namespace JasmineLeaf.Controllers
                 if (existingRequest.Status == "Pending")
                     return Json(new { message = "Your request is still pending. Please wait for admin approval." });
                 else if (existingRequest.Status == "Rejected")
-                    return Json(new { message = "Your request has been rejected. Contact admin for more details." });
+                    return Json(new { message = "Your request has been Rejected. Contact admin for more details." });
                 else if (existingRequest.Status == "Approved")
-                    return Json(new { message = "You are already approved. You can download the files." });
+                    return Json(new { message = "You are already Approved. You can download the files now." });
             }
 
             // Only add a new request if no existing request is found

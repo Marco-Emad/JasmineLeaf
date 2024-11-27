@@ -9,12 +9,25 @@ namespace JasmineLeaf.Controllers
     {
         private readonly LeafContext _context;
         private readonly IWebHostEnvironment _environment;
+        //dynamically change the stages here
         private readonly List<string> _stages = new List<string> { "Healthy", "Stage1", "Stage2", "Stage3", "Stage4" };
 
         public LeafController(IWebHostEnvironment environment, LeafContext context)
         {
             _environment = environment;
             _context = context;
+        }
+        // empty for now
+        public IActionResult Index()
+        {
+            var userId = Request.Cookies["UserId"];
+            ViewData["UserStatus"] = null;
+            if (!string.IsNullOrEmpty(userId))
+            {
+                ViewData["UserStatus"] = _context.Requests.FirstOrDefault(r => r.UserId == userId).Status;
+            }
+
+            return View();
         }
         public bool IsDownloadAuthorized()
         {
@@ -108,10 +121,5 @@ namespace JasmineLeaf.Controllers
             return File(fileBytes, "application/zip", "All_Stages_Images.zip");
         }
 
-        // empty for now
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }

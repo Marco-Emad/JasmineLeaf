@@ -7,27 +7,18 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/JasmineLeaf.styles.css" asp-append-version="true" />
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Include Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
-
-    <!-- Include Bootstrap JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
+                <!-- Navbar Brand -->
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">Dr.Shwetha DataSets</a>
-                @* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button> *@
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <!-- Collapsible Content -->
+                <div class="collapse navbar-collapse">
+                    <!-- Left-aligned Navigation Items -->
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -38,50 +29,63 @@
                             <a class="nav-link text-dark" asp-controller="Koli" asp-action="Index">Koli DataSet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="" asp-action="">Proccessed Images</a>
+                            <a class="nav-link text-dark" asp-controller="" asp-action="">Processed Images</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="" asp-action="">Source Code</a>
                         </li>
                         <li class="nav-item">
+                            @if (ViewData["UserStatus"]?.ToString() == "Pending")
+                            {
+                                <span class="nav-link text-warning">Your Request is under review</span>
+                            }
+                            else if (ViewData["UserStatus"]?.ToString() == "Rejected")
+                            {
+                                <span class="nav-link text-danger">Your Request is Rejected</span>
+                            }
+                            else if (ViewData["UserStatus"]?.ToString() == "Approved")
+                            {
+                                <span class="nav-link text-success">Your Request is Approved, you can download the dataset</span>
+                            }
+                        </li>
+                    </ul>
+
+                    <!-- Right-aligned Navigation Items -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
                             @if (ViewData["UserStatus"]?.ToString() != "Approved")
                             {
-                                <button class="btn btn-link nav-link text-danger" onclick="requestDownload()">Request To Download</button>
+                                <button class="btn btn-primary" onclick="requestDownload()">Request To Download</button>
                             }
-
                         </li>
-
-                        @* <li class="nav-item mr-5">
-                        <h3 class="nav-link text-dark">@UserStatus</h3>
-                        </li> *@
                     </ul>
                 </div>
-
-                <!-- Modal pop-up message -->
-                <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Download Request Status</h5>
-                                @* <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button> *@
-                            </div>
-                            <div class="modal-body" id="modalMessage">
-                                <!-- Message will be dynamically inserted here -->
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </nav>
+
     </header>
 
     <div class="container">
         <main role="main" class="pb-3">
+            <!-- Modal pop-up message -->
+            <div class="modal fade" id="responseModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">
+                                <!-- Title will be dynamically inserted here -->
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="modalMessage">
+                            <!-- Message will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             @RenderBody()
+
         </main>
     </div>
 
@@ -104,6 +108,7 @@
                 .then(data => {
                     // Insert the response message into the modal body
                     document.getElementById('modalMessage').innerText = data.message;
+                    document.getElementById('modalTitle').innerText = data.title;
 
                     // Show the modal
                     $('#responseModal').modal('show');
@@ -120,6 +125,14 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

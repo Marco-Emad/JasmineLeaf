@@ -17,7 +17,7 @@ namespace JasmineLeaf.Controllers
             _environment = environment;
             _context = context;
         }
-        // empty for now
+
         public IActionResult Index()
         {
             var userId = Request.Cookies["UserId"];
@@ -36,7 +36,7 @@ namespace JasmineLeaf.Controllers
                 return false;
 
             var request = _context.Requests.FirstOrDefault(r => r.UserId == userId);
-            if (request == null || request.Status != "Approved")
+            if (request?.Status != "Approved")
                 return false;
 
             return true;
@@ -45,7 +45,11 @@ namespace JasmineLeaf.Controllers
         {
             if (!IsDownloadAuthorized())
             {
-                return Unauthorized("You are not authorized to download these images.");
+                return Json(new
+                {
+                    title = "Access Denied",
+                    message = "you are not authorized to download the dataset, request the admin for permission."
+                });
             }
 
             string stageFolderPath = Path.Combine(_environment.WebRootPath, "images", stage);
@@ -69,12 +73,15 @@ namespace JasmineLeaf.Controllers
 
             return File(fileBytes, "application/zip", $"{stage}_images.zip");
         }
-
         public IActionResult DownloadAllStages()
         {
             if (!IsDownloadAuthorized())
             {
-                return Unauthorized("You are not authorized to download these images.");
+                return Json(new
+                {
+                    title = "Access Denied",
+                    message = "you are not authorized to download the dataset, request the admin for permission."
+                });
             }
 
             string tempFolderPath = Path.Combine(_environment.WebRootPath, "temp");

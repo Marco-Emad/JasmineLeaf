@@ -3,9 +3,6 @@
 }
 
 <div class="container mt-5">
-    <div>
-        <h2>@ViewData["UserStatus"]</h2>
-    </div>
     <div class="row">
 
         <!-- Card for Data Description -->
@@ -54,31 +51,100 @@
         <!-- Buttons for downloading the stages -->
         <div class="container mt-4">
             <h3>Download All Images At Once</h3>
-            <a asp-controller="Leaf" asp-action="DownloadAllStages" class="btn btn-primary">
-                All Images
-            </a>
+            <button class="btn btn-primary" onclick="downloadAllStages()">All Images</button>
         </div>
 
         <div class="container mt-4">
             <h3>or Download Images by Stage</h3>
             <div class="d-flex gap-2">
-                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Healthy" class="btn btn-primary">
-                    Healthy
-                </a>
-                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage1" class="btn btn-primary">
-                    Stage 1
-                </a>
-                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage2" class="btn btn-primary">
-                    Stage 2
-                </a>
-                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage3" class="btn btn-primary">
-                    Stage 3
-                </a>
-                <a asp-controller="Leaf" asp-action="DownloadStage" asp-route-stage="Stage4" class="btn btn-primary">
-                    Stage 4
-                </a>
+                <button class="btn btn-primary" onclick="downloadStage('Healthy')">Healthy</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage1')">Stage 1</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage2')">Stage 2</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage3')">Stage 3</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage4')">Stage 4</button>
             </div>
+
         </div>
 
     </div>
 </div>
+
+@section Scripts {
+    <script>
+
+        // download all stages
+        function downloadAllStages() {
+            fetch(`/Leaf/DownloadAllStages`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok && response.headers.get('Content-Type').includes('application/zip')) {
+                        // Trigger file download
+                        return response.blob().then(blob => {
+                            const link = document.createElement('a');
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = `All_Stages_Images.zip`;
+                            link.click();
+                        });
+                    } else {
+                        // Handle JSON response (unauthorized or error messages)
+                        return response.json().then(data => {
+                            // Insert the response message into the modal body
+                            document.getElementById('modalMessage').innerText = data.message;
+                            document.getElementById('modalTitle').innerText = data.title;
+
+                            // Show the modal
+                            $('#responseModal').modal('show');
+                        });
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('modalMessage').innerText = 'An unexpected error occurred. Please try again later.';
+                    document.getElementById('modalTitle').innerText = 'Error';
+                    $('#responseModal').modal('show');
+                    console.error(error);
+                });
+        }
+
+        // download stage
+        function downloadStage(stage) {
+            fetch(`/Leaf/DownloadStage?stage=${stage}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok && response.headers.get('Content-Type').includes('application/zip')) {
+                        // Trigger file download
+                        return response.blob().then(blob => {
+                            const link = document.createElement('a');
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = `${stage}_images.zip`;
+                            link.click();
+                        });
+                    } else {
+                        // Handle JSON response (unauthorized or error messages)
+                        return response.json().then(data => {
+                            // Insert the response message into the modal body
+                            document.getElementById('modalMessage').innerText = data.message;
+                            document.getElementById('modalTitle').innerText = data.title;
+
+                            // Show the modal
+                            $('#responseModal').modal('show');
+                        });
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('modalMessage').innerText = 'An unexpected error occurred. Please try again later.';
+                    document.getElementById('modalTitle').innerText = 'Error';
+                    $('#responseModal').modal('show');
+                    console.error(error);
+                });
+        }
+
+    </script>
+}

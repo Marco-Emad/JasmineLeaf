@@ -34,8 +34,11 @@ namespace JasmineLeaf.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception here
-                return Json(new { message = "An error occurred while deleting expired cookies. Please try again later." });
+                return Json(new
+                {
+                    title = "Error",
+                    message = "An error occurred while deleting expired cookies. Please try again later."
+                });
             }
 
 
@@ -57,11 +60,11 @@ namespace JasmineLeaf.Controllers
             {
                 // Return a message based on the status of the existing request
                 if (existingRequest.Status == "Pending")
-                    return Json(new { message = "Your request is still pending. Please wait for admin approval." });
+                    return Json(new { title = "Pending Request", message = "Your request is still pending. Please wait for admin approval." });
                 else if (existingRequest.Status == "Rejected")
-                    return Json(new { message = "Your request has been Rejected. Contact admin for more details." });
+                    return Json(new { title = "Request Rejected", message = "Your request has been Rejected. Contact admin for more details." });
                 else if (existingRequest.Status == "Approved")
-                    return Json(new { message = "You are already Approved. You can download the files now." });
+                    return Json(new { title = "Request Approved", message = "You are already Approved. You can download the files now." });
             }
 
             // Only add a new request if no existing request is found
@@ -74,7 +77,7 @@ namespace JasmineLeaf.Controllers
             _context.Requests.Add(newRequest);
             _context.SaveChanges();
 
-            return Json(new { message = "Your request has been sent. Please wait for admin approval." });
+            return Json(new { title = "Request Sent", message = "Your request has been sent. Please wait for admin approval." });
         }
 
         [HttpPost]

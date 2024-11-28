@@ -1,13 +1,16 @@
 ﻿@{
-    ViewData["Title"] = "Admin Authentication";
+    ViewData["Title"] = "Admin Login";
 }
 
-<h2>Admin Authentication</h2>
+<h2>Admin Login</h2>
 
-<form method="post" asp-action="ReviewRequests">
+<form method="post" asp-action="ValidateAdminKey">
+
     <div class="form-group">
         <label for="key">Enter Admin Key</label>
         <input type="password" class="form-control" id="key" name="key" required />
+        <div asp-validation-summary="All" class="text-danger"></div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+
 </form>

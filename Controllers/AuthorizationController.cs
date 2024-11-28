@@ -20,6 +20,13 @@ namespace JasmineLeaf.Controllers
 
         public IActionResult Index()
         {
+            var userId = Request.Cookies["UserId"];
+            ViewData["UserStatus"] = null;
+            if (!string.IsNullOrEmpty(userId))
+            {
+                ViewData["UserStatus"] = _context.Requests.FirstOrDefault(r => r.UserId == userId).Status;
+            }
+
             return View();
         }
         public IActionResult RequestDownload()
@@ -81,22 +88,24 @@ namespace JasmineLeaf.Controllers
         }
 
         [HttpPost]
-        public IActionResult ReviewRequests(string key)
+        public IActionResult ValidateAdminKey(string key)
         {
-            // Get the admin key from configuration
             var adminKey = _config["AdminKey"];
-
-            // Check if the provided key matches the stored admin key
-            if (key != adminKey)
+            if (key == adminKey)
             {
-                // If not, return Unauthorized
-                return Unauthorized("You are not authorized to access this page.");
+                HttpContext.Session.SetString("IsAdmin", "true");
+                return RedirectToAction("ReviewRequests");
             }
 
-            // If the key is valid, retrieve pending requests
-            var pendingRequests = _context.Requests.Where(r => r.Status == "Pending").ToList();
+            ModelState.AddModelError("", "Invalid admin key.");
+            return View("Index");
+        }
+        public IActionResult ReviewRequests()
+        {
+            if (HttpContext.Session.GetString("IsAdmin") != "true")
+                return Unauthorized("Access denied.");
 
-            // Return the view with the list of pending requests
+            var pendingRequests = _context.Requests.Where(r => r.Status == "Pending").ToList();
             return View(pendingRequests);
         }
 
@@ -110,8 +119,7 @@ namespace JasmineLeaf.Controllers
             request.ReviewedAt = DateTime.Now;
             _context.SaveChanges();
 
-
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("ReviewRequests");
         }
 
         [HttpPost]
@@ -124,17 +132,8 @@ namespace JasmineLeaf.Controllers
             request.ReviewedAt = DateTime.Now;
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("ReviewRequests");
         }
-
-        //private void SendNotification(string userId, string message)
-        //{
-        //    var user = _context.Users.Find(userId);
-        //    if (user != null && !string.IsNullOrEmpty(user.Email))
-        //    {
-        //        // كود إرسال الإيميل هنا
-        //    }
-        //}
 
     }
 }

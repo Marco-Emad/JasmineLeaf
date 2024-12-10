@@ -1,0 +1,14 @@
+{
+  {
+    "Id": 1,
+    "Name": "Koli (1)",
+    "Description": "A healthy koli image",
+    "Image": "null"
+  },
+  {
+    "Id": 2,
+    "Name": "Chicken 2",
+    "Description": "Stage 1 koli image",
+    "Image": "null"
+  }
+}

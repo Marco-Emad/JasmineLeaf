@@ -41,12 +41,12 @@
         <!-- Buttons for downloading the stages -->
         <div class="container mt-4">
             <h3>Download All Images At Once</h3>
-            <a asp-controller="Koli" asp-action="DownloadAllStages" class="btn btn-primary">
+            <a asp-controller="Koli" asp-action="DownloadStage" class="btn btn-primary">
                 All Images
             </a>
         </div>
 
-        <div class="container mt-4">
+        @* <div class="container mt-4">
             <h3>or Download Images by Stage</h3>
             <div class="d-flex gap-2">
                 <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Healthy" class="btn btn-primary">
@@ -65,7 +65,7 @@
                     Stage 4
                 </a>
             </div>
-        </div>
+        </div> *@
 
     </div>
 </div>

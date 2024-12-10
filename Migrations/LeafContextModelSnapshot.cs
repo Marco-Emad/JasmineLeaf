@@ -45,6 +45,1779 @@ namespace JasmineLeaf.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Kolis");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Description for Koli 1",
+                            Image = "wwwroot/images/kolidataset/Koli (1).jpeg",
+                            Name = "Koli (1)"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Description for Koli 2",
+                            Image = "wwwroot/images/kolidataset/Koli (2).jpeg",
+                            Name = "Koli (2)"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Description for Koli 3",
+                            Image = "wwwroot/images/kolidataset/Koli (3).jpeg",
+                            Name = "Koli (3)"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Description for Koli 4",
+                            Image = "wwwroot/images/kolidataset/Koli (4).jpeg",
+                            Name = "Koli (4)"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Description for Koli 5",
+                            Image = "wwwroot/images/kolidataset/Koli (5).jpeg",
+                            Name = "Koli (5)"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "Description for Koli 6",
+                            Image = "wwwroot/images/kolidataset/Koli (6).jpeg",
+                            Name = "Koli (6)"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "Description for Koli 7",
+                            Image = "wwwroot/images/kolidataset/Koli (7).jpeg",
+                            Name = "Koli (7)"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "Description for Koli 8",
+                            Image = "wwwroot/images/kolidataset/Koli (8).jpeg",
+                            Name = "Koli (8)"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "Description for Koli 9",
+                            Image = "wwwroot/images/kolidataset/Koli (9).jpeg",
+                            Name = "Koli (9)"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Description = "Description for Koli 10",
+                            Image = "wwwroot/images/kolidataset/Koli (10).jpeg",
+                            Name = "Koli (10)"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Description = "Description for Koli 11",
+                            Image = "wwwroot/images/kolidataset/Koli (11).jpeg",
+                            Name = "Koli (11)"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Description = "Description for Koli 12",
+                            Image = "wwwroot/images/kolidataset/Koli (12).jpeg",
+                            Name = "Koli (12)"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Description = "Description for Koli 13",
+                            Image = "wwwroot/images/kolidataset/Koli (13).jpeg",
+                            Name = "Koli (13)"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Description = "Description for Koli 14",
+                            Image = "wwwroot/images/kolidataset/Koli (14).jpeg",
+                            Name = "Koli (14)"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Description = "Description for Koli 15",
+                            Image = "wwwroot/images/kolidataset/Koli (15).jpeg",
+                            Name = "Koli (15)"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Description = "Description for Koli 16",
+                            Image = "wwwroot/images/kolidataset/Koli (16).jpeg",
+                            Name = "Koli (16)"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Description = "Description for Koli 17",
+                            Image = "wwwroot/images/kolidataset/Koli (17).jpeg",
+                            Name = "Koli (17)"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Description = "Description for Koli 18",
+                            Image = "wwwroot/images/kolidataset/Koli (18).jpeg",
+                            Name = "Koli (18)"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Description = "Description for Koli 19",
+                            Image = "wwwroot/images/kolidataset/Koli (19).jpeg",
+                            Name = "Koli (19)"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Description = "Description for Koli 20",
+                            Image = "wwwroot/images/kolidataset/Koli (20).jpeg",
+                            Name = "Koli (20)"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Description = "Description for Koli 21",
+                            Image = "wwwroot/images/kolidataset/Koli (21).jpeg",
+                            Name = "Koli (21)"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Description = "Description for Koli 22",
+                            Image = "wwwroot/images/kolidataset/Koli (22).jpeg",
+                            Name = "Koli (22)"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Description = "Description for Koli 23",
+                            Image = "wwwroot/images/kolidataset/Koli (23).jpeg",
+                            Name = "Koli (23)"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Description = "Description for Koli 24",
+                            Image = "wwwroot/images/kolidataset/Koli (24).jpeg",
+                            Name = "Koli (24)"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Description = "Description for Koli 25",
+                            Image = "wwwroot/images/kolidataset/Koli (25).jpeg",
+                            Name = "Koli (25)"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Description = "Description for Koli 26",
+                            Image = "wwwroot/images/kolidataset/Koli (26).jpeg",
+                            Name = "Koli (26)"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            Description = "Description for Koli 27",
+                            Image = "wwwroot/images/kolidataset/Koli (27).jpeg",
+                            Name = "Koli (27)"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Description = "Description for Koli 28",
+                            Image = "wwwroot/images/kolidataset/Koli (28).jpeg",
+                            Name = "Koli (28)"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Description = "Description for Koli 29",
+                            Image = "wwwroot/images/kolidataset/Koli (29).jpeg",
+                            Name = "Koli (29)"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Description = "Description for Koli 30",
+                            Image = "wwwroot/images/kolidataset/Koli (30).jpeg",
+                            Name = "Koli (30)"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Description = "Description for Koli 31",
+                            Image = "wwwroot/images/kolidataset/Koli (31).jpeg",
+                            Name = "Koli (31)"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Description = "Description for Koli 32",
+                            Image = "wwwroot/images/kolidataset/Koli (32).jpeg",
+                            Name = "Koli (32)"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Description = "Description for Koli 33",
+                            Image = "wwwroot/images/kolidataset/Koli (33).jpeg",
+                            Name = "Koli (33)"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Description = "Description for Koli 34",
+                            Image = "wwwroot/images/kolidataset/Koli (34).jpeg",
+                            Name = "Koli (34)"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Description = "Description for Koli 35",
+                            Image = "wwwroot/images/kolidataset/Koli (35).jpeg",
+                            Name = "Koli (35)"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Description = "Description for Koli 36",
+                            Image = "wwwroot/images/kolidataset/Koli (36).jpeg",
+                            Name = "Koli (36)"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            Description = "Description for Koli 37",
+                            Image = "wwwroot/images/kolidataset/Koli (37).jpeg",
+                            Name = "Koli (37)"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Description = "Description for Koli 38",
+                            Image = "wwwroot/images/kolidataset/Koli (38).jpeg",
+                            Name = "Koli (38)"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Description = "Description for Koli 39",
+                            Image = "wwwroot/images/kolidataset/Koli (39).jpeg",
+                            Name = "Koli (39)"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Description = "Description for Koli 40",
+                            Image = "wwwroot/images/kolidataset/Koli (40).jpeg",
+                            Name = "Koli (40)"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Description = "Description for Koli 41",
+                            Image = "wwwroot/images/kolidataset/Koli (41).jpeg",
+                            Name = "Koli (41)"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Description = "Description for Koli 42",
+                            Image = "wwwroot/images/kolidataset/Koli (42).jpeg",
+                            Name = "Koli (42)"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Description = "Description for Koli 43",
+                            Image = "wwwroot/images/kolidataset/Koli (43).jpeg",
+                            Name = "Koli (43)"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Description = "Description for Koli 44",
+                            Image = "wwwroot/images/kolidataset/Koli (44).jpeg",
+                            Name = "Koli (44)"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Description = "Description for Koli 45",
+                            Image = "wwwroot/images/kolidataset/Koli (45).jpeg",
+                            Name = "Koli (45)"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Description = "Description for Koli 46",
+                            Image = "wwwroot/images/kolidataset/Koli (46).jpeg",
+                            Name = "Koli (46)"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Description = "Description for Koli 47",
+                            Image = "wwwroot/images/kolidataset/Koli (47).jpeg",
+                            Name = "Koli (47)"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Description = "Description for Koli 48",
+                            Image = "wwwroot/images/kolidataset/Koli (48).jpeg",
+                            Name = "Koli (48)"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Description = "Description for Koli 49",
+                            Image = "wwwroot/images/kolidataset/Koli (49).jpeg",
+                            Name = "Koli (49)"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Description = "Description for Koli 50",
+                            Image = "wwwroot/images/kolidataset/Koli (50).jpeg",
+                            Name = "Koli (50)"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            Description = "Description for Koli 51",
+                            Image = "wwwroot/images/kolidataset/Koli (51).jpeg",
+                            Name = "Koli (51)"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Description = "Description for Koli 52",
+                            Image = "wwwroot/images/kolidataset/Koli (52).jpeg",
+                            Name = "Koli (52)"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            Description = "Description for Koli 53",
+                            Image = "wwwroot/images/kolidataset/Koli (53).jpeg",
+                            Name = "Koli (53)"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            Description = "Description for Koli 54",
+                            Image = "wwwroot/images/kolidataset/Koli (54).jpeg",
+                            Name = "Koli (54)"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            Description = "Description for Koli 55",
+                            Image = "wwwroot/images/kolidataset/Koli (55).jpeg",
+                            Name = "Koli (55)"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            Description = "Description for Koli 56",
+                            Image = "wwwroot/images/kolidataset/Koli (56).jpeg",
+                            Name = "Koli (56)"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            Description = "Description for Koli 57",
+                            Image = "wwwroot/images/kolidataset/Koli (57).jpeg",
+                            Name = "Koli (57)"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            Description = "Description for Koli 58",
+                            Image = "wwwroot/images/kolidataset/Koli (58).jpeg",
+                            Name = "Koli (58)"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            Description = "Description for Koli 59",
+                            Image = "wwwroot/images/kolidataset/Koli (59).jpeg",
+                            Name = "Koli (59)"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            Description = "Description for Koli 60",
+                            Image = "wwwroot/images/kolidataset/Koli (60).jpeg",
+                            Name = "Koli (60)"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            Description = "Description for Koli 61",
+                            Image = "wwwroot/images/kolidataset/Koli (61).jpeg",
+                            Name = "Koli (61)"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            Description = "Description for Koli 62",
+                            Image = "wwwroot/images/kolidataset/Koli (62).jpeg",
+                            Name = "Koli (62)"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            Description = "Description for Koli 63",
+                            Image = "wwwroot/images/kolidataset/Koli (63).jpeg",
+                            Name = "Koli (63)"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            Description = "Description for Koli 64",
+                            Image = "wwwroot/images/kolidataset/Koli (64).jpeg",
+                            Name = "Koli (64)"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            Description = "Description for Koli 65",
+                            Image = "wwwroot/images/kolidataset/Koli (65).jpeg",
+                            Name = "Koli (65)"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Description = "Description for Koli 66",
+                            Image = "wwwroot/images/kolidataset/Koli (66).jpeg",
+                            Name = "Koli (66)"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Description = "Description for Koli 67",
+                            Image = "wwwroot/images/kolidataset/Koli (67).jpeg",
+                            Name = "Koli (67)"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            Description = "Description for Koli 68",
+                            Image = "wwwroot/images/kolidataset/Koli (68).jpeg",
+                            Name = "Koli (68)"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            Description = "Description for Koli 69",
+                            Image = "wwwroot/images/kolidataset/Koli (69).jpeg",
+                            Name = "Koli (69)"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            Description = "Description for Koli 70",
+                            Image = "wwwroot/images/kolidataset/Koli (70).jpeg",
+                            Name = "Koli (70)"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            Description = "Description for Koli 71",
+                            Image = "wwwroot/images/kolidataset/Koli (71).jpeg",
+                            Name = "Koli (71)"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            Description = "Description for Koli 72",
+                            Image = "wwwroot/images/kolidataset/Koli (72).jpeg",
+                            Name = "Koli (72)"
+                        },
+                        new
+                        {
+                            Id = 73,
+                            Description = "Description for Koli 73",
+                            Image = "wwwroot/images/kolidataset/Koli (73).jpeg",
+                            Name = "Koli (73)"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            Description = "Description for Koli 74",
+                            Image = "wwwroot/images/kolidataset/Koli (74).jpeg",
+                            Name = "Koli (74)"
+                        },
+                        new
+                        {
+                            Id = 75,
+                            Description = "Description for Koli 75",
+                            Image = "wwwroot/images/kolidataset/Koli (75).jpeg",
+                            Name = "Koli (75)"
+                        },
+                        new
+                        {
+                            Id = 76,
+                            Description = "Description for Koli 76",
+                            Image = "wwwroot/images/kolidataset/Koli (76).jpeg",
+                            Name = "Koli (76)"
+                        },
+                        new
+                        {
+                            Id = 77,
+                            Description = "Description for Koli 77",
+                            Image = "wwwroot/images/kolidataset/Koli (77).jpeg",
+                            Name = "Koli (77)"
+                        },
+                        new
+                        {
+                            Id = 78,
+                            Description = "Description for Koli 78",
+                            Image = "wwwroot/images/kolidataset/Koli (78).jpeg",
+                            Name = "Koli (78)"
+                        },
+                        new
+                        {
+                            Id = 79,
+                            Description = "Description for Koli 79",
+                            Image = "wwwroot/images/kolidataset/Koli (79).jpeg",
+                            Name = "Koli (79)"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            Description = "Description for Koli 80",
+                            Image = "wwwroot/images/kolidataset/Koli (80).jpeg",
+                            Name = "Koli (80)"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            Description = "Description for Koli 81",
+                            Image = "wwwroot/images/kolidataset/Koli (81).jpeg",
+                            Name = "Koli (81)"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            Description = "Description for Koli 82",
+                            Image = "wwwroot/images/kolidataset/Koli (82).jpeg",
+                            Name = "Koli (82)"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            Description = "Description for Koli 83",
+                            Image = "wwwroot/images/kolidataset/Koli (83).jpeg",
+                            Name = "Koli (83)"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            Description = "Description for Koli 84",
+                            Image = "wwwroot/images/kolidataset/Koli (84).jpeg",
+                            Name = "Koli (84)"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            Description = "Description for Koli 85",
+                            Image = "wwwroot/images/kolidataset/Koli (85).jpeg",
+                            Name = "Koli (85)"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            Description = "Description for Koli 86",
+                            Image = "wwwroot/images/kolidataset/Koli (86).jpeg",
+                            Name = "Koli (86)"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            Description = "Description for Koli 87",
+                            Image = "wwwroot/images/kolidataset/Koli (87).jpeg",
+                            Name = "Koli (87)"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            Description = "Description for Koli 88",
+                            Image = "wwwroot/images/kolidataset/Koli (88).jpeg",
+                            Name = "Koli (88)"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            Description = "Description for Koli 89",
+                            Image = "wwwroot/images/kolidataset/Koli (89).jpeg",
+                            Name = "Koli (89)"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            Description = "Description for Koli 90",
+                            Image = "wwwroot/images/kolidataset/Koli (90).jpeg",
+                            Name = "Koli (90)"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            Description = "Description for Koli 91",
+                            Image = "wwwroot/images/kolidataset/Koli (91).jpeg",
+                            Name = "Koli (91)"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            Description = "Description for Koli 92",
+                            Image = "wwwroot/images/kolidataset/Koli (92).jpeg",
+                            Name = "Koli (92)"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            Description = "Description for Koli 93",
+                            Image = "wwwroot/images/kolidataset/Koli (93).jpeg",
+                            Name = "Koli (93)"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            Description = "Description for Koli 94",
+                            Image = "wwwroot/images/kolidataset/Koli (94).jpeg",
+                            Name = "Koli (94)"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            Description = "Description for Koli 95",
+                            Image = "wwwroot/images/kolidataset/Koli (95).jpeg",
+                            Name = "Koli (95)"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            Description = "Description for Koli 96",
+                            Image = "wwwroot/images/kolidataset/Koli (96).jpeg",
+                            Name = "Koli (96)"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            Description = "Description for Koli 97",
+                            Image = "wwwroot/images/kolidataset/Koli (97).jpeg",
+                            Name = "Koli (97)"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            Description = "Description for Koli 98",
+                            Image = "wwwroot/images/kolidataset/Koli (98).jpeg",
+                            Name = "Koli (98)"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            Description = "Description for Koli 99",
+                            Image = "wwwroot/images/kolidataset/Koli (99).jpeg",
+                            Name = "Koli (99)"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            Description = "Description for Koli 100",
+                            Image = "wwwroot/images/kolidataset/Koli (100).jpeg",
+                            Name = "Koli (100)"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            Description = "Description for Koli 101",
+                            Image = "wwwroot/images/kolidataset/Koli (101).jpeg",
+                            Name = "Koli (101)"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Description = "Description for Koli 102",
+                            Image = "wwwroot/images/kolidataset/Koli (102).jpeg",
+                            Name = "Koli (102)"
+                        },
+                        new
+                        {
+                            Id = 103,
+                            Description = "Description for Koli 103",
+                            Image = "wwwroot/images/kolidataset/Koli (103).jpeg",
+                            Name = "Koli (103)"
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Description = "Description for Koli 104",
+                            Image = "wwwroot/images/kolidataset/Koli (104).jpeg",
+                            Name = "Koli (104)"
+                        },
+                        new
+                        {
+                            Id = 105,
+                            Description = "Description for Koli 105",
+                            Image = "wwwroot/images/kolidataset/Koli (105).jpeg",
+                            Name = "Koli (105)"
+                        },
+                        new
+                        {
+                            Id = 106,
+                            Description = "Description for Koli 106",
+                            Image = "wwwroot/images/kolidataset/Koli (106).jpeg",
+                            Name = "Koli (106)"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Description = "Description for Koli 107",
+                            Image = "wwwroot/images/kolidataset/Koli (107).jpeg",
+                            Name = "Koli (107)"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Description = "Description for Koli 108",
+                            Image = "wwwroot/images/kolidataset/Koli (108).jpeg",
+                            Name = "Koli (108)"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Description = "Description for Koli 109",
+                            Image = "wwwroot/images/kolidataset/Koli (109).jpeg",
+                            Name = "Koli (109)"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Description = "Description for Koli 110",
+                            Image = "wwwroot/images/kolidataset/Koli (110).jpeg",
+                            Name = "Koli (110)"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Description = "Description for Koli 111",
+                            Image = "wwwroot/images/kolidataset/Koli (111).jpeg",
+                            Name = "Koli (111)"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Description = "Description for Koli 112",
+                            Image = "wwwroot/images/kolidataset/Koli (112).jpeg",
+                            Name = "Koli (112)"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Description = "Description for Koli 113",
+                            Image = "wwwroot/images/kolidataset/Koli (113).jpeg",
+                            Name = "Koli (113)"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Description = "Description for Koli 114",
+                            Image = "wwwroot/images/kolidataset/Koli (114).jpeg",
+                            Name = "Koli (114)"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Description = "Description for Koli 115",
+                            Image = "wwwroot/images/kolidataset/Koli (115).jpeg",
+                            Name = "Koli (115)"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Description = "Description for Koli 116",
+                            Image = "wwwroot/images/kolidataset/Koli (116).jpeg",
+                            Name = "Koli (116)"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Description = "Description for Koli 117",
+                            Image = "wwwroot/images/kolidataset/Koli (117).jpeg",
+                            Name = "Koli (117)"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Description = "Description for Koli 118",
+                            Image = "wwwroot/images/kolidataset/Koli (118).jpeg",
+                            Name = "Koli (118)"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Description = "Description for Koli 119",
+                            Image = "wwwroot/images/kolidataset/Koli (119).jpeg",
+                            Name = "Koli (119)"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Description = "Description for Koli 120",
+                            Image = "wwwroot/images/kolidataset/Koli (120).jpeg",
+                            Name = "Koli (120)"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Description = "Description for Koli 121",
+                            Image = "wwwroot/images/kolidataset/Koli (121).jpeg",
+                            Name = "Koli (121)"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Description = "Description for Koli 122",
+                            Image = "wwwroot/images/kolidataset/Koli (122).jpeg",
+                            Name = "Koli (122)"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Description = "Description for Koli 123",
+                            Image = "wwwroot/images/kolidataset/Koli (123).jpeg",
+                            Name = "Koli (123)"
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Description = "Description for Koli 124",
+                            Image = "wwwroot/images/kolidataset/Koli (124).jpeg",
+                            Name = "Koli (124)"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Description = "Description for Koli 125",
+                            Image = "wwwroot/images/kolidataset/Koli (125).jpeg",
+                            Name = "Koli (125)"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Description = "Description for Koli 126",
+                            Image = "wwwroot/images/kolidataset/Koli (126).jpeg",
+                            Name = "Koli (126)"
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Description = "Description for Koli 127",
+                            Image = "wwwroot/images/kolidataset/Koli (127).jpeg",
+                            Name = "Koli (127)"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Description = "Description for Koli 128",
+                            Image = "wwwroot/images/kolidataset/Koli (128).jpeg",
+                            Name = "Koli (128)"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Description = "Description for Koli 129",
+                            Image = "wwwroot/images/kolidataset/Koli (129).jpeg",
+                            Name = "Koli (129)"
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Description = "Description for Koli 130",
+                            Image = "wwwroot/images/kolidataset/Koli (130).jpeg",
+                            Name = "Koli (130)"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Description = "Description for Koli 131",
+                            Image = "wwwroot/images/kolidataset/Koli (131).jpeg",
+                            Name = "Koli (131)"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Description = "Description for Koli 132",
+                            Image = "wwwroot/images/kolidataset/Koli (132).jpeg",
+                            Name = "Koli (132)"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Description = "Description for Koli 133",
+                            Image = "wwwroot/images/kolidataset/Koli (133).jpeg",
+                            Name = "Koli (133)"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Description = "Description for Koli 134",
+                            Image = "wwwroot/images/kolidataset/Koli (134).jpeg",
+                            Name = "Koli (134)"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Description = "Description for Koli 135",
+                            Image = "wwwroot/images/kolidataset/Koli (135).jpeg",
+                            Name = "Koli (135)"
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Description = "Description for Koli 136",
+                            Image = "wwwroot/images/kolidataset/Koli (136).jpeg",
+                            Name = "Koli (136)"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            Description = "Description for Koli 137",
+                            Image = "wwwroot/images/kolidataset/Koli (137).jpeg",
+                            Name = "Koli (137)"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            Description = "Description for Koli 138",
+                            Image = "wwwroot/images/kolidataset/Koli (138).jpeg",
+                            Name = "Koli (138)"
+                        },
+                        new
+                        {
+                            Id = 139,
+                            Description = "Description for Koli 139",
+                            Image = "wwwroot/images/kolidataset/Koli (139).jpeg",
+                            Name = "Koli (139)"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            Description = "Description for Koli 140",
+                            Image = "wwwroot/images/kolidataset/Koli (140).jpeg",
+                            Name = "Koli (140)"
+                        },
+                        new
+                        {
+                            Id = 141,
+                            Description = "Description for Koli 141",
+                            Image = "wwwroot/images/kolidataset/Koli (141).jpeg",
+                            Name = "Koli (141)"
+                        },
+                        new
+                        {
+                            Id = 142,
+                            Description = "Description for Koli 142",
+                            Image = "wwwroot/images/kolidataset/Koli (142).jpeg",
+                            Name = "Koli (142)"
+                        },
+                        new
+                        {
+                            Id = 143,
+                            Description = "Description for Koli 143",
+                            Image = "wwwroot/images/kolidataset/Koli (143).jpeg",
+                            Name = "Koli (143)"
+                        },
+                        new
+                        {
+                            Id = 144,
+                            Description = "Description for Koli 144",
+                            Image = "wwwroot/images/kolidataset/Koli (144).jpeg",
+                            Name = "Koli (144)"
+                        },
+                        new
+                        {
+                            Id = 145,
+                            Description = "Description for Koli 145",
+                            Image = "wwwroot/images/kolidataset/Koli (145).jpeg",
+                            Name = "Koli (145)"
+                        },
+                        new
+                        {
+                            Id = 146,
+                            Description = "Description for Koli 146",
+                            Image = "wwwroot/images/kolidataset/Koli (146).jpeg",
+                            Name = "Koli (146)"
+                        },
+                        new
+                        {
+                            Id = 147,
+                            Description = "Description for Koli 147",
+                            Image = "wwwroot/images/kolidataset/Koli (147).jpeg",
+                            Name = "Koli (147)"
+                        },
+                        new
+                        {
+                            Id = 148,
+                            Description = "Description for Koli 148",
+                            Image = "wwwroot/images/kolidataset/Koli (148).jpeg",
+                            Name = "Koli (148)"
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Description = "Description for Koli 149",
+                            Image = "wwwroot/images/kolidataset/Koli (149).jpeg",
+                            Name = "Koli (149)"
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Description = "Description for Koli 150",
+                            Image = "wwwroot/images/kolidataset/Koli (150).jpeg",
+                            Name = "Koli (150)"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Description = "Description for Koli 151",
+                            Image = "wwwroot/images/kolidataset/Koli (151).jpeg",
+                            Name = "Koli (151)"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Description = "Description for Koli 152",
+                            Image = "wwwroot/images/kolidataset/Koli (152).jpeg",
+                            Name = "Koli (152)"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Description = "Description for Koli 153",
+                            Image = "wwwroot/images/kolidataset/Koli (153).jpeg",
+                            Name = "Koli (153)"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            Description = "Description for Koli 154",
+                            Image = "wwwroot/images/kolidataset/Koli (154).jpeg",
+                            Name = "Koli (154)"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Description = "Description for Koli 155",
+                            Image = "wwwroot/images/kolidataset/Koli (155).jpeg",
+                            Name = "Koli (155)"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Description = "Description for Koli 156",
+                            Image = "wwwroot/images/kolidataset/Koli (156).jpeg",
+                            Name = "Koli (156)"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            Description = "Description for Koli 157",
+                            Image = "wwwroot/images/kolidataset/Koli (157).jpeg",
+                            Name = "Koli (157)"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            Description = "Description for Koli 158",
+                            Image = "wwwroot/images/kolidataset/Koli (158).jpeg",
+                            Name = "Koli (158)"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            Description = "Description for Koli 159",
+                            Image = "wwwroot/images/kolidataset/Koli (159).jpeg",
+                            Name = "Koli (159)"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            Description = "Description for Koli 160",
+                            Image = "wwwroot/images/kolidataset/Koli (160).jpeg",
+                            Name = "Koli (160)"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            Description = "Description for Koli 161",
+                            Image = "wwwroot/images/kolidataset/Koli (161).jpeg",
+                            Name = "Koli (161)"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Description = "Description for Koli 162",
+                            Image = "wwwroot/images/kolidataset/Koli (162).jpeg",
+                            Name = "Koli (162)"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            Description = "Description for Koli 163",
+                            Image = "wwwroot/images/kolidataset/Koli (163).jpeg",
+                            Name = "Koli (163)"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Description = "Description for Koli 164",
+                            Image = "wwwroot/images/kolidataset/Koli (164).jpeg",
+                            Name = "Koli (164)"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Description = "Description for Koli 165",
+                            Image = "wwwroot/images/kolidataset/Koli (165).jpeg",
+                            Name = "Koli (165)"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            Description = "Description for Koli 166",
+                            Image = "wwwroot/images/kolidataset/Koli (166).jpeg",
+                            Name = "Koli (166)"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Description = "Description for Koli 167",
+                            Image = "wwwroot/images/kolidataset/Koli (167).jpeg",
+                            Name = "Koli (167)"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Description = "Description for Koli 168",
+                            Image = "wwwroot/images/kolidataset/Koli (168).jpeg",
+                            Name = "Koli (168)"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            Description = "Description for Koli 169",
+                            Image = "wwwroot/images/kolidataset/Koli (169).jpeg",
+                            Name = "Koli (169)"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Description = "Description for Koli 170",
+                            Image = "wwwroot/images/kolidataset/Koli (170).jpeg",
+                            Name = "Koli (170)"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Description = "Description for Koli 171",
+                            Image = "wwwroot/images/kolidataset/Koli (171).jpeg",
+                            Name = "Koli (171)"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Description = "Description for Koli 172",
+                            Image = "wwwroot/images/kolidataset/Koli (172).jpeg",
+                            Name = "Koli (172)"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Description = "Description for Koli 173",
+                            Image = "wwwroot/images/kolidataset/Koli (173).jpeg",
+                            Name = "Koli (173)"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Description = "Description for Koli 174",
+                            Image = "wwwroot/images/kolidataset/Koli (174).jpeg",
+                            Name = "Koli (174)"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Description = "Description for Koli 175",
+                            Image = "wwwroot/images/kolidataset/Koli (175).jpeg",
+                            Name = "Koli (175)"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Description = "Description for Koli 176",
+                            Image = "wwwroot/images/kolidataset/Koli (176).jpeg",
+                            Name = "Koli (176)"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            Description = "Description for Koli 177",
+                            Image = "wwwroot/images/kolidataset/Koli (177).jpeg",
+                            Name = "Koli (177)"
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Description = "Description for Koli 178",
+                            Image = "wwwroot/images/kolidataset/Koli (178).jpeg",
+                            Name = "Koli (178)"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Description = "Description for Koli 179",
+                            Image = "wwwroot/images/kolidataset/Koli (179).jpeg",
+                            Name = "Koli (179)"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Description = "Description for Koli 180",
+                            Image = "wwwroot/images/kolidataset/Koli (180).jpeg",
+                            Name = "Koli (180)"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Description = "Description for Koli 181",
+                            Image = "wwwroot/images/kolidataset/Koli (181).jpeg",
+                            Name = "Koli (181)"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Description = "Description for Koli 182",
+                            Image = "wwwroot/images/kolidataset/Koli (182).jpeg",
+                            Name = "Koli (182)"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            Description = "Description for Koli 183",
+                            Image = "wwwroot/images/kolidataset/Koli (183).jpeg",
+                            Name = "Koli (183)"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Description = "Description for Koli 184",
+                            Image = "wwwroot/images/kolidataset/Koli (184).jpeg",
+                            Name = "Koli (184)"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Description = "Description for Koli 185",
+                            Image = "wwwroot/images/kolidataset/Koli (185).jpeg",
+                            Name = "Koli (185)"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Description = "Description for Koli 186",
+                            Image = "wwwroot/images/kolidataset/Koli (186).jpeg",
+                            Name = "Koli (186)"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Description = "Description for Koli 187",
+                            Image = "wwwroot/images/kolidataset/Koli (187).jpeg",
+                            Name = "Koli (187)"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Description = "Description for Koli 188",
+                            Image = "wwwroot/images/kolidataset/Koli (188).jpeg",
+                            Name = "Koli (188)"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Description = "Description for Koli 189",
+                            Image = "wwwroot/images/kolidataset/Koli (189).jpeg",
+                            Name = "Koli (189)"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Description = "Description for Koli 190",
+                            Image = "wwwroot/images/kolidataset/Koli (190).jpeg",
+                            Name = "Koli (190)"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            Description = "Description for Koli 191",
+                            Image = "wwwroot/images/kolidataset/Koli (191).jpeg",
+                            Name = "Koli (191)"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            Description = "Description for Koli 192",
+                            Image = "wwwroot/images/kolidataset/Koli (192).jpeg",
+                            Name = "Koli (192)"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            Description = "Description for Koli 193",
+                            Image = "wwwroot/images/kolidataset/Koli (193).jpeg",
+                            Name = "Koli (193)"
+                        },
+                        new
+                        {
+                            Id = 194,
+                            Description = "Description for Koli 194",
+                            Image = "wwwroot/images/kolidataset/Koli (194).jpeg",
+                            Name = "Koli (194)"
+                        },
+                        new
+                        {
+                            Id = 195,
+                            Description = "Description for Koli 195",
+                            Image = "wwwroot/images/kolidataset/Koli (195).jpeg",
+                            Name = "Koli (195)"
+                        },
+                        new
+                        {
+                            Id = 196,
+                            Description = "Description for Koli 196",
+                            Image = "wwwroot/images/kolidataset/Koli (196).jpeg",
+                            Name = "Koli (196)"
+                        },
+                        new
+                        {
+                            Id = 197,
+                            Description = "Description for Koli 197",
+                            Image = "wwwroot/images/kolidataset/Koli (197).jpeg",
+                            Name = "Koli (197)"
+                        },
+                        new
+                        {
+                            Id = 198,
+                            Description = "Description for Koli 198",
+                            Image = "wwwroot/images/kolidataset/Koli (198).jpeg",
+                            Name = "Koli (198)"
+                        },
+                        new
+                        {
+                            Id = 199,
+                            Description = "Description for Koli 199",
+                            Image = "wwwroot/images/kolidataset/Koli (199).jpeg",
+                            Name = "Koli (199)"
+                        },
+                        new
+                        {
+                            Id = 200,
+                            Description = "Description for Koli 200",
+                            Image = "wwwroot/images/kolidataset/Koli (200).jpeg",
+                            Name = "Koli (200)"
+                        },
+                        new
+                        {
+                            Id = 201,
+                            Description = "Description for Koli 201",
+                            Image = "wwwroot/images/kolidataset/Koli (201).jpeg",
+                            Name = "Koli (201)"
+                        },
+                        new
+                        {
+                            Id = 202,
+                            Description = "Description for Koli 202",
+                            Image = "wwwroot/images/kolidataset/Koli (202).jpeg",
+                            Name = "Koli (202)"
+                        },
+                        new
+                        {
+                            Id = 203,
+                            Description = "Description for Koli 203",
+                            Image = "wwwroot/images/kolidataset/Koli (203).jpeg",
+                            Name = "Koli (203)"
+                        },
+                        new
+                        {
+                            Id = 204,
+                            Description = "Description for Koli 204",
+                            Image = "wwwroot/images/kolidataset/Koli (204).jpeg",
+                            Name = "Koli (204)"
+                        },
+                        new
+                        {
+                            Id = 205,
+                            Description = "Description for Koli 205",
+                            Image = "wwwroot/images/kolidataset/Koli (205).jpeg",
+                            Name = "Koli (205)"
+                        },
+                        new
+                        {
+                            Id = 206,
+                            Description = "Description for Koli 206",
+                            Image = "wwwroot/images/kolidataset/Koli (206).jpeg",
+                            Name = "Koli (206)"
+                        },
+                        new
+                        {
+                            Id = 207,
+                            Description = "Description for Koli 207",
+                            Image = "wwwroot/images/kolidataset/Koli (207).jpeg",
+                            Name = "Koli (207)"
+                        },
+                        new
+                        {
+                            Id = 208,
+                            Description = "Description for Koli 208",
+                            Image = "wwwroot/images/kolidataset/Koli (208).jpeg",
+                            Name = "Koli (208)"
+                        },
+                        new
+                        {
+                            Id = 209,
+                            Description = "Description for Koli 209",
+                            Image = "wwwroot/images/kolidataset/Koli (209).jpeg",
+                            Name = "Koli (209)"
+                        },
+                        new
+                        {
+                            Id = 210,
+                            Description = "Description for Koli 210",
+                            Image = "wwwroot/images/kolidataset/Koli (210).jpeg",
+                            Name = "Koli (210)"
+                        },
+                        new
+                        {
+                            Id = 211,
+                            Description = "Description for Koli 211",
+                            Image = "wwwroot/images/kolidataset/Koli (211).jpeg",
+                            Name = "Koli (211)"
+                        },
+                        new
+                        {
+                            Id = 212,
+                            Description = "Description for Koli 212",
+                            Image = "wwwroot/images/kolidataset/Koli (212).jpeg",
+                            Name = "Koli (212)"
+                        },
+                        new
+                        {
+                            Id = 213,
+                            Description = "Description for Koli 213",
+                            Image = "wwwroot/images/kolidataset/Koli (213).jpeg",
+                            Name = "Koli (213)"
+                        },
+                        new
+                        {
+                            Id = 214,
+                            Description = "Description for Koli 214",
+                            Image = "wwwroot/images/kolidataset/Koli (214).jpeg",
+                            Name = "Koli (214)"
+                        },
+                        new
+                        {
+                            Id = 215,
+                            Description = "Description for Koli 215",
+                            Image = "wwwroot/images/kolidataset/Koli (215).jpeg",
+                            Name = "Koli (215)"
+                        },
+                        new
+                        {
+                            Id = 216,
+                            Description = "Description for Koli 216",
+                            Image = "wwwroot/images/kolidataset/Koli (216).jpeg",
+                            Name = "Koli (216)"
+                        },
+                        new
+                        {
+                            Id = 217,
+                            Description = "Description for Koli 217",
+                            Image = "wwwroot/images/kolidataset/Koli (217).jpeg",
+                            Name = "Koli (217)"
+                        },
+                        new
+                        {
+                            Id = 218,
+                            Description = "Description for Koli 218",
+                            Image = "wwwroot/images/kolidataset/Koli (218).jpeg",
+                            Name = "Koli (218)"
+                        },
+                        new
+                        {
+                            Id = 219,
+                            Description = "Description for Koli 219",
+                            Image = "wwwroot/images/kolidataset/Koli (219).jpeg",
+                            Name = "Koli (219)"
+                        },
+                        new
+                        {
+                            Id = 220,
+                            Description = "Description for Koli 220",
+                            Image = "wwwroot/images/kolidataset/Koli (220).jpeg",
+                            Name = "Koli (220)"
+                        },
+                        new
+                        {
+                            Id = 221,
+                            Description = "Description for Koli 221",
+                            Image = "wwwroot/images/kolidataset/Koli (221).jpeg",
+                            Name = "Koli (221)"
+                        },
+                        new
+                        {
+                            Id = 222,
+                            Description = "Description for Koli 222",
+                            Image = "wwwroot/images/kolidataset/Koli (222).jpeg",
+                            Name = "Koli (222)"
+                        },
+                        new
+                        {
+                            Id = 223,
+                            Description = "Description for Koli 223",
+                            Image = "wwwroot/images/kolidataset/Koli (223).jpeg",
+                            Name = "Koli (223)"
+                        },
+                        new
+                        {
+                            Id = 224,
+                            Description = "Description for Koli 224",
+                            Image = "wwwroot/images/kolidataset/Koli (224).jpeg",
+                            Name = "Koli (224)"
+                        },
+                        new
+                        {
+                            Id = 225,
+                            Description = "Description for Koli 225",
+                            Image = "wwwroot/images/kolidataset/Koli (225).jpeg",
+                            Name = "Koli (225)"
+                        },
+                        new
+                        {
+                            Id = 226,
+                            Description = "Description for Koli 226",
+                            Image = "wwwroot/images/kolidataset/Koli (226).jpeg",
+                            Name = "Koli (226)"
+                        },
+                        new
+                        {
+                            Id = 227,
+                            Description = "Description for Koli 227",
+                            Image = "wwwroot/images/kolidataset/Koli (227).jpeg",
+                            Name = "Koli (227)"
+                        },
+                        new
+                        {
+                            Id = 228,
+                            Description = "Description for Koli 228",
+                            Image = "wwwroot/images/kolidataset/Koli (228).jpeg",
+                            Name = "Koli (228)"
+                        },
+                        new
+                        {
+                            Id = 229,
+                            Description = "Description for Koli 229",
+                            Image = "wwwroot/images/kolidataset/Koli (229).jpeg",
+                            Name = "Koli (229)"
+                        },
+                        new
+                        {
+                            Id = 230,
+                            Description = "Description for Koli 230",
+                            Image = "wwwroot/images/kolidataset/Koli (230).jpeg",
+                            Name = "Koli (230)"
+                        },
+                        new
+                        {
+                            Id = 231,
+                            Description = "Description for Koli 231",
+                            Image = "wwwroot/images/kolidataset/Koli (231).jpeg",
+                            Name = "Koli (231)"
+                        },
+                        new
+                        {
+                            Id = 232,
+                            Description = "Description for Koli 232",
+                            Image = "wwwroot/images/kolidataset/Koli (232).jpeg",
+                            Name = "Koli (232)"
+                        },
+                        new
+                        {
+                            Id = 233,
+                            Description = "Description for Koli 233",
+                            Image = "wwwroot/images/kolidataset/Koli (233).jpeg",
+                            Name = "Koli (233)"
+                        },
+                        new
+                        {
+                            Id = 234,
+                            Description = "Description for Koli 234",
+                            Image = "wwwroot/images/kolidataset/Koli (234).jpeg",
+                            Name = "Koli (234)"
+                        },
+                        new
+                        {
+                            Id = 235,
+                            Description = "Description for Koli 235",
+                            Image = "wwwroot/images/kolidataset/Koli (235).jpeg",
+                            Name = "Koli (235)"
+                        },
+                        new
+                        {
+                            Id = 236,
+                            Description = "Description for Koli 236",
+                            Image = "wwwroot/images/kolidataset/Koli (236).jpeg",
+                            Name = "Koli (236)"
+                        },
+                        new
+                        {
+                            Id = 237,
+                            Description = "Description for Koli 237",
+                            Image = "wwwroot/images/kolidataset/Koli (237).jpeg",
+                            Name = "Koli (237)"
+                        },
+                        new
+                        {
+                            Id = 238,
+                            Description = "Description for Koli 238",
+                            Image = "wwwroot/images/kolidataset/Koli (238).jpeg",
+                            Name = "Koli (238)"
+                        },
+                        new
+                        {
+                            Id = 239,
+                            Description = "Description for Koli 239",
+                            Image = "wwwroot/images/kolidataset/Koli (239).jpeg",
+                            Name = "Koli (239)"
+                        },
+                        new
+                        {
+                            Id = 240,
+                            Description = "Description for Koli 240",
+                            Image = "wwwroot/images/kolidataset/Koli (240).jpeg",
+                            Name = "Koli (240)"
+                        },
+                        new
+                        {
+                            Id = 241,
+                            Description = "Description for Koli 241",
+                            Image = "wwwroot/images/kolidataset/Koli (241).jpeg",
+                            Name = "Koli (241)"
+                        },
+                        new
+                        {
+                            Id = 242,
+                            Description = "Description for Koli 242",
+                            Image = "wwwroot/images/kolidataset/Koli (242).jpeg",
+                            Name = "Koli (242)"
+                        },
+                        new
+                        {
+                            Id = 243,
+                            Description = "Description for Koli 243",
+                            Image = "wwwroot/images/kolidataset/Koli (243).jpeg",
+                            Name = "Koli (243)"
+                        },
+                        new
+                        {
+                            Id = 244,
+                            Description = "Description for Koli 244",
+                            Image = "wwwroot/images/kolidataset/Koli (244).jpeg",
+                            Name = "Koli (244)"
+                        },
+                        new
+                        {
+                            Id = 245,
+                            Description = "Description for Koli 245",
+                            Image = "wwwroot/images/kolidataset/Koli (245).jpeg",
+                            Name = "Koli (245)"
+                        },
+                        new
+                        {
+                            Id = 246,
+                            Description = "Description for Koli 246",
+                            Image = "wwwroot/images/kolidataset/Koli (246).jpeg",
+                            Name = "Koli (246)"
+                        },
+                        new
+                        {
+                            Id = 247,
+                            Description = "Description for Koli 247",
+                            Image = "wwwroot/images/kolidataset/Koli (247).jpeg",
+                            Name = "Koli (247)"
+                        },
+                        new
+                        {
+                            Id = 248,
+                            Description = "Description for Koli 248",
+                            Image = "wwwroot/images/kolidataset/Koli (248).jpeg",
+                            Name = "Koli (248)"
+                        },
+                        new
+                        {
+                            Id = 249,
+                            Description = "Description for Koli 249",
+                            Image = "wwwroot/images/kolidataset/Koli (249).jpeg",
+                            Name = "Koli (249)"
+                        },
+                        new
+                        {
+                            Id = 250,
+                            Description = "Description for Koli 250",
+                            Image = "wwwroot/images/kolidataset/Koli (250).jpeg",
+                            Name = "Koli (250)"
+                        },
+                        new
+                        {
+                            Id = 251,
+                            Description = "Description for Koli 251",
+                            Image = "wwwroot/images/kolidataset/Koli (251).jpeg",
+                            Name = "Koli (251)"
+                        },
+                        new
+                        {
+                            Id = 252,
+                            Description = "Description for Koli 252",
+                            Image = "wwwroot/images/kolidataset/Koli (252).jpeg",
+                            Name = "Koli (252)"
+                        },
+                        new
+                        {
+                            Id = 253,
+                            Description = "Description for Koli 253",
+                            Image = "wwwroot/images/kolidataset/Koli (253).jpeg",
+                            Name = "Koli (253)"
+                        });
                 });
 
             modelBuilder.Entity("JasmineLeaf.Models.Leaf", b =>

@@ -17,7 +17,7 @@ namespace JasmineLeaf.Controllers
         }
         public IActionResult Index()
         {
-            //generate koli dataset
+            #region generate koli dataset
             //try
             //{
             //    // Generate the dataset
@@ -55,6 +55,7 @@ namespace JasmineLeaf.Controllers
             //{
             //    ViewBag.Message = $"Error: {ex.Message}";
             //}
+            #endregion
 
             var userId = Request.Cookies["UserId"];
             ViewData["UserStatus"] = null;

@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\images\Healthy\**" />
+    <Compile Remove="wwwroot\images\Stage1\**" />
+    <Content Remove="wwwroot\images\Healthy\**" />
+    <Content Remove="wwwroot\images\Stage1\**" />
+    <EmbeddedResource Remove="wwwroot\images\Healthy\**" />
+    <EmbeddedResource Remove="wwwroot\images\Stage1\**" />
+    <None Remove="wwwroot\images\Healthy\**" />
+    <None Remove="wwwroot\images\Stage1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
@@ -19,9 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\Healthy\" />
     <Folder Include="wwwroot\temp\" />
-    <Folder Include="wwwroot\images\Stage1\" />
   </ItemGroup>
 
 </Project>

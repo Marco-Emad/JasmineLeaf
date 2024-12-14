@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.IO.Compression;
+using System.Text.Json;
 
 namespace JasmineLeaf.Controllers
 {
@@ -20,6 +21,57 @@ namespace JasmineLeaf.Controllers
 
         public IActionResult Index()
         {
+            #region generate leafDataset
+            try
+            {
+                // Generate the dataset
+                var leafData = new List<Leaf>();
+                int idCounter = 1;
+
+                foreach (var stage in _stages)
+                {
+                    for (int x = 1; x <= 25; x++) // Number of images per stage
+                    {
+                        for (int y = 1; y <= 8; y++) // Rotations per image
+                        {
+                            leafData.Add(new Leaf
+                            {
+                                Id = idCounter++,
+                                Name = $"{stage}_{x} ({y}).jpg",
+                                Image = $"wwwroot/images/leafdataset/{stage}/{stage}_{x} ({y}).jpg",
+                                Stage = stage,
+                                Description = $"Description for {stage} image {x}, rotation {y}"
+                            });
+                        }
+                    }
+                }
+
+                // Serialize the data to JSON
+                string json = JsonSerializer.Serialize(leafData, new JsonSerializerOptions { WriteIndented = true });
+
+                // Define the file path in wwwroot
+                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "SeedData", "LeafData.json");
+
+                // Ensure the directory exists
+                string directoryPath = Path.GetDirectoryName(filePath);
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                // Write the JSON data to the file
+                System.IO.File.WriteAllText(filePath, json);
+
+                ViewBag.Message = "JSON file created successfully!";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = $"Error: {ex.Message}";
+            }
+            #endregion
+
+
+
             var userId = Request.Cookies["UserId"];
             ViewData["UserStatus"] = null;
             if (!string.IsNullOrEmpty(userId))
@@ -52,7 +104,7 @@ namespace JasmineLeaf.Controllers
                 });
             }
 
-            string stageFolderPath = Path.Combine(_environment.WebRootPath, "images", stage);
+            string stageFolderPath = Path.Combine(_environment.WebRootPath, "images/leafdataset", stage);
 
             if (!Directory.Exists(stageFolderPath))
             {
@@ -107,7 +159,7 @@ namespace JasmineLeaf.Controllers
                 // Add each stage folder directly into the zip archive
                 foreach (var stage in _stages)
                 {
-                    string stageFolderPath = Path.Combine(_environment.WebRootPath, "images", stage);
+                    string stageFolderPath = Path.Combine(_environment.WebRootPath, "images/leafdataset", stage);
 
                     if (Directory.Exists(stageFolderPath))
                     {

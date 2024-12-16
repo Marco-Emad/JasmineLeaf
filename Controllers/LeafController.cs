@@ -172,6 +172,23 @@ namespace JasmineLeaf.Controllers
                         }
                     }
                 }
+
+                // Add each test folder
+                foreach (var stage in _stages)
+                {
+                    string stageFolderPath = Path.Combine(_environment.WebRootPath, "images/leafdataset/Test_Data", stage);
+
+                    if (Directory.Exists(stageFolderPath))
+                    {
+                        // Add each file in the current stage folder to the zip
+                        foreach (var filePath in Directory.GetFiles(stageFolderPath))
+                        {
+                            string fileName = Path.GetFileName(filePath);
+                            string entryName = Path.Combine("Test_Data", stage, fileName); // Organize by folder in zip
+                            zipArchive.CreateEntryFromFile(filePath, entryName);
+                        }
+                    }
+                }
             }
 
             // Read the ZIP file into a byte array to send as a downloadable file

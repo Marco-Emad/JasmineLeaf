@@ -6,10 +6,9 @@ EXPOSE 80
 # Use the SDK image to build the app
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["JasmineLeaf/JasmineLeaf.csproj", "JasmineLeaf/"]
-RUN dotnet restore "JasmineLeaf/JasmineLeaf.csproj"
+COPY ["JasmineLeaf.csproj", "./"]
+RUN dotnet restore "JasmineLeaf.csproj"
 COPY . .
-WORKDIR "/src/JasmineLeaf"
 RUN dotnet build "JasmineLeaf.csproj" -c Release -o /app/build
 
 FROM build AS publish

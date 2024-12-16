@@ -19,9 +19,9 @@ namespace JasmineLeaf.Models
             var Leaves = LoadLeafDataFromJson();
             modelBuilder.Entity<Leaf>().HasData(Leaves);
 
-            // Seed Koli data
-            var Kolis = LoadChickenDataFromJson();
-            modelBuilder.Entity<Koli>().HasData(Kolis);
+            // Seed Bird data
+            var Birds = LoadChickenDataFromJson();
+            modelBuilder.Entity<Koli>().HasData(Birds);
 
             base.OnModelCreating(modelBuilder);
         }
@@ -39,7 +39,7 @@ namespace JasmineLeaf.Models
         }
         private List<Koli> LoadChickenDataFromJson()
         {
-            var jsonFilePath = Path.Combine(AppContext.BaseDirectory, "SeedData", "KoliData.json");
+            var jsonFilePath = Path.Combine(AppContext.BaseDirectory, "SeedData", "BirdData.json");
             var jsonData = File.ReadAllText(jsonFilePath);
             var options = new JsonSerializerOptions
             {

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Koli DataSet";
+    ViewData["Title"] = "Bird DataSet";
 }
 
 <div class="container mt-5">
@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">
-                        Koli DataSet Description here
+                        Bird DataSet Description here
                     </p>
                 </div>
             </div>
@@ -41,31 +41,22 @@
         <!-- Buttons for downloading the stages -->
         <div class="container mt-4">
             <h3>Download All Images At Once</h3>
-            <a asp-controller="Koli" asp-action="DownloadStage" class="btn btn-primary">
+            <a asp-controller="Koli" asp-action="DownloadAllStages" class="btn btn-primary">
                 All Images
             </a>
         </div>
 
-        @* <div class="container mt-4">
+        <div class="container mt-4">
             <h3>or Download Images by Stage</h3>
             <div class="d-flex gap-2">
-                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Healthy" class="btn btn-primary">
-                    Healthy
+                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Original" class="btn btn-primary">
+                    Original Images
                 </a>
-                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage1" class="btn btn-primary">
-                    Stage 1
-                </a>
-                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage2" class="btn btn-primary">
-                    Stage 2
-                </a>
-                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage3" class="btn btn-primary">
-                    Stage 3
-                </a>
-                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Stage4" class="btn btn-primary">
-                    Stage 4
+                <a asp-controller="Koli" asp-action="DownloadStage" asp-route-stage="Blurred" class="btn btn-primary">
+                    Blurred Images
                 </a>
             </div>
-        </div> *@
+        </div>
 
     </div>
 </div>

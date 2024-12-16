@@ -10,6 +10,7 @@ namespace JasmineLeaf.Controllers
     {
         private readonly LeafContext _context;
         private readonly IWebHostEnvironment _environment;
+        private readonly List<string> stages = new List<string> { "Original", "Blurred" };
         public KoliController(IWebHostEnvironment environment, LeafContext context)
         {
             _environment = environment;
@@ -17,44 +18,53 @@ namespace JasmineLeaf.Controllers
         }
         public IActionResult Index()
         {
-            #region generate koli dataset
-            //try
-            //{
-            //    // Generate the dataset
-            //    var koliData = new List<object>();
-            //    for (int i = 1; i <= 253; i++)
-            //    {
-            //        koliData.Add(new
-            //        {
-            //            Id = i,
-            //            Name = $"Koli ({i})",
-            //            Image = $"wwwroot/images/kolidataset/Koli ({i}).jpeg",
-            //            Description = $"Description for Koli {i}"
-            //        });
-            //    }
+            #region generate bird dataset
+            try
+            {
+                // Generate the dataset
+                var birdData = new List<Koli>();
+                int imageCountPerStage = 258; // Distribute images equally among stages
+                int imageCounter = 1;
 
-            //    // Serialize the data to JSON
-            //    string json = JsonSerializer.Serialize(koliData, new JsonSerializerOptions { WriteIndented = true });
+                foreach (var stage in stages)
+                {
+                    for (int i = 1; i <= imageCountPerStage; i++)
+                    {
+                        birdData.Add(new Koli
+                        {
+                            Id = imageCounter,
+                            Name = $"{stage} ({i})",
+                            Stage = stage,
+                            Image = $"wwwroot/images/birddataset/{stage}/{stage} ({i}).jpeg",
+                            Description = $"Description for Bird {stage} {i}"
+                        });
+                        imageCounter++;
+                    }
+                }
 
-            //    // Define the file path in wwwroot
-            //    string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Kolis.json");
+                // Serialize the data to JSON
+                string json = JsonSerializer.Serialize(birdData, new JsonSerializerOptions { WriteIndented = true });
 
-            //    // Ensure the directory exists
-            //    string directoryPath = Path.GetDirectoryName(filePath);
-            //    if (!Directory.Exists(directoryPath))
-            //    {
-            //        Directory.CreateDirectory(directoryPath);
-            //    }
+                // Define the file path in wwwroot
+                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "SeedData", "BirdData.json");
 
-            //    // Write the JSON data to the file
-            //    System.IO.File.WriteAllText(filePath, json);
+                // Ensure the directory exists
+                string directoryPath = Path.GetDirectoryName(filePath);
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
 
-            //    ViewBag.Message = "JSON file created successfully!";
-            //}
-            //catch (Exception ex)
-            //{
-            //    ViewBag.Message = $"Error: {ex.Message}";
-            //}
+                // Write the JSON data to the file
+                System.IO.File.WriteAllText(filePath, json);
+
+                ViewBag.Message = "JSON file created successfully!";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = $"Error: {ex.Message}";
+            }
+
             #endregion
 
             var userId = Request.Cookies["UserId"];
@@ -80,7 +90,7 @@ namespace JasmineLeaf.Controllers
             return true;
         }
 
-        public IActionResult DownloadStage()
+        public IActionResult DownloadStage(string stage)
         {
             if (!IsDownloadAuthorized())
             {
@@ -91,14 +101,14 @@ namespace JasmineLeaf.Controllers
                 });
             }
 
-            string stageFolderPath = Path.Combine(_environment.WebRootPath, "images", "kolidataset");
+            string stageFolderPath = Path.Combine(_environment.WebRootPath, "images/birddataset", stage);
 
             if (!Directory.Exists(stageFolderPath))
             {
                 return NotFound("The specified stage does not exist.");
             }
 
-            string zipPath = Path.Combine(_environment.WebRootPath, "temp", $"Koli_images.zip");
+            string zipPath = Path.Combine(_environment.WebRootPath, "temp", $"{stage}_images.zip");
 
             //if the file already exist delete it
             if (System.IO.File.Exists(zipPath))
@@ -110,7 +120,62 @@ namespace JasmineLeaf.Controllers
 
             byte[] fileBytes = System.IO.File.ReadAllBytes(zipPath);
 
-            return File(fileBytes, "application/zip", $"Koli_images.zip");
+            return File(fileBytes, "application/zip", $"{stage}_images.zip");
+        }
+
+        public IActionResult DownloadAllStages()
+        {
+            if (!IsDownloadAuthorized())
+            {
+                return Json(new
+                {
+                    title = "Access Denied",
+                    message = "you are not authorized to download the dataset, request the admin for permission."
+                });
+            }
+
+            string tempFolderPath = Path.Combine(_environment.WebRootPath, "temp");
+
+            // Ensure the temp folder exists
+            if (!Directory.Exists(tempFolderPath))
+            {
+                Directory.CreateDirectory(tempFolderPath);
+            }
+
+            // Path for the combined zip file
+            string zipPath = Path.Combine(tempFolderPath, "All_Birds_Images.zip");
+
+            // Delete any existing ZIP file with the same name
+            if (System.IO.File.Exists(zipPath))
+            {
+                System.IO.File.Delete(zipPath);
+            }
+
+            // Create the ZIP file
+            using (var zipArchive = ZipFile.Open(zipPath, ZipArchiveMode.Create))
+            {
+                // Add each stage folder directly into the zip archive
+                foreach (var stage in stages)
+                {
+                    string stageFolderPath = Path.Combine(_environment.WebRootPath, "images/birddataset", stage);
+
+                    if (Directory.Exists(stageFolderPath))
+                    {
+                        // Add each file in the current stage folder to the zip
+                        foreach (var filePath in Directory.GetFiles(stageFolderPath))
+                        {
+                            string fileName = Path.GetFileName(filePath);
+                            string entryName = Path.Combine(stage, fileName); // Organize by folder in zip
+                            zipArchive.CreateEntryFromFile(filePath, entryName);
+                        }
+                    }
+                }
+            }
+
+            // Read the ZIP file into a byte array to send as a downloadable file
+            byte[] fileBytes = System.IO.File.ReadAllBytes(zipPath);
+
+            return File(fileBytes, "application/zip", "All_Birds_Images.zip");
         }
     }
 }

@@ -1,0 +1,150 @@
+﻿@{
+    ViewData["Title"] = "Leaf DataSet";
+}
+
+<div class="container mt-5">
+    
+
+        <!-- Card for Data Description -->
+        <div class="col-lg-12 col-md-6 col-sm-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    Data Description
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        The dataset for diseased jasmine leaf images was created in collaboration with experts from Krishi Vigyan Kendra in Karnataka, India. Using digital cameras, a total of 1000 images were captured to document the progression of Alternaria leaf blight spot disease. These images are categorized into four stages of the disease, with 200 images representing stage one, 200 images for stage two, 200 images for stage three, and 200 images for stage four.
+
+                        Alternaria leaf blight spot is a fungal disease commonly affecting jasmine plants in regions with warm, humid climates and extended periods of moisture on the leaves. This disease is caused by the fungal pathogens Alternaria jasmini and Alternaria alternata, which primarily infect the leaves and can significantly impact plant health and flower production. The disease manifests as small, irregular brown spots on the upper surfaces of the leaves, progressing to dark brown or black spots on the underside. As the disease advances, these spots merge to form larger patches, causing the leaves to curl and dry along the edges. In severe cases, young shoots may dry out, and the overall flower yield may be reduced.
+
+                        This dataset, coupled with the detailed understanding of the disease, provides a valuable resource for researchers and agricultural experts to develop more effective disease management strategies and ensure the sustainability of jasmine crop production.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Citations -->
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    Citations
+                </div>
+                <div class="card-body">
+                    <ul class="card-text">
+                        <li>
+                            <a href="https://onlinelibrary.wiley.com/doi/10.1155/2024/5057538" target="_blank" rel="noopener noreferrer">
+                                Shwetha,V., et all."A customer Backbone UNet Framework with DCGAN Augmentation for Efficient Segmentation of Leaf Spot Diseases in Jasmine Plant." Journal of Computer Networks and Communications 2024
+                            </a>
+                        </li>
+                        <br />
+
+                        <li>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2589721724000035" target="_blank" rel="noopener noreferrer">
+                                Shwetha,V., Arnav Bhagwat, and Vijaya Laxmi."LeafSpotNet: A deep learning framework for detecting leaf spot diseases in Jasmine plants."
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Buttons for downloading the stages -->
+        <div class="container mt-4">
+            <h3>Download All Images At Once</h3>
+            <button class="btn btn-primary" onclick="downloadAllStages()">All Images</button>
+        </div>
+
+        <div class="container mt-4">
+            <h3>or Download Images by Stage</h3>
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary" onclick="downloadStage('Healthy')">Healthy</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage1')">Stage 1</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage2')">Stage 2</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage3')">Stage 3</button>
+                <button class="btn btn-primary" onclick="downloadStage('Stage4')">Stage 4</button>
+            </div>
+        </div>
+
+    </div>
+
+
+@section Scripts {
+    <script>
+
+        // download all stages
+        function downloadAllStages() {
+            fetch(`/Leaf/DownloadAllStages`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok && response.headers.get('Content-Type').includes('application/zip')) {
+                        // Trigger file download
+                        return response.blob().then(blob => {
+                            const link = document.createElement('a');
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = `All_Stages_Images.zip`;
+                            link.click();
+                        });
+                    } else {
+                        // Handle JSON response (unauthorized or error messages)
+                        return response.json().then(data => {
+                            // Insert the response message into the modal body
+                            document.getElementById('modalMessage').innerText = data.message;
+                            document.getElementById('modalTitle').innerText = data.title;
+
+                            // Show the modal
+                            $('#responseModal').modal('show');
+                        });
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('modalMessage').innerText = 'An unexpected error occurred. Please try again later.';
+                    document.getElementById('modalTitle').innerText = 'Error';
+                    $('#responseModal').modal('show');
+                    console.error(error);
+                });
+        }
+
+        // download stage
+        function downloadStage(stage) {
+            fetch(`/Leaf/DownloadStage?stage=${stage}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok && response.headers.get('Content-Type').includes('application/zip')) {
+                        // Trigger file download
+                        return response.blob().then(blob => {
+                            const link = document.createElement('a');
+                            link.href = window.URL.createObjectURL(blob);
+                            link.download = `${stage}_images.zip`;
+                            link.click();
+                        });
+                    } else {
+                        // Handle JSON response (unauthorized or error messages)
+                        return response.json().then(data => {
+                            // Insert the response message into the modal body
+                            document.getElementById('modalMessage').innerText = data.message;
+                            document.getElementById('modalTitle').innerText = data.title;
+
+                            // Show the modal
+                            $('#responseModal').modal('show');
+                        });
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('modalMessage').innerText = 'An unexpected error occurred. Please try again later.';
+                    document.getElementById('modalTitle').innerText = 'Error';
+                    $('#responseModal').modal('show');
+                    console.error(error);
+                });
+        }
+
+    </script>
+}

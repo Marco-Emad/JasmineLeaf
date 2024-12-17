@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JasmineLeaf.Migrations
 {
     [DbContext(typeof(LeafContext))]
-    [Migration("20241214134044_leafSeedData")]
-    partial class leafSeedData
+    [Migration("20241217055257_seedData")]
+    partial class seedData
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,10 @@ namespace JasmineLeaf.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Stage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Kolis");
@@ -53,1773 +57,4130 @@ namespace JasmineLeaf.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Description for Koli 1",
-                            Image = "wwwroot/images/kolidataset/Koli (1).jpeg",
-                            Name = "Koli (1)"
+                            Description = "Description for Bird Original 1",
+                            Image = "wwwroot/images/birddataset/Original/Original (1).jpeg",
+                            Name = "Original (1)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Description for Koli 2",
-                            Image = "wwwroot/images/kolidataset/Koli (2).jpeg",
-                            Name = "Koli (2)"
+                            Description = "Description for Bird Original 2",
+                            Image = "wwwroot/images/birddataset/Original/Original (2).jpeg",
+                            Name = "Original (2)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Description for Koli 3",
-                            Image = "wwwroot/images/kolidataset/Koli (3).jpeg",
-                            Name = "Koli (3)"
+                            Description = "Description for Bird Original 3",
+                            Image = "wwwroot/images/birddataset/Original/Original (3).jpeg",
+                            Name = "Original (3)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 4,
-                            Description = "Description for Koli 4",
-                            Image = "wwwroot/images/kolidataset/Koli (4).jpeg",
-                            Name = "Koli (4)"
+                            Description = "Description for Bird Original 4",
+                            Image = "wwwroot/images/birddataset/Original/Original (4).jpeg",
+                            Name = "Original (4)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 5,
-                            Description = "Description for Koli 5",
-                            Image = "wwwroot/images/kolidataset/Koli (5).jpeg",
-                            Name = "Koli (5)"
+                            Description = "Description for Bird Original 5",
+                            Image = "wwwroot/images/birddataset/Original/Original (5).jpeg",
+                            Name = "Original (5)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 6,
-                            Description = "Description for Koli 6",
-                            Image = "wwwroot/images/kolidataset/Koli (6).jpeg",
-                            Name = "Koli (6)"
+                            Description = "Description for Bird Original 6",
+                            Image = "wwwroot/images/birddataset/Original/Original (6).jpeg",
+                            Name = "Original (6)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 7,
-                            Description = "Description for Koli 7",
-                            Image = "wwwroot/images/kolidataset/Koli (7).jpeg",
-                            Name = "Koli (7)"
+                            Description = "Description for Bird Original 7",
+                            Image = "wwwroot/images/birddataset/Original/Original (7).jpeg",
+                            Name = "Original (7)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 8,
-                            Description = "Description for Koli 8",
-                            Image = "wwwroot/images/kolidataset/Koli (8).jpeg",
-                            Name = "Koli (8)"
+                            Description = "Description for Bird Original 8",
+                            Image = "wwwroot/images/birddataset/Original/Original (8).jpeg",
+                            Name = "Original (8)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 9,
-                            Description = "Description for Koli 9",
-                            Image = "wwwroot/images/kolidataset/Koli (9).jpeg",
-                            Name = "Koli (9)"
+                            Description = "Description for Bird Original 9",
+                            Image = "wwwroot/images/birddataset/Original/Original (9).jpeg",
+                            Name = "Original (9)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 10,
-                            Description = "Description for Koli 10",
-                            Image = "wwwroot/images/kolidataset/Koli (10).jpeg",
-                            Name = "Koli (10)"
+                            Description = "Description for Bird Original 10",
+                            Image = "wwwroot/images/birddataset/Original/Original (10).jpeg",
+                            Name = "Original (10)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 11,
-                            Description = "Description for Koli 11",
-                            Image = "wwwroot/images/kolidataset/Koli (11).jpeg",
-                            Name = "Koli (11)"
+                            Description = "Description for Bird Original 11",
+                            Image = "wwwroot/images/birddataset/Original/Original (11).jpeg",
+                            Name = "Original (11)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 12,
-                            Description = "Description for Koli 12",
-                            Image = "wwwroot/images/kolidataset/Koli (12).jpeg",
-                            Name = "Koli (12)"
+                            Description = "Description for Bird Original 12",
+                            Image = "wwwroot/images/birddataset/Original/Original (12).jpeg",
+                            Name = "Original (12)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 13,
-                            Description = "Description for Koli 13",
-                            Image = "wwwroot/images/kolidataset/Koli (13).jpeg",
-                            Name = "Koli (13)"
+                            Description = "Description for Bird Original 13",
+                            Image = "wwwroot/images/birddataset/Original/Original (13).jpeg",
+                            Name = "Original (13)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 14,
-                            Description = "Description for Koli 14",
-                            Image = "wwwroot/images/kolidataset/Koli (14).jpeg",
-                            Name = "Koli (14)"
+                            Description = "Description for Bird Original 14",
+                            Image = "wwwroot/images/birddataset/Original/Original (14).jpeg",
+                            Name = "Original (14)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 15,
-                            Description = "Description for Koli 15",
-                            Image = "wwwroot/images/kolidataset/Koli (15).jpeg",
-                            Name = "Koli (15)"
+                            Description = "Description for Bird Original 15",
+                            Image = "wwwroot/images/birddataset/Original/Original (15).jpeg",
+                            Name = "Original (15)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 16,
-                            Description = "Description for Koli 16",
-                            Image = "wwwroot/images/kolidataset/Koli (16).jpeg",
-                            Name = "Koli (16)"
+                            Description = "Description for Bird Original 16",
+                            Image = "wwwroot/images/birddataset/Original/Original (16).jpeg",
+                            Name = "Original (16)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 17,
-                            Description = "Description for Koli 17",
-                            Image = "wwwroot/images/kolidataset/Koli (17).jpeg",
-                            Name = "Koli (17)"
+                            Description = "Description for Bird Original 17",
+                            Image = "wwwroot/images/birddataset/Original/Original (17).jpeg",
+                            Name = "Original (17)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 18,
-                            Description = "Description for Koli 18",
-                            Image = "wwwroot/images/kolidataset/Koli (18).jpeg",
-                            Name = "Koli (18)"
+                            Description = "Description for Bird Original 18",
+                            Image = "wwwroot/images/birddataset/Original/Original (18).jpeg",
+                            Name = "Original (18)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 19,
-                            Description = "Description for Koli 19",
-                            Image = "wwwroot/images/kolidataset/Koli (19).jpeg",
-                            Name = "Koli (19)"
+                            Description = "Description for Bird Original 19",
+                            Image = "wwwroot/images/birddataset/Original/Original (19).jpeg",
+                            Name = "Original (19)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 20,
-                            Description = "Description for Koli 20",
-                            Image = "wwwroot/images/kolidataset/Koli (20).jpeg",
-                            Name = "Koli (20)"
+                            Description = "Description for Bird Original 20",
+                            Image = "wwwroot/images/birddataset/Original/Original (20).jpeg",
+                            Name = "Original (20)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 21,
-                            Description = "Description for Koli 21",
-                            Image = "wwwroot/images/kolidataset/Koli (21).jpeg",
-                            Name = "Koli (21)"
+                            Description = "Description for Bird Original 21",
+                            Image = "wwwroot/images/birddataset/Original/Original (21).jpeg",
+                            Name = "Original (21)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 22,
-                            Description = "Description for Koli 22",
-                            Image = "wwwroot/images/kolidataset/Koli (22).jpeg",
-                            Name = "Koli (22)"
+                            Description = "Description for Bird Original 22",
+                            Image = "wwwroot/images/birddataset/Original/Original (22).jpeg",
+                            Name = "Original (22)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 23,
-                            Description = "Description for Koli 23",
-                            Image = "wwwroot/images/kolidataset/Koli (23).jpeg",
-                            Name = "Koli (23)"
+                            Description = "Description for Bird Original 23",
+                            Image = "wwwroot/images/birddataset/Original/Original (23).jpeg",
+                            Name = "Original (23)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 24,
-                            Description = "Description for Koli 24",
-                            Image = "wwwroot/images/kolidataset/Koli (24).jpeg",
-                            Name = "Koli (24)"
+                            Description = "Description for Bird Original 24",
+                            Image = "wwwroot/images/birddataset/Original/Original (24).jpeg",
+                            Name = "Original (24)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 25,
-                            Description = "Description for Koli 25",
-                            Image = "wwwroot/images/kolidataset/Koli (25).jpeg",
-                            Name = "Koli (25)"
+                            Description = "Description for Bird Original 25",
+                            Image = "wwwroot/images/birddataset/Original/Original (25).jpeg",
+                            Name = "Original (25)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 26,
-                            Description = "Description for Koli 26",
-                            Image = "wwwroot/images/kolidataset/Koli (26).jpeg",
-                            Name = "Koli (26)"
+                            Description = "Description for Bird Original 26",
+                            Image = "wwwroot/images/birddataset/Original/Original (26).jpeg",
+                            Name = "Original (26)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 27,
-                            Description = "Description for Koli 27",
-                            Image = "wwwroot/images/kolidataset/Koli (27).jpeg",
-                            Name = "Koli (27)"
+                            Description = "Description for Bird Original 27",
+                            Image = "wwwroot/images/birddataset/Original/Original (27).jpeg",
+                            Name = "Original (27)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 28,
-                            Description = "Description for Koli 28",
-                            Image = "wwwroot/images/kolidataset/Koli (28).jpeg",
-                            Name = "Koli (28)"
+                            Description = "Description for Bird Original 28",
+                            Image = "wwwroot/images/birddataset/Original/Original (28).jpeg",
+                            Name = "Original (28)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 29,
-                            Description = "Description for Koli 29",
-                            Image = "wwwroot/images/kolidataset/Koli (29).jpeg",
-                            Name = "Koli (29)"
+                            Description = "Description for Bird Original 29",
+                            Image = "wwwroot/images/birddataset/Original/Original (29).jpeg",
+                            Name = "Original (29)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 30,
-                            Description = "Description for Koli 30",
-                            Image = "wwwroot/images/kolidataset/Koli (30).jpeg",
-                            Name = "Koli (30)"
+                            Description = "Description for Bird Original 30",
+                            Image = "wwwroot/images/birddataset/Original/Original (30).jpeg",
+                            Name = "Original (30)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 31,
-                            Description = "Description for Koli 31",
-                            Image = "wwwroot/images/kolidataset/Koli (31).jpeg",
-                            Name = "Koli (31)"
+                            Description = "Description for Bird Original 31",
+                            Image = "wwwroot/images/birddataset/Original/Original (31).jpeg",
+                            Name = "Original (31)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 32,
-                            Description = "Description for Koli 32",
-                            Image = "wwwroot/images/kolidataset/Koli (32).jpeg",
-                            Name = "Koli (32)"
+                            Description = "Description for Bird Original 32",
+                            Image = "wwwroot/images/birddataset/Original/Original (32).jpeg",
+                            Name = "Original (32)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 33,
-                            Description = "Description for Koli 33",
-                            Image = "wwwroot/images/kolidataset/Koli (33).jpeg",
-                            Name = "Koli (33)"
+                            Description = "Description for Bird Original 33",
+                            Image = "wwwroot/images/birddataset/Original/Original (33).jpeg",
+                            Name = "Original (33)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 34,
-                            Description = "Description for Koli 34",
-                            Image = "wwwroot/images/kolidataset/Koli (34).jpeg",
-                            Name = "Koli (34)"
+                            Description = "Description for Bird Original 34",
+                            Image = "wwwroot/images/birddataset/Original/Original (34).jpeg",
+                            Name = "Original (34)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 35,
-                            Description = "Description for Koli 35",
-                            Image = "wwwroot/images/kolidataset/Koli (35).jpeg",
-                            Name = "Koli (35)"
+                            Description = "Description for Bird Original 35",
+                            Image = "wwwroot/images/birddataset/Original/Original (35).jpeg",
+                            Name = "Original (35)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 36,
-                            Description = "Description for Koli 36",
-                            Image = "wwwroot/images/kolidataset/Koli (36).jpeg",
-                            Name = "Koli (36)"
+                            Description = "Description for Bird Original 36",
+                            Image = "wwwroot/images/birddataset/Original/Original (36).jpeg",
+                            Name = "Original (36)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 37,
-                            Description = "Description for Koli 37",
-                            Image = "wwwroot/images/kolidataset/Koli (37).jpeg",
-                            Name = "Koli (37)"
+                            Description = "Description for Bird Original 37",
+                            Image = "wwwroot/images/birddataset/Original/Original (37).jpeg",
+                            Name = "Original (37)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 38,
-                            Description = "Description for Koli 38",
-                            Image = "wwwroot/images/kolidataset/Koli (38).jpeg",
-                            Name = "Koli (38)"
+                            Description = "Description for Bird Original 38",
+                            Image = "wwwroot/images/birddataset/Original/Original (38).jpeg",
+                            Name = "Original (38)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 39,
-                            Description = "Description for Koli 39",
-                            Image = "wwwroot/images/kolidataset/Koli (39).jpeg",
-                            Name = "Koli (39)"
+                            Description = "Description for Bird Original 39",
+                            Image = "wwwroot/images/birddataset/Original/Original (39).jpeg",
+                            Name = "Original (39)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 40,
-                            Description = "Description for Koli 40",
-                            Image = "wwwroot/images/kolidataset/Koli (40).jpeg",
-                            Name = "Koli (40)"
+                            Description = "Description for Bird Original 40",
+                            Image = "wwwroot/images/birddataset/Original/Original (40).jpeg",
+                            Name = "Original (40)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 41,
-                            Description = "Description for Koli 41",
-                            Image = "wwwroot/images/kolidataset/Koli (41).jpeg",
-                            Name = "Koli (41)"
+                            Description = "Description for Bird Original 41",
+                            Image = "wwwroot/images/birddataset/Original/Original (41).jpeg",
+                            Name = "Original (41)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 42,
-                            Description = "Description for Koli 42",
-                            Image = "wwwroot/images/kolidataset/Koli (42).jpeg",
-                            Name = "Koli (42)"
+                            Description = "Description for Bird Original 42",
+                            Image = "wwwroot/images/birddataset/Original/Original (42).jpeg",
+                            Name = "Original (42)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 43,
-                            Description = "Description for Koli 43",
-                            Image = "wwwroot/images/kolidataset/Koli (43).jpeg",
-                            Name = "Koli (43)"
+                            Description = "Description for Bird Original 43",
+                            Image = "wwwroot/images/birddataset/Original/Original (43).jpeg",
+                            Name = "Original (43)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 44,
-                            Description = "Description for Koli 44",
-                            Image = "wwwroot/images/kolidataset/Koli (44).jpeg",
-                            Name = "Koli (44)"
+                            Description = "Description for Bird Original 44",
+                            Image = "wwwroot/images/birddataset/Original/Original (44).jpeg",
+                            Name = "Original (44)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 45,
-                            Description = "Description for Koli 45",
-                            Image = "wwwroot/images/kolidataset/Koli (45).jpeg",
-                            Name = "Koli (45)"
+                            Description = "Description for Bird Original 45",
+                            Image = "wwwroot/images/birddataset/Original/Original (45).jpeg",
+                            Name = "Original (45)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 46,
-                            Description = "Description for Koli 46",
-                            Image = "wwwroot/images/kolidataset/Koli (46).jpeg",
-                            Name = "Koli (46)"
+                            Description = "Description for Bird Original 46",
+                            Image = "wwwroot/images/birddataset/Original/Original (46).jpeg",
+                            Name = "Original (46)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 47,
-                            Description = "Description for Koli 47",
-                            Image = "wwwroot/images/kolidataset/Koli (47).jpeg",
-                            Name = "Koli (47)"
+                            Description = "Description for Bird Original 47",
+                            Image = "wwwroot/images/birddataset/Original/Original (47).jpeg",
+                            Name = "Original (47)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 48,
-                            Description = "Description for Koli 48",
-                            Image = "wwwroot/images/kolidataset/Koli (48).jpeg",
-                            Name = "Koli (48)"
+                            Description = "Description for Bird Original 48",
+                            Image = "wwwroot/images/birddataset/Original/Original (48).jpeg",
+                            Name = "Original (48)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 49,
-                            Description = "Description for Koli 49",
-                            Image = "wwwroot/images/kolidataset/Koli (49).jpeg",
-                            Name = "Koli (49)"
+                            Description = "Description for Bird Original 49",
+                            Image = "wwwroot/images/birddataset/Original/Original (49).jpeg",
+                            Name = "Original (49)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 50,
-                            Description = "Description for Koli 50",
-                            Image = "wwwroot/images/kolidataset/Koli (50).jpeg",
-                            Name = "Koli (50)"
+                            Description = "Description for Bird Original 50",
+                            Image = "wwwroot/images/birddataset/Original/Original (50).jpeg",
+                            Name = "Original (50)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 51,
-                            Description = "Description for Koli 51",
-                            Image = "wwwroot/images/kolidataset/Koli (51).jpeg",
-                            Name = "Koli (51)"
+                            Description = "Description for Bird Original 51",
+                            Image = "wwwroot/images/birddataset/Original/Original (51).jpeg",
+                            Name = "Original (51)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 52,
-                            Description = "Description for Koli 52",
-                            Image = "wwwroot/images/kolidataset/Koli (52).jpeg",
-                            Name = "Koli (52)"
+                            Description = "Description for Bird Original 52",
+                            Image = "wwwroot/images/birddataset/Original/Original (52).jpeg",
+                            Name = "Original (52)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 53,
-                            Description = "Description for Koli 53",
-                            Image = "wwwroot/images/kolidataset/Koli (53).jpeg",
-                            Name = "Koli (53)"
+                            Description = "Description for Bird Original 53",
+                            Image = "wwwroot/images/birddataset/Original/Original (53).jpeg",
+                            Name = "Original (53)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 54,
-                            Description = "Description for Koli 54",
-                            Image = "wwwroot/images/kolidataset/Koli (54).jpeg",
-                            Name = "Koli (54)"
+                            Description = "Description for Bird Original 54",
+                            Image = "wwwroot/images/birddataset/Original/Original (54).jpeg",
+                            Name = "Original (54)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 55,
-                            Description = "Description for Koli 55",
-                            Image = "wwwroot/images/kolidataset/Koli (55).jpeg",
-                            Name = "Koli (55)"
+                            Description = "Description for Bird Original 55",
+                            Image = "wwwroot/images/birddataset/Original/Original (55).jpeg",
+                            Name = "Original (55)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 56,
-                            Description = "Description for Koli 56",
-                            Image = "wwwroot/images/kolidataset/Koli (56).jpeg",
-                            Name = "Koli (56)"
+                            Description = "Description for Bird Original 56",
+                            Image = "wwwroot/images/birddataset/Original/Original (56).jpeg",
+                            Name = "Original (56)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 57,
-                            Description = "Description for Koli 57",
-                            Image = "wwwroot/images/kolidataset/Koli (57).jpeg",
-                            Name = "Koli (57)"
+                            Description = "Description for Bird Original 57",
+                            Image = "wwwroot/images/birddataset/Original/Original (57).jpeg",
+                            Name = "Original (57)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 58,
-                            Description = "Description for Koli 58",
-                            Image = "wwwroot/images/kolidataset/Koli (58).jpeg",
-                            Name = "Koli (58)"
+                            Description = "Description for Bird Original 58",
+                            Image = "wwwroot/images/birddataset/Original/Original (58).jpeg",
+                            Name = "Original (58)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 59,
-                            Description = "Description for Koli 59",
-                            Image = "wwwroot/images/kolidataset/Koli (59).jpeg",
-                            Name = "Koli (59)"
+                            Description = "Description for Bird Original 59",
+                            Image = "wwwroot/images/birddataset/Original/Original (59).jpeg",
+                            Name = "Original (59)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 60,
-                            Description = "Description for Koli 60",
-                            Image = "wwwroot/images/kolidataset/Koli (60).jpeg",
-                            Name = "Koli (60)"
+                            Description = "Description for Bird Original 60",
+                            Image = "wwwroot/images/birddataset/Original/Original (60).jpeg",
+                            Name = "Original (60)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 61,
-                            Description = "Description for Koli 61",
-                            Image = "wwwroot/images/kolidataset/Koli (61).jpeg",
-                            Name = "Koli (61)"
+                            Description = "Description for Bird Original 61",
+                            Image = "wwwroot/images/birddataset/Original/Original (61).jpeg",
+                            Name = "Original (61)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 62,
-                            Description = "Description for Koli 62",
-                            Image = "wwwroot/images/kolidataset/Koli (62).jpeg",
-                            Name = "Koli (62)"
+                            Description = "Description for Bird Original 62",
+                            Image = "wwwroot/images/birddataset/Original/Original (62).jpeg",
+                            Name = "Original (62)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 63,
-                            Description = "Description for Koli 63",
-                            Image = "wwwroot/images/kolidataset/Koli (63).jpeg",
-                            Name = "Koli (63)"
+                            Description = "Description for Bird Original 63",
+                            Image = "wwwroot/images/birddataset/Original/Original (63).jpeg",
+                            Name = "Original (63)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 64,
-                            Description = "Description for Koli 64",
-                            Image = "wwwroot/images/kolidataset/Koli (64).jpeg",
-                            Name = "Koli (64)"
+                            Description = "Description for Bird Original 64",
+                            Image = "wwwroot/images/birddataset/Original/Original (64).jpeg",
+                            Name = "Original (64)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 65,
-                            Description = "Description for Koli 65",
-                            Image = "wwwroot/images/kolidataset/Koli (65).jpeg",
-                            Name = "Koli (65)"
+                            Description = "Description for Bird Original 65",
+                            Image = "wwwroot/images/birddataset/Original/Original (65).jpeg",
+                            Name = "Original (65)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 66,
-                            Description = "Description for Koli 66",
-                            Image = "wwwroot/images/kolidataset/Koli (66).jpeg",
-                            Name = "Koli (66)"
+                            Description = "Description for Bird Original 66",
+                            Image = "wwwroot/images/birddataset/Original/Original (66).jpeg",
+                            Name = "Original (66)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 67,
-                            Description = "Description for Koli 67",
-                            Image = "wwwroot/images/kolidataset/Koli (67).jpeg",
-                            Name = "Koli (67)"
+                            Description = "Description for Bird Original 67",
+                            Image = "wwwroot/images/birddataset/Original/Original (67).jpeg",
+                            Name = "Original (67)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 68,
-                            Description = "Description for Koli 68",
-                            Image = "wwwroot/images/kolidataset/Koli (68).jpeg",
-                            Name = "Koli (68)"
+                            Description = "Description for Bird Original 68",
+                            Image = "wwwroot/images/birddataset/Original/Original (68).jpeg",
+                            Name = "Original (68)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 69,
-                            Description = "Description for Koli 69",
-                            Image = "wwwroot/images/kolidataset/Koli (69).jpeg",
-                            Name = "Koli (69)"
+                            Description = "Description for Bird Original 69",
+                            Image = "wwwroot/images/birddataset/Original/Original (69).jpeg",
+                            Name = "Original (69)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 70,
-                            Description = "Description for Koli 70",
-                            Image = "wwwroot/images/kolidataset/Koli (70).jpeg",
-                            Name = "Koli (70)"
+                            Description = "Description for Bird Original 70",
+                            Image = "wwwroot/images/birddataset/Original/Original (70).jpeg",
+                            Name = "Original (70)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 71,
-                            Description = "Description for Koli 71",
-                            Image = "wwwroot/images/kolidataset/Koli (71).jpeg",
-                            Name = "Koli (71)"
+                            Description = "Description for Bird Original 71",
+                            Image = "wwwroot/images/birddataset/Original/Original (71).jpeg",
+                            Name = "Original (71)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 72,
-                            Description = "Description for Koli 72",
-                            Image = "wwwroot/images/kolidataset/Koli (72).jpeg",
-                            Name = "Koli (72)"
+                            Description = "Description for Bird Original 72",
+                            Image = "wwwroot/images/birddataset/Original/Original (72).jpeg",
+                            Name = "Original (72)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 73,
-                            Description = "Description for Koli 73",
-                            Image = "wwwroot/images/kolidataset/Koli (73).jpeg",
-                            Name = "Koli (73)"
+                            Description = "Description for Bird Original 73",
+                            Image = "wwwroot/images/birddataset/Original/Original (73).jpeg",
+                            Name = "Original (73)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 74,
-                            Description = "Description for Koli 74",
-                            Image = "wwwroot/images/kolidataset/Koli (74).jpeg",
-                            Name = "Koli (74)"
+                            Description = "Description for Bird Original 74",
+                            Image = "wwwroot/images/birddataset/Original/Original (74).jpeg",
+                            Name = "Original (74)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 75,
-                            Description = "Description for Koli 75",
-                            Image = "wwwroot/images/kolidataset/Koli (75).jpeg",
-                            Name = "Koli (75)"
+                            Description = "Description for Bird Original 75",
+                            Image = "wwwroot/images/birddataset/Original/Original (75).jpeg",
+                            Name = "Original (75)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 76,
-                            Description = "Description for Koli 76",
-                            Image = "wwwroot/images/kolidataset/Koli (76).jpeg",
-                            Name = "Koli (76)"
+                            Description = "Description for Bird Original 76",
+                            Image = "wwwroot/images/birddataset/Original/Original (76).jpeg",
+                            Name = "Original (76)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 77,
-                            Description = "Description for Koli 77",
-                            Image = "wwwroot/images/kolidataset/Koli (77).jpeg",
-                            Name = "Koli (77)"
+                            Description = "Description for Bird Original 77",
+                            Image = "wwwroot/images/birddataset/Original/Original (77).jpeg",
+                            Name = "Original (77)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 78,
-                            Description = "Description for Koli 78",
-                            Image = "wwwroot/images/kolidataset/Koli (78).jpeg",
-                            Name = "Koli (78)"
+                            Description = "Description for Bird Original 78",
+                            Image = "wwwroot/images/birddataset/Original/Original (78).jpeg",
+                            Name = "Original (78)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 79,
-                            Description = "Description for Koli 79",
-                            Image = "wwwroot/images/kolidataset/Koli (79).jpeg",
-                            Name = "Koli (79)"
+                            Description = "Description for Bird Original 79",
+                            Image = "wwwroot/images/birddataset/Original/Original (79).jpeg",
+                            Name = "Original (79)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 80,
-                            Description = "Description for Koli 80",
-                            Image = "wwwroot/images/kolidataset/Koli (80).jpeg",
-                            Name = "Koli (80)"
+                            Description = "Description for Bird Original 80",
+                            Image = "wwwroot/images/birddataset/Original/Original (80).jpeg",
+                            Name = "Original (80)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 81,
-                            Description = "Description for Koli 81",
-                            Image = "wwwroot/images/kolidataset/Koli (81).jpeg",
-                            Name = "Koli (81)"
+                            Description = "Description for Bird Original 81",
+                            Image = "wwwroot/images/birddataset/Original/Original (81).jpeg",
+                            Name = "Original (81)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 82,
-                            Description = "Description for Koli 82",
-                            Image = "wwwroot/images/kolidataset/Koli (82).jpeg",
-                            Name = "Koli (82)"
+                            Description = "Description for Bird Original 82",
+                            Image = "wwwroot/images/birddataset/Original/Original (82).jpeg",
+                            Name = "Original (82)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 83,
-                            Description = "Description for Koli 83",
-                            Image = "wwwroot/images/kolidataset/Koli (83).jpeg",
-                            Name = "Koli (83)"
+                            Description = "Description for Bird Original 83",
+                            Image = "wwwroot/images/birddataset/Original/Original (83).jpeg",
+                            Name = "Original (83)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 84,
-                            Description = "Description for Koli 84",
-                            Image = "wwwroot/images/kolidataset/Koli (84).jpeg",
-                            Name = "Koli (84)"
+                            Description = "Description for Bird Original 84",
+                            Image = "wwwroot/images/birddataset/Original/Original (84).jpeg",
+                            Name = "Original (84)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 85,
-                            Description = "Description for Koli 85",
-                            Image = "wwwroot/images/kolidataset/Koli (85).jpeg",
-                            Name = "Koli (85)"
+                            Description = "Description for Bird Original 85",
+                            Image = "wwwroot/images/birddataset/Original/Original (85).jpeg",
+                            Name = "Original (85)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 86,
-                            Description = "Description for Koli 86",
-                            Image = "wwwroot/images/kolidataset/Koli (86).jpeg",
-                            Name = "Koli (86)"
+                            Description = "Description for Bird Original 86",
+                            Image = "wwwroot/images/birddataset/Original/Original (86).jpeg",
+                            Name = "Original (86)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 87,
-                            Description = "Description for Koli 87",
-                            Image = "wwwroot/images/kolidataset/Koli (87).jpeg",
-                            Name = "Koli (87)"
+                            Description = "Description for Bird Original 87",
+                            Image = "wwwroot/images/birddataset/Original/Original (87).jpeg",
+                            Name = "Original (87)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 88,
-                            Description = "Description for Koli 88",
-                            Image = "wwwroot/images/kolidataset/Koli (88).jpeg",
-                            Name = "Koli (88)"
+                            Description = "Description for Bird Original 88",
+                            Image = "wwwroot/images/birddataset/Original/Original (88).jpeg",
+                            Name = "Original (88)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 89,
-                            Description = "Description for Koli 89",
-                            Image = "wwwroot/images/kolidataset/Koli (89).jpeg",
-                            Name = "Koli (89)"
+                            Description = "Description for Bird Original 89",
+                            Image = "wwwroot/images/birddataset/Original/Original (89).jpeg",
+                            Name = "Original (89)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 90,
-                            Description = "Description for Koli 90",
-                            Image = "wwwroot/images/kolidataset/Koli (90).jpeg",
-                            Name = "Koli (90)"
+                            Description = "Description for Bird Original 90",
+                            Image = "wwwroot/images/birddataset/Original/Original (90).jpeg",
+                            Name = "Original (90)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 91,
-                            Description = "Description for Koli 91",
-                            Image = "wwwroot/images/kolidataset/Koli (91).jpeg",
-                            Name = "Koli (91)"
+                            Description = "Description for Bird Original 91",
+                            Image = "wwwroot/images/birddataset/Original/Original (91).jpeg",
+                            Name = "Original (91)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 92,
-                            Description = "Description for Koli 92",
-                            Image = "wwwroot/images/kolidataset/Koli (92).jpeg",
-                            Name = "Koli (92)"
+                            Description = "Description for Bird Original 92",
+                            Image = "wwwroot/images/birddataset/Original/Original (92).jpeg",
+                            Name = "Original (92)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 93,
-                            Description = "Description for Koli 93",
-                            Image = "wwwroot/images/kolidataset/Koli (93).jpeg",
-                            Name = "Koli (93)"
+                            Description = "Description for Bird Original 93",
+                            Image = "wwwroot/images/birddataset/Original/Original (93).jpeg",
+                            Name = "Original (93)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 94,
-                            Description = "Description for Koli 94",
-                            Image = "wwwroot/images/kolidataset/Koli (94).jpeg",
-                            Name = "Koli (94)"
+                            Description = "Description for Bird Original 94",
+                            Image = "wwwroot/images/birddataset/Original/Original (94).jpeg",
+                            Name = "Original (94)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 95,
-                            Description = "Description for Koli 95",
-                            Image = "wwwroot/images/kolidataset/Koli (95).jpeg",
-                            Name = "Koli (95)"
+                            Description = "Description for Bird Original 95",
+                            Image = "wwwroot/images/birddataset/Original/Original (95).jpeg",
+                            Name = "Original (95)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 96,
-                            Description = "Description for Koli 96",
-                            Image = "wwwroot/images/kolidataset/Koli (96).jpeg",
-                            Name = "Koli (96)"
+                            Description = "Description for Bird Original 96",
+                            Image = "wwwroot/images/birddataset/Original/Original (96).jpeg",
+                            Name = "Original (96)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 97,
-                            Description = "Description for Koli 97",
-                            Image = "wwwroot/images/kolidataset/Koli (97).jpeg",
-                            Name = "Koli (97)"
+                            Description = "Description for Bird Original 97",
+                            Image = "wwwroot/images/birddataset/Original/Original (97).jpeg",
+                            Name = "Original (97)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 98,
-                            Description = "Description for Koli 98",
-                            Image = "wwwroot/images/kolidataset/Koli (98).jpeg",
-                            Name = "Koli (98)"
+                            Description = "Description for Bird Original 98",
+                            Image = "wwwroot/images/birddataset/Original/Original (98).jpeg",
+                            Name = "Original (98)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 99,
-                            Description = "Description for Koli 99",
-                            Image = "wwwroot/images/kolidataset/Koli (99).jpeg",
-                            Name = "Koli (99)"
+                            Description = "Description for Bird Original 99",
+                            Image = "wwwroot/images/birddataset/Original/Original (99).jpeg",
+                            Name = "Original (99)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 100,
-                            Description = "Description for Koli 100",
-                            Image = "wwwroot/images/kolidataset/Koli (100).jpeg",
-                            Name = "Koli (100)"
+                            Description = "Description for Bird Original 100",
+                            Image = "wwwroot/images/birddataset/Original/Original (100).jpeg",
+                            Name = "Original (100)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 101,
-                            Description = "Description for Koli 101",
-                            Image = "wwwroot/images/kolidataset/Koli (101).jpeg",
-                            Name = "Koli (101)"
+                            Description = "Description for Bird Original 101",
+                            Image = "wwwroot/images/birddataset/Original/Original (101).jpeg",
+                            Name = "Original (101)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 102,
-                            Description = "Description for Koli 102",
-                            Image = "wwwroot/images/kolidataset/Koli (102).jpeg",
-                            Name = "Koli (102)"
+                            Description = "Description for Bird Original 102",
+                            Image = "wwwroot/images/birddataset/Original/Original (102).jpeg",
+                            Name = "Original (102)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 103,
-                            Description = "Description for Koli 103",
-                            Image = "wwwroot/images/kolidataset/Koli (103).jpeg",
-                            Name = "Koli (103)"
+                            Description = "Description for Bird Original 103",
+                            Image = "wwwroot/images/birddataset/Original/Original (103).jpeg",
+                            Name = "Original (103)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 104,
-                            Description = "Description for Koli 104",
-                            Image = "wwwroot/images/kolidataset/Koli (104).jpeg",
-                            Name = "Koli (104)"
+                            Description = "Description for Bird Original 104",
+                            Image = "wwwroot/images/birddataset/Original/Original (104).jpeg",
+                            Name = "Original (104)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 105,
-                            Description = "Description for Koli 105",
-                            Image = "wwwroot/images/kolidataset/Koli (105).jpeg",
-                            Name = "Koli (105)"
+                            Description = "Description for Bird Original 105",
+                            Image = "wwwroot/images/birddataset/Original/Original (105).jpeg",
+                            Name = "Original (105)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 106,
-                            Description = "Description for Koli 106",
-                            Image = "wwwroot/images/kolidataset/Koli (106).jpeg",
-                            Name = "Koli (106)"
+                            Description = "Description for Bird Original 106",
+                            Image = "wwwroot/images/birddataset/Original/Original (106).jpeg",
+                            Name = "Original (106)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 107,
-                            Description = "Description for Koli 107",
-                            Image = "wwwroot/images/kolidataset/Koli (107).jpeg",
-                            Name = "Koli (107)"
+                            Description = "Description for Bird Original 107",
+                            Image = "wwwroot/images/birddataset/Original/Original (107).jpeg",
+                            Name = "Original (107)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 108,
-                            Description = "Description for Koli 108",
-                            Image = "wwwroot/images/kolidataset/Koli (108).jpeg",
-                            Name = "Koli (108)"
+                            Description = "Description for Bird Original 108",
+                            Image = "wwwroot/images/birddataset/Original/Original (108).jpeg",
+                            Name = "Original (108)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 109,
-                            Description = "Description for Koli 109",
-                            Image = "wwwroot/images/kolidataset/Koli (109).jpeg",
-                            Name = "Koli (109)"
+                            Description = "Description for Bird Original 109",
+                            Image = "wwwroot/images/birddataset/Original/Original (109).jpeg",
+                            Name = "Original (109)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 110,
-                            Description = "Description for Koli 110",
-                            Image = "wwwroot/images/kolidataset/Koli (110).jpeg",
-                            Name = "Koli (110)"
+                            Description = "Description for Bird Original 110",
+                            Image = "wwwroot/images/birddataset/Original/Original (110).jpeg",
+                            Name = "Original (110)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 111,
-                            Description = "Description for Koli 111",
-                            Image = "wwwroot/images/kolidataset/Koli (111).jpeg",
-                            Name = "Koli (111)"
+                            Description = "Description for Bird Original 111",
+                            Image = "wwwroot/images/birddataset/Original/Original (111).jpeg",
+                            Name = "Original (111)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 112,
-                            Description = "Description for Koli 112",
-                            Image = "wwwroot/images/kolidataset/Koli (112).jpeg",
-                            Name = "Koli (112)"
+                            Description = "Description for Bird Original 112",
+                            Image = "wwwroot/images/birddataset/Original/Original (112).jpeg",
+                            Name = "Original (112)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 113,
-                            Description = "Description for Koli 113",
-                            Image = "wwwroot/images/kolidataset/Koli (113).jpeg",
-                            Name = "Koli (113)"
+                            Description = "Description for Bird Original 113",
+                            Image = "wwwroot/images/birddataset/Original/Original (113).jpeg",
+                            Name = "Original (113)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 114,
-                            Description = "Description for Koli 114",
-                            Image = "wwwroot/images/kolidataset/Koli (114).jpeg",
-                            Name = "Koli (114)"
+                            Description = "Description for Bird Original 114",
+                            Image = "wwwroot/images/birddataset/Original/Original (114).jpeg",
+                            Name = "Original (114)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 115,
-                            Description = "Description for Koli 115",
-                            Image = "wwwroot/images/kolidataset/Koli (115).jpeg",
-                            Name = "Koli (115)"
+                            Description = "Description for Bird Original 115",
+                            Image = "wwwroot/images/birddataset/Original/Original (115).jpeg",
+                            Name = "Original (115)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 116,
-                            Description = "Description for Koli 116",
-                            Image = "wwwroot/images/kolidataset/Koli (116).jpeg",
-                            Name = "Koli (116)"
+                            Description = "Description for Bird Original 116",
+                            Image = "wwwroot/images/birddataset/Original/Original (116).jpeg",
+                            Name = "Original (116)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 117,
-                            Description = "Description for Koli 117",
-                            Image = "wwwroot/images/kolidataset/Koli (117).jpeg",
-                            Name = "Koli (117)"
+                            Description = "Description for Bird Original 117",
+                            Image = "wwwroot/images/birddataset/Original/Original (117).jpeg",
+                            Name = "Original (117)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 118,
-                            Description = "Description for Koli 118",
-                            Image = "wwwroot/images/kolidataset/Koli (118).jpeg",
-                            Name = "Koli (118)"
+                            Description = "Description for Bird Original 118",
+                            Image = "wwwroot/images/birddataset/Original/Original (118).jpeg",
+                            Name = "Original (118)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 119,
-                            Description = "Description for Koli 119",
-                            Image = "wwwroot/images/kolidataset/Koli (119).jpeg",
-                            Name = "Koli (119)"
+                            Description = "Description for Bird Original 119",
+                            Image = "wwwroot/images/birddataset/Original/Original (119).jpeg",
+                            Name = "Original (119)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 120,
-                            Description = "Description for Koli 120",
-                            Image = "wwwroot/images/kolidataset/Koli (120).jpeg",
-                            Name = "Koli (120)"
+                            Description = "Description for Bird Original 120",
+                            Image = "wwwroot/images/birddataset/Original/Original (120).jpeg",
+                            Name = "Original (120)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 121,
-                            Description = "Description for Koli 121",
-                            Image = "wwwroot/images/kolidataset/Koli (121).jpeg",
-                            Name = "Koli (121)"
+                            Description = "Description for Bird Original 121",
+                            Image = "wwwroot/images/birddataset/Original/Original (121).jpeg",
+                            Name = "Original (121)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 122,
-                            Description = "Description for Koli 122",
-                            Image = "wwwroot/images/kolidataset/Koli (122).jpeg",
-                            Name = "Koli (122)"
+                            Description = "Description for Bird Original 122",
+                            Image = "wwwroot/images/birddataset/Original/Original (122).jpeg",
+                            Name = "Original (122)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 123,
-                            Description = "Description for Koli 123",
-                            Image = "wwwroot/images/kolidataset/Koli (123).jpeg",
-                            Name = "Koli (123)"
+                            Description = "Description for Bird Original 123",
+                            Image = "wwwroot/images/birddataset/Original/Original (123).jpeg",
+                            Name = "Original (123)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 124,
-                            Description = "Description for Koli 124",
-                            Image = "wwwroot/images/kolidataset/Koli (124).jpeg",
-                            Name = "Koli (124)"
+                            Description = "Description for Bird Original 124",
+                            Image = "wwwroot/images/birddataset/Original/Original (124).jpeg",
+                            Name = "Original (124)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 125,
-                            Description = "Description for Koli 125",
-                            Image = "wwwroot/images/kolidataset/Koli (125).jpeg",
-                            Name = "Koli (125)"
+                            Description = "Description for Bird Original 125",
+                            Image = "wwwroot/images/birddataset/Original/Original (125).jpeg",
+                            Name = "Original (125)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 126,
-                            Description = "Description for Koli 126",
-                            Image = "wwwroot/images/kolidataset/Koli (126).jpeg",
-                            Name = "Koli (126)"
+                            Description = "Description for Bird Original 126",
+                            Image = "wwwroot/images/birddataset/Original/Original (126).jpeg",
+                            Name = "Original (126)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 127,
-                            Description = "Description for Koli 127",
-                            Image = "wwwroot/images/kolidataset/Koli (127).jpeg",
-                            Name = "Koli (127)"
+                            Description = "Description for Bird Original 127",
+                            Image = "wwwroot/images/birddataset/Original/Original (127).jpeg",
+                            Name = "Original (127)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 128,
-                            Description = "Description for Koli 128",
-                            Image = "wwwroot/images/kolidataset/Koli (128).jpeg",
-                            Name = "Koli (128)"
+                            Description = "Description for Bird Original 128",
+                            Image = "wwwroot/images/birddataset/Original/Original (128).jpeg",
+                            Name = "Original (128)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 129,
-                            Description = "Description for Koli 129",
-                            Image = "wwwroot/images/kolidataset/Koli (129).jpeg",
-                            Name = "Koli (129)"
+                            Description = "Description for Bird Original 129",
+                            Image = "wwwroot/images/birddataset/Original/Original (129).jpeg",
+                            Name = "Original (129)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 130,
-                            Description = "Description for Koli 130",
-                            Image = "wwwroot/images/kolidataset/Koli (130).jpeg",
-                            Name = "Koli (130)"
+                            Description = "Description for Bird Original 130",
+                            Image = "wwwroot/images/birddataset/Original/Original (130).jpeg",
+                            Name = "Original (130)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 131,
-                            Description = "Description for Koli 131",
-                            Image = "wwwroot/images/kolidataset/Koli (131).jpeg",
-                            Name = "Koli (131)"
+                            Description = "Description for Bird Original 131",
+                            Image = "wwwroot/images/birddataset/Original/Original (131).jpeg",
+                            Name = "Original (131)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 132,
-                            Description = "Description for Koli 132",
-                            Image = "wwwroot/images/kolidataset/Koli (132).jpeg",
-                            Name = "Koli (132)"
+                            Description = "Description for Bird Original 132",
+                            Image = "wwwroot/images/birddataset/Original/Original (132).jpeg",
+                            Name = "Original (132)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 133,
-                            Description = "Description for Koli 133",
-                            Image = "wwwroot/images/kolidataset/Koli (133).jpeg",
-                            Name = "Koli (133)"
+                            Description = "Description for Bird Original 133",
+                            Image = "wwwroot/images/birddataset/Original/Original (133).jpeg",
+                            Name = "Original (133)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 134,
-                            Description = "Description for Koli 134",
-                            Image = "wwwroot/images/kolidataset/Koli (134).jpeg",
-                            Name = "Koli (134)"
+                            Description = "Description for Bird Original 134",
+                            Image = "wwwroot/images/birddataset/Original/Original (134).jpeg",
+                            Name = "Original (134)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 135,
-                            Description = "Description for Koli 135",
-                            Image = "wwwroot/images/kolidataset/Koli (135).jpeg",
-                            Name = "Koli (135)"
+                            Description = "Description for Bird Original 135",
+                            Image = "wwwroot/images/birddataset/Original/Original (135).jpeg",
+                            Name = "Original (135)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 136,
-                            Description = "Description for Koli 136",
-                            Image = "wwwroot/images/kolidataset/Koli (136).jpeg",
-                            Name = "Koli (136)"
+                            Description = "Description for Bird Original 136",
+                            Image = "wwwroot/images/birddataset/Original/Original (136).jpeg",
+                            Name = "Original (136)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 137,
-                            Description = "Description for Koli 137",
-                            Image = "wwwroot/images/kolidataset/Koli (137).jpeg",
-                            Name = "Koli (137)"
+                            Description = "Description for Bird Original 137",
+                            Image = "wwwroot/images/birddataset/Original/Original (137).jpeg",
+                            Name = "Original (137)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 138,
-                            Description = "Description for Koli 138",
-                            Image = "wwwroot/images/kolidataset/Koli (138).jpeg",
-                            Name = "Koli (138)"
+                            Description = "Description for Bird Original 138",
+                            Image = "wwwroot/images/birddataset/Original/Original (138).jpeg",
+                            Name = "Original (138)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 139,
-                            Description = "Description for Koli 139",
-                            Image = "wwwroot/images/kolidataset/Koli (139).jpeg",
-                            Name = "Koli (139)"
+                            Description = "Description for Bird Original 139",
+                            Image = "wwwroot/images/birddataset/Original/Original (139).jpeg",
+                            Name = "Original (139)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 140,
-                            Description = "Description for Koli 140",
-                            Image = "wwwroot/images/kolidataset/Koli (140).jpeg",
-                            Name = "Koli (140)"
+                            Description = "Description for Bird Original 140",
+                            Image = "wwwroot/images/birddataset/Original/Original (140).jpeg",
+                            Name = "Original (140)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 141,
-                            Description = "Description for Koli 141",
-                            Image = "wwwroot/images/kolidataset/Koli (141).jpeg",
-                            Name = "Koli (141)"
+                            Description = "Description for Bird Original 141",
+                            Image = "wwwroot/images/birddataset/Original/Original (141).jpeg",
+                            Name = "Original (141)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 142,
-                            Description = "Description for Koli 142",
-                            Image = "wwwroot/images/kolidataset/Koli (142).jpeg",
-                            Name = "Koli (142)"
+                            Description = "Description for Bird Original 142",
+                            Image = "wwwroot/images/birddataset/Original/Original (142).jpeg",
+                            Name = "Original (142)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 143,
-                            Description = "Description for Koli 143",
-                            Image = "wwwroot/images/kolidataset/Koli (143).jpeg",
-                            Name = "Koli (143)"
+                            Description = "Description for Bird Original 143",
+                            Image = "wwwroot/images/birddataset/Original/Original (143).jpeg",
+                            Name = "Original (143)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 144,
-                            Description = "Description for Koli 144",
-                            Image = "wwwroot/images/kolidataset/Koli (144).jpeg",
-                            Name = "Koli (144)"
+                            Description = "Description for Bird Original 144",
+                            Image = "wwwroot/images/birddataset/Original/Original (144).jpeg",
+                            Name = "Original (144)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 145,
-                            Description = "Description for Koli 145",
-                            Image = "wwwroot/images/kolidataset/Koli (145).jpeg",
-                            Name = "Koli (145)"
+                            Description = "Description for Bird Original 145",
+                            Image = "wwwroot/images/birddataset/Original/Original (145).jpeg",
+                            Name = "Original (145)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 146,
-                            Description = "Description for Koli 146",
-                            Image = "wwwroot/images/kolidataset/Koli (146).jpeg",
-                            Name = "Koli (146)"
+                            Description = "Description for Bird Original 146",
+                            Image = "wwwroot/images/birddataset/Original/Original (146).jpeg",
+                            Name = "Original (146)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 147,
-                            Description = "Description for Koli 147",
-                            Image = "wwwroot/images/kolidataset/Koli (147).jpeg",
-                            Name = "Koli (147)"
+                            Description = "Description for Bird Original 147",
+                            Image = "wwwroot/images/birddataset/Original/Original (147).jpeg",
+                            Name = "Original (147)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 148,
-                            Description = "Description for Koli 148",
-                            Image = "wwwroot/images/kolidataset/Koli (148).jpeg",
-                            Name = "Koli (148)"
+                            Description = "Description for Bird Original 148",
+                            Image = "wwwroot/images/birddataset/Original/Original (148).jpeg",
+                            Name = "Original (148)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 149,
-                            Description = "Description for Koli 149",
-                            Image = "wwwroot/images/kolidataset/Koli (149).jpeg",
-                            Name = "Koli (149)"
+                            Description = "Description for Bird Original 149",
+                            Image = "wwwroot/images/birddataset/Original/Original (149).jpeg",
+                            Name = "Original (149)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 150,
-                            Description = "Description for Koli 150",
-                            Image = "wwwroot/images/kolidataset/Koli (150).jpeg",
-                            Name = "Koli (150)"
+                            Description = "Description for Bird Original 150",
+                            Image = "wwwroot/images/birddataset/Original/Original (150).jpeg",
+                            Name = "Original (150)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 151,
-                            Description = "Description for Koli 151",
-                            Image = "wwwroot/images/kolidataset/Koli (151).jpeg",
-                            Name = "Koli (151)"
+                            Description = "Description for Bird Original 151",
+                            Image = "wwwroot/images/birddataset/Original/Original (151).jpeg",
+                            Name = "Original (151)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 152,
-                            Description = "Description for Koli 152",
-                            Image = "wwwroot/images/kolidataset/Koli (152).jpeg",
-                            Name = "Koli (152)"
+                            Description = "Description for Bird Original 152",
+                            Image = "wwwroot/images/birddataset/Original/Original (152).jpeg",
+                            Name = "Original (152)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 153,
-                            Description = "Description for Koli 153",
-                            Image = "wwwroot/images/kolidataset/Koli (153).jpeg",
-                            Name = "Koli (153)"
+                            Description = "Description for Bird Original 153",
+                            Image = "wwwroot/images/birddataset/Original/Original (153).jpeg",
+                            Name = "Original (153)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 154,
-                            Description = "Description for Koli 154",
-                            Image = "wwwroot/images/kolidataset/Koli (154).jpeg",
-                            Name = "Koli (154)"
+                            Description = "Description for Bird Original 154",
+                            Image = "wwwroot/images/birddataset/Original/Original (154).jpeg",
+                            Name = "Original (154)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 155,
-                            Description = "Description for Koli 155",
-                            Image = "wwwroot/images/kolidataset/Koli (155).jpeg",
-                            Name = "Koli (155)"
+                            Description = "Description for Bird Original 155",
+                            Image = "wwwroot/images/birddataset/Original/Original (155).jpeg",
+                            Name = "Original (155)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 156,
-                            Description = "Description for Koli 156",
-                            Image = "wwwroot/images/kolidataset/Koli (156).jpeg",
-                            Name = "Koli (156)"
+                            Description = "Description for Bird Original 156",
+                            Image = "wwwroot/images/birddataset/Original/Original (156).jpeg",
+                            Name = "Original (156)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 157,
-                            Description = "Description for Koli 157",
-                            Image = "wwwroot/images/kolidataset/Koli (157).jpeg",
-                            Name = "Koli (157)"
+                            Description = "Description for Bird Original 157",
+                            Image = "wwwroot/images/birddataset/Original/Original (157).jpeg",
+                            Name = "Original (157)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 158,
-                            Description = "Description for Koli 158",
-                            Image = "wwwroot/images/kolidataset/Koli (158).jpeg",
-                            Name = "Koli (158)"
+                            Description = "Description for Bird Original 158",
+                            Image = "wwwroot/images/birddataset/Original/Original (158).jpeg",
+                            Name = "Original (158)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 159,
-                            Description = "Description for Koli 159",
-                            Image = "wwwroot/images/kolidataset/Koli (159).jpeg",
-                            Name = "Koli (159)"
+                            Description = "Description for Bird Original 159",
+                            Image = "wwwroot/images/birddataset/Original/Original (159).jpeg",
+                            Name = "Original (159)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 160,
-                            Description = "Description for Koli 160",
-                            Image = "wwwroot/images/kolidataset/Koli (160).jpeg",
-                            Name = "Koli (160)"
+                            Description = "Description for Bird Original 160",
+                            Image = "wwwroot/images/birddataset/Original/Original (160).jpeg",
+                            Name = "Original (160)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 161,
-                            Description = "Description for Koli 161",
-                            Image = "wwwroot/images/kolidataset/Koli (161).jpeg",
-                            Name = "Koli (161)"
+                            Description = "Description for Bird Original 161",
+                            Image = "wwwroot/images/birddataset/Original/Original (161).jpeg",
+                            Name = "Original (161)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 162,
-                            Description = "Description for Koli 162",
-                            Image = "wwwroot/images/kolidataset/Koli (162).jpeg",
-                            Name = "Koli (162)"
+                            Description = "Description for Bird Original 162",
+                            Image = "wwwroot/images/birddataset/Original/Original (162).jpeg",
+                            Name = "Original (162)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 163,
-                            Description = "Description for Koli 163",
-                            Image = "wwwroot/images/kolidataset/Koli (163).jpeg",
-                            Name = "Koli (163)"
+                            Description = "Description for Bird Original 163",
+                            Image = "wwwroot/images/birddataset/Original/Original (163).jpeg",
+                            Name = "Original (163)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 164,
-                            Description = "Description for Koli 164",
-                            Image = "wwwroot/images/kolidataset/Koli (164).jpeg",
-                            Name = "Koli (164)"
+                            Description = "Description for Bird Original 164",
+                            Image = "wwwroot/images/birddataset/Original/Original (164).jpeg",
+                            Name = "Original (164)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 165,
-                            Description = "Description for Koli 165",
-                            Image = "wwwroot/images/kolidataset/Koli (165).jpeg",
-                            Name = "Koli (165)"
+                            Description = "Description for Bird Original 165",
+                            Image = "wwwroot/images/birddataset/Original/Original (165).jpeg",
+                            Name = "Original (165)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 166,
-                            Description = "Description for Koli 166",
-                            Image = "wwwroot/images/kolidataset/Koli (166).jpeg",
-                            Name = "Koli (166)"
+                            Description = "Description for Bird Original 166",
+                            Image = "wwwroot/images/birddataset/Original/Original (166).jpeg",
+                            Name = "Original (166)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 167,
-                            Description = "Description for Koli 167",
-                            Image = "wwwroot/images/kolidataset/Koli (167).jpeg",
-                            Name = "Koli (167)"
+                            Description = "Description for Bird Original 167",
+                            Image = "wwwroot/images/birddataset/Original/Original (167).jpeg",
+                            Name = "Original (167)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 168,
-                            Description = "Description for Koli 168",
-                            Image = "wwwroot/images/kolidataset/Koli (168).jpeg",
-                            Name = "Koli (168)"
+                            Description = "Description for Bird Original 168",
+                            Image = "wwwroot/images/birddataset/Original/Original (168).jpeg",
+                            Name = "Original (168)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 169,
-                            Description = "Description for Koli 169",
-                            Image = "wwwroot/images/kolidataset/Koli (169).jpeg",
-                            Name = "Koli (169)"
+                            Description = "Description for Bird Original 169",
+                            Image = "wwwroot/images/birddataset/Original/Original (169).jpeg",
+                            Name = "Original (169)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 170,
-                            Description = "Description for Koli 170",
-                            Image = "wwwroot/images/kolidataset/Koli (170).jpeg",
-                            Name = "Koli (170)"
+                            Description = "Description for Bird Original 170",
+                            Image = "wwwroot/images/birddataset/Original/Original (170).jpeg",
+                            Name = "Original (170)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 171,
-                            Description = "Description for Koli 171",
-                            Image = "wwwroot/images/kolidataset/Koli (171).jpeg",
-                            Name = "Koli (171)"
+                            Description = "Description for Bird Original 171",
+                            Image = "wwwroot/images/birddataset/Original/Original (171).jpeg",
+                            Name = "Original (171)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 172,
-                            Description = "Description for Koli 172",
-                            Image = "wwwroot/images/kolidataset/Koli (172).jpeg",
-                            Name = "Koli (172)"
+                            Description = "Description for Bird Original 172",
+                            Image = "wwwroot/images/birddataset/Original/Original (172).jpeg",
+                            Name = "Original (172)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 173,
-                            Description = "Description for Koli 173",
-                            Image = "wwwroot/images/kolidataset/Koli (173).jpeg",
-                            Name = "Koli (173)"
+                            Description = "Description for Bird Original 173",
+                            Image = "wwwroot/images/birddataset/Original/Original (173).jpeg",
+                            Name = "Original (173)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 174,
-                            Description = "Description for Koli 174",
-                            Image = "wwwroot/images/kolidataset/Koli (174).jpeg",
-                            Name = "Koli (174)"
+                            Description = "Description for Bird Original 174",
+                            Image = "wwwroot/images/birddataset/Original/Original (174).jpeg",
+                            Name = "Original (174)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 175,
-                            Description = "Description for Koli 175",
-                            Image = "wwwroot/images/kolidataset/Koli (175).jpeg",
-                            Name = "Koli (175)"
+                            Description = "Description for Bird Original 175",
+                            Image = "wwwroot/images/birddataset/Original/Original (175).jpeg",
+                            Name = "Original (175)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 176,
-                            Description = "Description for Koli 176",
-                            Image = "wwwroot/images/kolidataset/Koli (176).jpeg",
-                            Name = "Koli (176)"
+                            Description = "Description for Bird Original 176",
+                            Image = "wwwroot/images/birddataset/Original/Original (176).jpeg",
+                            Name = "Original (176)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 177,
-                            Description = "Description for Koli 177",
-                            Image = "wwwroot/images/kolidataset/Koli (177).jpeg",
-                            Name = "Koli (177)"
+                            Description = "Description for Bird Original 177",
+                            Image = "wwwroot/images/birddataset/Original/Original (177).jpeg",
+                            Name = "Original (177)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 178,
-                            Description = "Description for Koli 178",
-                            Image = "wwwroot/images/kolidataset/Koli (178).jpeg",
-                            Name = "Koli (178)"
+                            Description = "Description for Bird Original 178",
+                            Image = "wwwroot/images/birddataset/Original/Original (178).jpeg",
+                            Name = "Original (178)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 179,
-                            Description = "Description for Koli 179",
-                            Image = "wwwroot/images/kolidataset/Koli (179).jpeg",
-                            Name = "Koli (179)"
+                            Description = "Description for Bird Original 179",
+                            Image = "wwwroot/images/birddataset/Original/Original (179).jpeg",
+                            Name = "Original (179)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 180,
-                            Description = "Description for Koli 180",
-                            Image = "wwwroot/images/kolidataset/Koli (180).jpeg",
-                            Name = "Koli (180)"
+                            Description = "Description for Bird Original 180",
+                            Image = "wwwroot/images/birddataset/Original/Original (180).jpeg",
+                            Name = "Original (180)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 181,
-                            Description = "Description for Koli 181",
-                            Image = "wwwroot/images/kolidataset/Koli (181).jpeg",
-                            Name = "Koli (181)"
+                            Description = "Description for Bird Original 181",
+                            Image = "wwwroot/images/birddataset/Original/Original (181).jpeg",
+                            Name = "Original (181)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 182,
-                            Description = "Description for Koli 182",
-                            Image = "wwwroot/images/kolidataset/Koli (182).jpeg",
-                            Name = "Koli (182)"
+                            Description = "Description for Bird Original 182",
+                            Image = "wwwroot/images/birddataset/Original/Original (182).jpeg",
+                            Name = "Original (182)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 183,
-                            Description = "Description for Koli 183",
-                            Image = "wwwroot/images/kolidataset/Koli (183).jpeg",
-                            Name = "Koli (183)"
+                            Description = "Description for Bird Original 183",
+                            Image = "wwwroot/images/birddataset/Original/Original (183).jpeg",
+                            Name = "Original (183)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 184,
-                            Description = "Description for Koli 184",
-                            Image = "wwwroot/images/kolidataset/Koli (184).jpeg",
-                            Name = "Koli (184)"
+                            Description = "Description for Bird Original 184",
+                            Image = "wwwroot/images/birddataset/Original/Original (184).jpeg",
+                            Name = "Original (184)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 185,
-                            Description = "Description for Koli 185",
-                            Image = "wwwroot/images/kolidataset/Koli (185).jpeg",
-                            Name = "Koli (185)"
+                            Description = "Description for Bird Original 185",
+                            Image = "wwwroot/images/birddataset/Original/Original (185).jpeg",
+                            Name = "Original (185)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 186,
-                            Description = "Description for Koli 186",
-                            Image = "wwwroot/images/kolidataset/Koli (186).jpeg",
-                            Name = "Koli (186)"
+                            Description = "Description for Bird Original 186",
+                            Image = "wwwroot/images/birddataset/Original/Original (186).jpeg",
+                            Name = "Original (186)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 187,
-                            Description = "Description for Koli 187",
-                            Image = "wwwroot/images/kolidataset/Koli (187).jpeg",
-                            Name = "Koli (187)"
+                            Description = "Description for Bird Original 187",
+                            Image = "wwwroot/images/birddataset/Original/Original (187).jpeg",
+                            Name = "Original (187)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 188,
-                            Description = "Description for Koli 188",
-                            Image = "wwwroot/images/kolidataset/Koli (188).jpeg",
-                            Name = "Koli (188)"
+                            Description = "Description for Bird Original 188",
+                            Image = "wwwroot/images/birddataset/Original/Original (188).jpeg",
+                            Name = "Original (188)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 189,
-                            Description = "Description for Koli 189",
-                            Image = "wwwroot/images/kolidataset/Koli (189).jpeg",
-                            Name = "Koli (189)"
+                            Description = "Description for Bird Original 189",
+                            Image = "wwwroot/images/birddataset/Original/Original (189).jpeg",
+                            Name = "Original (189)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 190,
-                            Description = "Description for Koli 190",
-                            Image = "wwwroot/images/kolidataset/Koli (190).jpeg",
-                            Name = "Koli (190)"
+                            Description = "Description for Bird Original 190",
+                            Image = "wwwroot/images/birddataset/Original/Original (190).jpeg",
+                            Name = "Original (190)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 191,
-                            Description = "Description for Koli 191",
-                            Image = "wwwroot/images/kolidataset/Koli (191).jpeg",
-                            Name = "Koli (191)"
+                            Description = "Description for Bird Original 191",
+                            Image = "wwwroot/images/birddataset/Original/Original (191).jpeg",
+                            Name = "Original (191)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 192,
-                            Description = "Description for Koli 192",
-                            Image = "wwwroot/images/kolidataset/Koli (192).jpeg",
-                            Name = "Koli (192)"
+                            Description = "Description for Bird Original 192",
+                            Image = "wwwroot/images/birddataset/Original/Original (192).jpeg",
+                            Name = "Original (192)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 193,
-                            Description = "Description for Koli 193",
-                            Image = "wwwroot/images/kolidataset/Koli (193).jpeg",
-                            Name = "Koli (193)"
+                            Description = "Description for Bird Original 193",
+                            Image = "wwwroot/images/birddataset/Original/Original (193).jpeg",
+                            Name = "Original (193)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 194,
-                            Description = "Description for Koli 194",
-                            Image = "wwwroot/images/kolidataset/Koli (194).jpeg",
-                            Name = "Koli (194)"
+                            Description = "Description for Bird Original 194",
+                            Image = "wwwroot/images/birddataset/Original/Original (194).jpeg",
+                            Name = "Original (194)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 195,
-                            Description = "Description for Koli 195",
-                            Image = "wwwroot/images/kolidataset/Koli (195).jpeg",
-                            Name = "Koli (195)"
+                            Description = "Description for Bird Original 195",
+                            Image = "wwwroot/images/birddataset/Original/Original (195).jpeg",
+                            Name = "Original (195)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 196,
-                            Description = "Description for Koli 196",
-                            Image = "wwwroot/images/kolidataset/Koli (196).jpeg",
-                            Name = "Koli (196)"
+                            Description = "Description for Bird Original 196",
+                            Image = "wwwroot/images/birddataset/Original/Original (196).jpeg",
+                            Name = "Original (196)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 197,
-                            Description = "Description for Koli 197",
-                            Image = "wwwroot/images/kolidataset/Koli (197).jpeg",
-                            Name = "Koli (197)"
+                            Description = "Description for Bird Original 197",
+                            Image = "wwwroot/images/birddataset/Original/Original (197).jpeg",
+                            Name = "Original (197)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 198,
-                            Description = "Description for Koli 198",
-                            Image = "wwwroot/images/kolidataset/Koli (198).jpeg",
-                            Name = "Koli (198)"
+                            Description = "Description for Bird Original 198",
+                            Image = "wwwroot/images/birddataset/Original/Original (198).jpeg",
+                            Name = "Original (198)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 199,
-                            Description = "Description for Koli 199",
-                            Image = "wwwroot/images/kolidataset/Koli (199).jpeg",
-                            Name = "Koli (199)"
+                            Description = "Description for Bird Original 199",
+                            Image = "wwwroot/images/birddataset/Original/Original (199).jpeg",
+                            Name = "Original (199)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 200,
-                            Description = "Description for Koli 200",
-                            Image = "wwwroot/images/kolidataset/Koli (200).jpeg",
-                            Name = "Koli (200)"
+                            Description = "Description for Bird Original 200",
+                            Image = "wwwroot/images/birddataset/Original/Original (200).jpeg",
+                            Name = "Original (200)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 201,
-                            Description = "Description for Koli 201",
-                            Image = "wwwroot/images/kolidataset/Koli (201).jpeg",
-                            Name = "Koli (201)"
+                            Description = "Description for Bird Original 201",
+                            Image = "wwwroot/images/birddataset/Original/Original (201).jpeg",
+                            Name = "Original (201)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 202,
-                            Description = "Description for Koli 202",
-                            Image = "wwwroot/images/kolidataset/Koli (202).jpeg",
-                            Name = "Koli (202)"
+                            Description = "Description for Bird Original 202",
+                            Image = "wwwroot/images/birddataset/Original/Original (202).jpeg",
+                            Name = "Original (202)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 203,
-                            Description = "Description for Koli 203",
-                            Image = "wwwroot/images/kolidataset/Koli (203).jpeg",
-                            Name = "Koli (203)"
+                            Description = "Description for Bird Original 203",
+                            Image = "wwwroot/images/birddataset/Original/Original (203).jpeg",
+                            Name = "Original (203)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 204,
-                            Description = "Description for Koli 204",
-                            Image = "wwwroot/images/kolidataset/Koli (204).jpeg",
-                            Name = "Koli (204)"
+                            Description = "Description for Bird Original 204",
+                            Image = "wwwroot/images/birddataset/Original/Original (204).jpeg",
+                            Name = "Original (204)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 205,
-                            Description = "Description for Koli 205",
-                            Image = "wwwroot/images/kolidataset/Koli (205).jpeg",
-                            Name = "Koli (205)"
+                            Description = "Description for Bird Original 205",
+                            Image = "wwwroot/images/birddataset/Original/Original (205).jpeg",
+                            Name = "Original (205)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 206,
-                            Description = "Description for Koli 206",
-                            Image = "wwwroot/images/kolidataset/Koli (206).jpeg",
-                            Name = "Koli (206)"
+                            Description = "Description for Bird Original 206",
+                            Image = "wwwroot/images/birddataset/Original/Original (206).jpeg",
+                            Name = "Original (206)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 207,
-                            Description = "Description for Koli 207",
-                            Image = "wwwroot/images/kolidataset/Koli (207).jpeg",
-                            Name = "Koli (207)"
+                            Description = "Description for Bird Original 207",
+                            Image = "wwwroot/images/birddataset/Original/Original (207).jpeg",
+                            Name = "Original (207)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 208,
-                            Description = "Description for Koli 208",
-                            Image = "wwwroot/images/kolidataset/Koli (208).jpeg",
-                            Name = "Koli (208)"
+                            Description = "Description for Bird Original 208",
+                            Image = "wwwroot/images/birddataset/Original/Original (208).jpeg",
+                            Name = "Original (208)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 209,
-                            Description = "Description for Koli 209",
-                            Image = "wwwroot/images/kolidataset/Koli (209).jpeg",
-                            Name = "Koli (209)"
+                            Description = "Description for Bird Original 209",
+                            Image = "wwwroot/images/birddataset/Original/Original (209).jpeg",
+                            Name = "Original (209)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 210,
-                            Description = "Description for Koli 210",
-                            Image = "wwwroot/images/kolidataset/Koli (210).jpeg",
-                            Name = "Koli (210)"
+                            Description = "Description for Bird Original 210",
+                            Image = "wwwroot/images/birddataset/Original/Original (210).jpeg",
+                            Name = "Original (210)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 211,
-                            Description = "Description for Koli 211",
-                            Image = "wwwroot/images/kolidataset/Koli (211).jpeg",
-                            Name = "Koli (211)"
+                            Description = "Description for Bird Original 211",
+                            Image = "wwwroot/images/birddataset/Original/Original (211).jpeg",
+                            Name = "Original (211)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 212,
-                            Description = "Description for Koli 212",
-                            Image = "wwwroot/images/kolidataset/Koli (212).jpeg",
-                            Name = "Koli (212)"
+                            Description = "Description for Bird Original 212",
+                            Image = "wwwroot/images/birddataset/Original/Original (212).jpeg",
+                            Name = "Original (212)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 213,
-                            Description = "Description for Koli 213",
-                            Image = "wwwroot/images/kolidataset/Koli (213).jpeg",
-                            Name = "Koli (213)"
+                            Description = "Description for Bird Original 213",
+                            Image = "wwwroot/images/birddataset/Original/Original (213).jpeg",
+                            Name = "Original (213)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 214,
-                            Description = "Description for Koli 214",
-                            Image = "wwwroot/images/kolidataset/Koli (214).jpeg",
-                            Name = "Koli (214)"
+                            Description = "Description for Bird Original 214",
+                            Image = "wwwroot/images/birddataset/Original/Original (214).jpeg",
+                            Name = "Original (214)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 215,
-                            Description = "Description for Koli 215",
-                            Image = "wwwroot/images/kolidataset/Koli (215).jpeg",
-                            Name = "Koli (215)"
+                            Description = "Description for Bird Original 215",
+                            Image = "wwwroot/images/birddataset/Original/Original (215).jpeg",
+                            Name = "Original (215)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 216,
-                            Description = "Description for Koli 216",
-                            Image = "wwwroot/images/kolidataset/Koli (216).jpeg",
-                            Name = "Koli (216)"
+                            Description = "Description for Bird Original 216",
+                            Image = "wwwroot/images/birddataset/Original/Original (216).jpeg",
+                            Name = "Original (216)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 217,
-                            Description = "Description for Koli 217",
-                            Image = "wwwroot/images/kolidataset/Koli (217).jpeg",
-                            Name = "Koli (217)"
+                            Description = "Description for Bird Original 217",
+                            Image = "wwwroot/images/birddataset/Original/Original (217).jpeg",
+                            Name = "Original (217)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 218,
-                            Description = "Description for Koli 218",
-                            Image = "wwwroot/images/kolidataset/Koli (218).jpeg",
-                            Name = "Koli (218)"
+                            Description = "Description for Bird Original 218",
+                            Image = "wwwroot/images/birddataset/Original/Original (218).jpeg",
+                            Name = "Original (218)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 219,
-                            Description = "Description for Koli 219",
-                            Image = "wwwroot/images/kolidataset/Koli (219).jpeg",
-                            Name = "Koli (219)"
+                            Description = "Description for Bird Original 219",
+                            Image = "wwwroot/images/birddataset/Original/Original (219).jpeg",
+                            Name = "Original (219)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 220,
-                            Description = "Description for Koli 220",
-                            Image = "wwwroot/images/kolidataset/Koli (220).jpeg",
-                            Name = "Koli (220)"
+                            Description = "Description for Bird Original 220",
+                            Image = "wwwroot/images/birddataset/Original/Original (220).jpeg",
+                            Name = "Original (220)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 221,
-                            Description = "Description for Koli 221",
-                            Image = "wwwroot/images/kolidataset/Koli (221).jpeg",
-                            Name = "Koli (221)"
+                            Description = "Description for Bird Original 221",
+                            Image = "wwwroot/images/birddataset/Original/Original (221).jpeg",
+                            Name = "Original (221)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 222,
-                            Description = "Description for Koli 222",
-                            Image = "wwwroot/images/kolidataset/Koli (222).jpeg",
-                            Name = "Koli (222)"
+                            Description = "Description for Bird Original 222",
+                            Image = "wwwroot/images/birddataset/Original/Original (222).jpeg",
+                            Name = "Original (222)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 223,
-                            Description = "Description for Koli 223",
-                            Image = "wwwroot/images/kolidataset/Koli (223).jpeg",
-                            Name = "Koli (223)"
+                            Description = "Description for Bird Original 223",
+                            Image = "wwwroot/images/birddataset/Original/Original (223).jpeg",
+                            Name = "Original (223)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 224,
-                            Description = "Description for Koli 224",
-                            Image = "wwwroot/images/kolidataset/Koli (224).jpeg",
-                            Name = "Koli (224)"
+                            Description = "Description for Bird Original 224",
+                            Image = "wwwroot/images/birddataset/Original/Original (224).jpeg",
+                            Name = "Original (224)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 225,
-                            Description = "Description for Koli 225",
-                            Image = "wwwroot/images/kolidataset/Koli (225).jpeg",
-                            Name = "Koli (225)"
+                            Description = "Description for Bird Original 225",
+                            Image = "wwwroot/images/birddataset/Original/Original (225).jpeg",
+                            Name = "Original (225)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 226,
-                            Description = "Description for Koli 226",
-                            Image = "wwwroot/images/kolidataset/Koli (226).jpeg",
-                            Name = "Koli (226)"
+                            Description = "Description for Bird Original 226",
+                            Image = "wwwroot/images/birddataset/Original/Original (226).jpeg",
+                            Name = "Original (226)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 227,
-                            Description = "Description for Koli 227",
-                            Image = "wwwroot/images/kolidataset/Koli (227).jpeg",
-                            Name = "Koli (227)"
+                            Description = "Description for Bird Original 227",
+                            Image = "wwwroot/images/birddataset/Original/Original (227).jpeg",
+                            Name = "Original (227)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 228,
-                            Description = "Description for Koli 228",
-                            Image = "wwwroot/images/kolidataset/Koli (228).jpeg",
-                            Name = "Koli (228)"
+                            Description = "Description for Bird Original 228",
+                            Image = "wwwroot/images/birddataset/Original/Original (228).jpeg",
+                            Name = "Original (228)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 229,
-                            Description = "Description for Koli 229",
-                            Image = "wwwroot/images/kolidataset/Koli (229).jpeg",
-                            Name = "Koli (229)"
+                            Description = "Description for Bird Original 229",
+                            Image = "wwwroot/images/birddataset/Original/Original (229).jpeg",
+                            Name = "Original (229)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 230,
-                            Description = "Description for Koli 230",
-                            Image = "wwwroot/images/kolidataset/Koli (230).jpeg",
-                            Name = "Koli (230)"
+                            Description = "Description for Bird Original 230",
+                            Image = "wwwroot/images/birddataset/Original/Original (230).jpeg",
+                            Name = "Original (230)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 231,
-                            Description = "Description for Koli 231",
-                            Image = "wwwroot/images/kolidataset/Koli (231).jpeg",
-                            Name = "Koli (231)"
+                            Description = "Description for Bird Original 231",
+                            Image = "wwwroot/images/birddataset/Original/Original (231).jpeg",
+                            Name = "Original (231)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 232,
-                            Description = "Description for Koli 232",
-                            Image = "wwwroot/images/kolidataset/Koli (232).jpeg",
-                            Name = "Koli (232)"
+                            Description = "Description for Bird Original 232",
+                            Image = "wwwroot/images/birddataset/Original/Original (232).jpeg",
+                            Name = "Original (232)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 233,
-                            Description = "Description for Koli 233",
-                            Image = "wwwroot/images/kolidataset/Koli (233).jpeg",
-                            Name = "Koli (233)"
+                            Description = "Description for Bird Original 233",
+                            Image = "wwwroot/images/birddataset/Original/Original (233).jpeg",
+                            Name = "Original (233)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 234,
-                            Description = "Description for Koli 234",
-                            Image = "wwwroot/images/kolidataset/Koli (234).jpeg",
-                            Name = "Koli (234)"
+                            Description = "Description for Bird Original 234",
+                            Image = "wwwroot/images/birddataset/Original/Original (234).jpeg",
+                            Name = "Original (234)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 235,
-                            Description = "Description for Koli 235",
-                            Image = "wwwroot/images/kolidataset/Koli (235).jpeg",
-                            Name = "Koli (235)"
+                            Description = "Description for Bird Original 235",
+                            Image = "wwwroot/images/birddataset/Original/Original (235).jpeg",
+                            Name = "Original (235)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 236,
-                            Description = "Description for Koli 236",
-                            Image = "wwwroot/images/kolidataset/Koli (236).jpeg",
-                            Name = "Koli (236)"
+                            Description = "Description for Bird Original 236",
+                            Image = "wwwroot/images/birddataset/Original/Original (236).jpeg",
+                            Name = "Original (236)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 237,
-                            Description = "Description for Koli 237",
-                            Image = "wwwroot/images/kolidataset/Koli (237).jpeg",
-                            Name = "Koli (237)"
+                            Description = "Description for Bird Original 237",
+                            Image = "wwwroot/images/birddataset/Original/Original (237).jpeg",
+                            Name = "Original (237)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 238,
-                            Description = "Description for Koli 238",
-                            Image = "wwwroot/images/kolidataset/Koli (238).jpeg",
-                            Name = "Koli (238)"
+                            Description = "Description for Bird Original 238",
+                            Image = "wwwroot/images/birddataset/Original/Original (238).jpeg",
+                            Name = "Original (238)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 239,
-                            Description = "Description for Koli 239",
-                            Image = "wwwroot/images/kolidataset/Koli (239).jpeg",
-                            Name = "Koli (239)"
+                            Description = "Description for Bird Original 239",
+                            Image = "wwwroot/images/birddataset/Original/Original (239).jpeg",
+                            Name = "Original (239)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 240,
-                            Description = "Description for Koli 240",
-                            Image = "wwwroot/images/kolidataset/Koli (240).jpeg",
-                            Name = "Koli (240)"
+                            Description = "Description for Bird Original 240",
+                            Image = "wwwroot/images/birddataset/Original/Original (240).jpeg",
+                            Name = "Original (240)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 241,
-                            Description = "Description for Koli 241",
-                            Image = "wwwroot/images/kolidataset/Koli (241).jpeg",
-                            Name = "Koli (241)"
+                            Description = "Description for Bird Original 241",
+                            Image = "wwwroot/images/birddataset/Original/Original (241).jpeg",
+                            Name = "Original (241)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 242,
-                            Description = "Description for Koli 242",
-                            Image = "wwwroot/images/kolidataset/Koli (242).jpeg",
-                            Name = "Koli (242)"
+                            Description = "Description for Bird Original 242",
+                            Image = "wwwroot/images/birddataset/Original/Original (242).jpeg",
+                            Name = "Original (242)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 243,
-                            Description = "Description for Koli 243",
-                            Image = "wwwroot/images/kolidataset/Koli (243).jpeg",
-                            Name = "Koli (243)"
+                            Description = "Description for Bird Original 243",
+                            Image = "wwwroot/images/birddataset/Original/Original (243).jpeg",
+                            Name = "Original (243)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 244,
-                            Description = "Description for Koli 244",
-                            Image = "wwwroot/images/kolidataset/Koli (244).jpeg",
-                            Name = "Koli (244)"
+                            Description = "Description for Bird Original 244",
+                            Image = "wwwroot/images/birddataset/Original/Original (244).jpeg",
+                            Name = "Original (244)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 245,
-                            Description = "Description for Koli 245",
-                            Image = "wwwroot/images/kolidataset/Koli (245).jpeg",
-                            Name = "Koli (245)"
+                            Description = "Description for Bird Original 245",
+                            Image = "wwwroot/images/birddataset/Original/Original (245).jpeg",
+                            Name = "Original (245)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 246,
-                            Description = "Description for Koli 246",
-                            Image = "wwwroot/images/kolidataset/Koli (246).jpeg",
-                            Name = "Koli (246)"
+                            Description = "Description for Bird Original 246",
+                            Image = "wwwroot/images/birddataset/Original/Original (246).jpeg",
+                            Name = "Original (246)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 247,
-                            Description = "Description for Koli 247",
-                            Image = "wwwroot/images/kolidataset/Koli (247).jpeg",
-                            Name = "Koli (247)"
+                            Description = "Description for Bird Original 247",
+                            Image = "wwwroot/images/birddataset/Original/Original (247).jpeg",
+                            Name = "Original (247)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 248,
-                            Description = "Description for Koli 248",
-                            Image = "wwwroot/images/kolidataset/Koli (248).jpeg",
-                            Name = "Koli (248)"
+                            Description = "Description for Bird Original 248",
+                            Image = "wwwroot/images/birddataset/Original/Original (248).jpeg",
+                            Name = "Original (248)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 249,
-                            Description = "Description for Koli 249",
-                            Image = "wwwroot/images/kolidataset/Koli (249).jpeg",
-                            Name = "Koli (249)"
+                            Description = "Description for Bird Original 249",
+                            Image = "wwwroot/images/birddataset/Original/Original (249).jpeg",
+                            Name = "Original (249)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 250,
-                            Description = "Description for Koli 250",
-                            Image = "wwwroot/images/kolidataset/Koli (250).jpeg",
-                            Name = "Koli (250)"
+                            Description = "Description for Bird Original 250",
+                            Image = "wwwroot/images/birddataset/Original/Original (250).jpeg",
+                            Name = "Original (250)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 251,
-                            Description = "Description for Koli 251",
-                            Image = "wwwroot/images/kolidataset/Koli (251).jpeg",
-                            Name = "Koli (251)"
+                            Description = "Description for Bird Original 251",
+                            Image = "wwwroot/images/birddataset/Original/Original (251).jpeg",
+                            Name = "Original (251)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 252,
-                            Description = "Description for Koli 252",
-                            Image = "wwwroot/images/kolidataset/Koli (252).jpeg",
-                            Name = "Koli (252)"
+                            Description = "Description for Bird Original 252",
+                            Image = "wwwroot/images/birddataset/Original/Original (252).jpeg",
+                            Name = "Original (252)",
+                            Stage = "Original"
                         },
                         new
                         {
                             Id = 253,
-                            Description = "Description for Koli 253",
-                            Image = "wwwroot/images/kolidataset/Koli (253).jpeg",
-                            Name = "Koli (253)"
+                            Description = "Description for Bird Original 253",
+                            Image = "wwwroot/images/birddataset/Original/Original (253).jpeg",
+                            Name = "Original (253)",
+                            Stage = "Original"
+                        },
+                        new
+                        {
+                            Id = 254,
+                            Description = "Description for Bird Original 254",
+                            Image = "wwwroot/images/birddataset/Original/Original (254).jpeg",
+                            Name = "Original (254)",
+                            Stage = "Original"
+                        },
+                        new
+                        {
+                            Id = 255,
+                            Description = "Description for Bird Original 255",
+                            Image = "wwwroot/images/birddataset/Original/Original (255).jpeg",
+                            Name = "Original (255)",
+                            Stage = "Original"
+                        },
+                        new
+                        {
+                            Id = 256,
+                            Description = "Description for Bird Original 256",
+                            Image = "wwwroot/images/birddataset/Original/Original (256).jpeg",
+                            Name = "Original (256)",
+                            Stage = "Original"
+                        },
+                        new
+                        {
+                            Id = 257,
+                            Description = "Description for Bird Original 257",
+                            Image = "wwwroot/images/birddataset/Original/Original (257).jpeg",
+                            Name = "Original (257)",
+                            Stage = "Original"
+                        },
+                        new
+                        {
+                            Id = 258,
+                            Description = "Description for Bird Original 258",
+                            Image = "wwwroot/images/birddataset/Original/Original (258).jpeg",
+                            Name = "Original (258)",
+                            Stage = "Original"
+                        },
+                        new
+                        {
+                            Id = 259,
+                            Description = "Description for Bird Blurred 1",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (1).jpeg",
+                            Name = "Blurred (1)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 260,
+                            Description = "Description for Bird Blurred 2",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (2).jpeg",
+                            Name = "Blurred (2)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 261,
+                            Description = "Description for Bird Blurred 3",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (3).jpeg",
+                            Name = "Blurred (3)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 262,
+                            Description = "Description for Bird Blurred 4",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (4).jpeg",
+                            Name = "Blurred (4)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 263,
+                            Description = "Description for Bird Blurred 5",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (5).jpeg",
+                            Name = "Blurred (5)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 264,
+                            Description = "Description for Bird Blurred 6",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (6).jpeg",
+                            Name = "Blurred (6)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 265,
+                            Description = "Description for Bird Blurred 7",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (7).jpeg",
+                            Name = "Blurred (7)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 266,
+                            Description = "Description for Bird Blurred 8",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (8).jpeg",
+                            Name = "Blurred (8)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 267,
+                            Description = "Description for Bird Blurred 9",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (9).jpeg",
+                            Name = "Blurred (9)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 268,
+                            Description = "Description for Bird Blurred 10",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (10).jpeg",
+                            Name = "Blurred (10)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 269,
+                            Description = "Description for Bird Blurred 11",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (11).jpeg",
+                            Name = "Blurred (11)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 270,
+                            Description = "Description for Bird Blurred 12",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (12).jpeg",
+                            Name = "Blurred (12)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 271,
+                            Description = "Description for Bird Blurred 13",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (13).jpeg",
+                            Name = "Blurred (13)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 272,
+                            Description = "Description for Bird Blurred 14",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (14).jpeg",
+                            Name = "Blurred (14)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 273,
+                            Description = "Description for Bird Blurred 15",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (15).jpeg",
+                            Name = "Blurred (15)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 274,
+                            Description = "Description for Bird Blurred 16",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (16).jpeg",
+                            Name = "Blurred (16)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 275,
+                            Description = "Description for Bird Blurred 17",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (17).jpeg",
+                            Name = "Blurred (17)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 276,
+                            Description = "Description for Bird Blurred 18",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (18).jpeg",
+                            Name = "Blurred (18)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 277,
+                            Description = "Description for Bird Blurred 19",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (19).jpeg",
+                            Name = "Blurred (19)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 278,
+                            Description = "Description for Bird Blurred 20",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (20).jpeg",
+                            Name = "Blurred (20)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 279,
+                            Description = "Description for Bird Blurred 21",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (21).jpeg",
+                            Name = "Blurred (21)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 280,
+                            Description = "Description for Bird Blurred 22",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (22).jpeg",
+                            Name = "Blurred (22)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 281,
+                            Description = "Description for Bird Blurred 23",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (23).jpeg",
+                            Name = "Blurred (23)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 282,
+                            Description = "Description for Bird Blurred 24",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (24).jpeg",
+                            Name = "Blurred (24)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 283,
+                            Description = "Description for Bird Blurred 25",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (25).jpeg",
+                            Name = "Blurred (25)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 284,
+                            Description = "Description for Bird Blurred 26",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (26).jpeg",
+                            Name = "Blurred (26)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 285,
+                            Description = "Description for Bird Blurred 27",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (27).jpeg",
+                            Name = "Blurred (27)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 286,
+                            Description = "Description for Bird Blurred 28",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (28).jpeg",
+                            Name = "Blurred (28)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 287,
+                            Description = "Description for Bird Blurred 29",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (29).jpeg",
+                            Name = "Blurred (29)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 288,
+                            Description = "Description for Bird Blurred 30",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (30).jpeg",
+                            Name = "Blurred (30)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 289,
+                            Description = "Description for Bird Blurred 31",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (31).jpeg",
+                            Name = "Blurred (31)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 290,
+                            Description = "Description for Bird Blurred 32",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (32).jpeg",
+                            Name = "Blurred (32)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 291,
+                            Description = "Description for Bird Blurred 33",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (33).jpeg",
+                            Name = "Blurred (33)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 292,
+                            Description = "Description for Bird Blurred 34",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (34).jpeg",
+                            Name = "Blurred (34)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 293,
+                            Description = "Description for Bird Blurred 35",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (35).jpeg",
+                            Name = "Blurred (35)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 294,
+                            Description = "Description for Bird Blurred 36",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (36).jpeg",
+                            Name = "Blurred (36)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 295,
+                            Description = "Description for Bird Blurred 37",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (37).jpeg",
+                            Name = "Blurred (37)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 296,
+                            Description = "Description for Bird Blurred 38",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (38).jpeg",
+                            Name = "Blurred (38)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 297,
+                            Description = "Description for Bird Blurred 39",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (39).jpeg",
+                            Name = "Blurred (39)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 298,
+                            Description = "Description for Bird Blurred 40",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (40).jpeg",
+                            Name = "Blurred (40)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 299,
+                            Description = "Description for Bird Blurred 41",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (41).jpeg",
+                            Name = "Blurred (41)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 300,
+                            Description = "Description for Bird Blurred 42",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (42).jpeg",
+                            Name = "Blurred (42)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 301,
+                            Description = "Description for Bird Blurred 43",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (43).jpeg",
+                            Name = "Blurred (43)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 302,
+                            Description = "Description for Bird Blurred 44",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (44).jpeg",
+                            Name = "Blurred (44)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 303,
+                            Description = "Description for Bird Blurred 45",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (45).jpeg",
+                            Name = "Blurred (45)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 304,
+                            Description = "Description for Bird Blurred 46",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (46).jpeg",
+                            Name = "Blurred (46)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 305,
+                            Description = "Description for Bird Blurred 47",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (47).jpeg",
+                            Name = "Blurred (47)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 306,
+                            Description = "Description for Bird Blurred 48",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (48).jpeg",
+                            Name = "Blurred (48)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 307,
+                            Description = "Description for Bird Blurred 49",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (49).jpeg",
+                            Name = "Blurred (49)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 308,
+                            Description = "Description for Bird Blurred 50",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (50).jpeg",
+                            Name = "Blurred (50)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 309,
+                            Description = "Description for Bird Blurred 51",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (51).jpeg",
+                            Name = "Blurred (51)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 310,
+                            Description = "Description for Bird Blurred 52",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (52).jpeg",
+                            Name = "Blurred (52)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 311,
+                            Description = "Description for Bird Blurred 53",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (53).jpeg",
+                            Name = "Blurred (53)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 312,
+                            Description = "Description for Bird Blurred 54",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (54).jpeg",
+                            Name = "Blurred (54)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 313,
+                            Description = "Description for Bird Blurred 55",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (55).jpeg",
+                            Name = "Blurred (55)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 314,
+                            Description = "Description for Bird Blurred 56",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (56).jpeg",
+                            Name = "Blurred (56)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 315,
+                            Description = "Description for Bird Blurred 57",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (57).jpeg",
+                            Name = "Blurred (57)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 316,
+                            Description = "Description for Bird Blurred 58",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (58).jpeg",
+                            Name = "Blurred (58)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 317,
+                            Description = "Description for Bird Blurred 59",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (59).jpeg",
+                            Name = "Blurred (59)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 318,
+                            Description = "Description for Bird Blurred 60",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (60).jpeg",
+                            Name = "Blurred (60)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 319,
+                            Description = "Description for Bird Blurred 61",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (61).jpeg",
+                            Name = "Blurred (61)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 320,
+                            Description = "Description for Bird Blurred 62",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (62).jpeg",
+                            Name = "Blurred (62)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 321,
+                            Description = "Description for Bird Blurred 63",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (63).jpeg",
+                            Name = "Blurred (63)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 322,
+                            Description = "Description for Bird Blurred 64",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (64).jpeg",
+                            Name = "Blurred (64)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 323,
+                            Description = "Description for Bird Blurred 65",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (65).jpeg",
+                            Name = "Blurred (65)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 324,
+                            Description = "Description for Bird Blurred 66",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (66).jpeg",
+                            Name = "Blurred (66)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 325,
+                            Description = "Description for Bird Blurred 67",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (67).jpeg",
+                            Name = "Blurred (67)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 326,
+                            Description = "Description for Bird Blurred 68",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (68).jpeg",
+                            Name = "Blurred (68)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 327,
+                            Description = "Description for Bird Blurred 69",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (69).jpeg",
+                            Name = "Blurred (69)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 328,
+                            Description = "Description for Bird Blurred 70",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (70).jpeg",
+                            Name = "Blurred (70)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 329,
+                            Description = "Description for Bird Blurred 71",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (71).jpeg",
+                            Name = "Blurred (71)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 330,
+                            Description = "Description for Bird Blurred 72",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (72).jpeg",
+                            Name = "Blurred (72)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 331,
+                            Description = "Description for Bird Blurred 73",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (73).jpeg",
+                            Name = "Blurred (73)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 332,
+                            Description = "Description for Bird Blurred 74",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (74).jpeg",
+                            Name = "Blurred (74)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 333,
+                            Description = "Description for Bird Blurred 75",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (75).jpeg",
+                            Name = "Blurred (75)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 334,
+                            Description = "Description for Bird Blurred 76",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (76).jpeg",
+                            Name = "Blurred (76)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 335,
+                            Description = "Description for Bird Blurred 77",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (77).jpeg",
+                            Name = "Blurred (77)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 336,
+                            Description = "Description for Bird Blurred 78",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (78).jpeg",
+                            Name = "Blurred (78)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 337,
+                            Description = "Description for Bird Blurred 79",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (79).jpeg",
+                            Name = "Blurred (79)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 338,
+                            Description = "Description for Bird Blurred 80",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (80).jpeg",
+                            Name = "Blurred (80)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 339,
+                            Description = "Description for Bird Blurred 81",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (81).jpeg",
+                            Name = "Blurred (81)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 340,
+                            Description = "Description for Bird Blurred 82",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (82).jpeg",
+                            Name = "Blurred (82)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 341,
+                            Description = "Description for Bird Blurred 83",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (83).jpeg",
+                            Name = "Blurred (83)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 342,
+                            Description = "Description for Bird Blurred 84",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (84).jpeg",
+                            Name = "Blurred (84)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 343,
+                            Description = "Description for Bird Blurred 85",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (85).jpeg",
+                            Name = "Blurred (85)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 344,
+                            Description = "Description for Bird Blurred 86",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (86).jpeg",
+                            Name = "Blurred (86)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 345,
+                            Description = "Description for Bird Blurred 87",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (87).jpeg",
+                            Name = "Blurred (87)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 346,
+                            Description = "Description for Bird Blurred 88",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (88).jpeg",
+                            Name = "Blurred (88)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 347,
+                            Description = "Description for Bird Blurred 89",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (89).jpeg",
+                            Name = "Blurred (89)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 348,
+                            Description = "Description for Bird Blurred 90",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (90).jpeg",
+                            Name = "Blurred (90)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 349,
+                            Description = "Description for Bird Blurred 91",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (91).jpeg",
+                            Name = "Blurred (91)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 350,
+                            Description = "Description for Bird Blurred 92",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (92).jpeg",
+                            Name = "Blurred (92)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 351,
+                            Description = "Description for Bird Blurred 93",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (93).jpeg",
+                            Name = "Blurred (93)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 352,
+                            Description = "Description for Bird Blurred 94",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (94).jpeg",
+                            Name = "Blurred (94)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 353,
+                            Description = "Description for Bird Blurred 95",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (95).jpeg",
+                            Name = "Blurred (95)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 354,
+                            Description = "Description for Bird Blurred 96",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (96).jpeg",
+                            Name = "Blurred (96)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 355,
+                            Description = "Description for Bird Blurred 97",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (97).jpeg",
+                            Name = "Blurred (97)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 356,
+                            Description = "Description for Bird Blurred 98",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (98).jpeg",
+                            Name = "Blurred (98)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 357,
+                            Description = "Description for Bird Blurred 99",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (99).jpeg",
+                            Name = "Blurred (99)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 358,
+                            Description = "Description for Bird Blurred 100",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (100).jpeg",
+                            Name = "Blurred (100)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 359,
+                            Description = "Description for Bird Blurred 101",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (101).jpeg",
+                            Name = "Blurred (101)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 360,
+                            Description = "Description for Bird Blurred 102",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (102).jpeg",
+                            Name = "Blurred (102)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 361,
+                            Description = "Description for Bird Blurred 103",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (103).jpeg",
+                            Name = "Blurred (103)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 362,
+                            Description = "Description for Bird Blurred 104",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (104).jpeg",
+                            Name = "Blurred (104)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 363,
+                            Description = "Description for Bird Blurred 105",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (105).jpeg",
+                            Name = "Blurred (105)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 364,
+                            Description = "Description for Bird Blurred 106",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (106).jpeg",
+                            Name = "Blurred (106)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 365,
+                            Description = "Description for Bird Blurred 107",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (107).jpeg",
+                            Name = "Blurred (107)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 366,
+                            Description = "Description for Bird Blurred 108",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (108).jpeg",
+                            Name = "Blurred (108)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 367,
+                            Description = "Description for Bird Blurred 109",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (109).jpeg",
+                            Name = "Blurred (109)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 368,
+                            Description = "Description for Bird Blurred 110",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (110).jpeg",
+                            Name = "Blurred (110)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 369,
+                            Description = "Description for Bird Blurred 111",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (111).jpeg",
+                            Name = "Blurred (111)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 370,
+                            Description = "Description for Bird Blurred 112",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (112).jpeg",
+                            Name = "Blurred (112)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 371,
+                            Description = "Description for Bird Blurred 113",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (113).jpeg",
+                            Name = "Blurred (113)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 372,
+                            Description = "Description for Bird Blurred 114",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (114).jpeg",
+                            Name = "Blurred (114)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 373,
+                            Description = "Description for Bird Blurred 115",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (115).jpeg",
+                            Name = "Blurred (115)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 374,
+                            Description = "Description for Bird Blurred 116",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (116).jpeg",
+                            Name = "Blurred (116)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 375,
+                            Description = "Description for Bird Blurred 117",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (117).jpeg",
+                            Name = "Blurred (117)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 376,
+                            Description = "Description for Bird Blurred 118",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (118).jpeg",
+                            Name = "Blurred (118)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 377,
+                            Description = "Description for Bird Blurred 119",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (119).jpeg",
+                            Name = "Blurred (119)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 378,
+                            Description = "Description for Bird Blurred 120",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (120).jpeg",
+                            Name = "Blurred (120)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 379,
+                            Description = "Description for Bird Blurred 121",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (121).jpeg",
+                            Name = "Blurred (121)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 380,
+                            Description = "Description for Bird Blurred 122",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (122).jpeg",
+                            Name = "Blurred (122)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 381,
+                            Description = "Description for Bird Blurred 123",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (123).jpeg",
+                            Name = "Blurred (123)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 382,
+                            Description = "Description for Bird Blurred 124",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (124).jpeg",
+                            Name = "Blurred (124)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 383,
+                            Description = "Description for Bird Blurred 125",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (125).jpeg",
+                            Name = "Blurred (125)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 384,
+                            Description = "Description for Bird Blurred 126",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (126).jpeg",
+                            Name = "Blurred (126)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 385,
+                            Description = "Description for Bird Blurred 127",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (127).jpeg",
+                            Name = "Blurred (127)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 386,
+                            Description = "Description for Bird Blurred 128",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (128).jpeg",
+                            Name = "Blurred (128)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 387,
+                            Description = "Description for Bird Blurred 129",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (129).jpeg",
+                            Name = "Blurred (129)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 388,
+                            Description = "Description for Bird Blurred 130",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (130).jpeg",
+                            Name = "Blurred (130)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 389,
+                            Description = "Description for Bird Blurred 131",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (131).jpeg",
+                            Name = "Blurred (131)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 390,
+                            Description = "Description for Bird Blurred 132",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (132).jpeg",
+                            Name = "Blurred (132)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 391,
+                            Description = "Description for Bird Blurred 133",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (133).jpeg",
+                            Name = "Blurred (133)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 392,
+                            Description = "Description for Bird Blurred 134",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (134).jpeg",
+                            Name = "Blurred (134)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 393,
+                            Description = "Description for Bird Blurred 135",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (135).jpeg",
+                            Name = "Blurred (135)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 394,
+                            Description = "Description for Bird Blurred 136",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (136).jpeg",
+                            Name = "Blurred (136)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 395,
+                            Description = "Description for Bird Blurred 137",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (137).jpeg",
+                            Name = "Blurred (137)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 396,
+                            Description = "Description for Bird Blurred 138",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (138).jpeg",
+                            Name = "Blurred (138)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 397,
+                            Description = "Description for Bird Blurred 139",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (139).jpeg",
+                            Name = "Blurred (139)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 398,
+                            Description = "Description for Bird Blurred 140",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (140).jpeg",
+                            Name = "Blurred (140)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 399,
+                            Description = "Description for Bird Blurred 141",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (141).jpeg",
+                            Name = "Blurred (141)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 400,
+                            Description = "Description for Bird Blurred 142",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (142).jpeg",
+                            Name = "Blurred (142)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 401,
+                            Description = "Description for Bird Blurred 143",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (143).jpeg",
+                            Name = "Blurred (143)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 402,
+                            Description = "Description for Bird Blurred 144",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (144).jpeg",
+                            Name = "Blurred (144)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 403,
+                            Description = "Description for Bird Blurred 145",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (145).jpeg",
+                            Name = "Blurred (145)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 404,
+                            Description = "Description for Bird Blurred 146",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (146).jpeg",
+                            Name = "Blurred (146)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 405,
+                            Description = "Description for Bird Blurred 147",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (147).jpeg",
+                            Name = "Blurred (147)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 406,
+                            Description = "Description for Bird Blurred 148",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (148).jpeg",
+                            Name = "Blurred (148)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 407,
+                            Description = "Description for Bird Blurred 149",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (149).jpeg",
+                            Name = "Blurred (149)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 408,
+                            Description = "Description for Bird Blurred 150",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (150).jpeg",
+                            Name = "Blurred (150)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 409,
+                            Description = "Description for Bird Blurred 151",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (151).jpeg",
+                            Name = "Blurred (151)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 410,
+                            Description = "Description for Bird Blurred 152",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (152).jpeg",
+                            Name = "Blurred (152)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 411,
+                            Description = "Description for Bird Blurred 153",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (153).jpeg",
+                            Name = "Blurred (153)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 412,
+                            Description = "Description for Bird Blurred 154",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (154).jpeg",
+                            Name = "Blurred (154)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 413,
+                            Description = "Description for Bird Blurred 155",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (155).jpeg",
+                            Name = "Blurred (155)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 414,
+                            Description = "Description for Bird Blurred 156",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (156).jpeg",
+                            Name = "Blurred (156)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 415,
+                            Description = "Description for Bird Blurred 157",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (157).jpeg",
+                            Name = "Blurred (157)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 416,
+                            Description = "Description for Bird Blurred 158",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (158).jpeg",
+                            Name = "Blurred (158)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 417,
+                            Description = "Description for Bird Blurred 159",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (159).jpeg",
+                            Name = "Blurred (159)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 418,
+                            Description = "Description for Bird Blurred 160",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (160).jpeg",
+                            Name = "Blurred (160)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 419,
+                            Description = "Description for Bird Blurred 161",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (161).jpeg",
+                            Name = "Blurred (161)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 420,
+                            Description = "Description for Bird Blurred 162",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (162).jpeg",
+                            Name = "Blurred (162)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 421,
+                            Description = "Description for Bird Blurred 163",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (163).jpeg",
+                            Name = "Blurred (163)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 422,
+                            Description = "Description for Bird Blurred 164",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (164).jpeg",
+                            Name = "Blurred (164)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 423,
+                            Description = "Description for Bird Blurred 165",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (165).jpeg",
+                            Name = "Blurred (165)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 424,
+                            Description = "Description for Bird Blurred 166",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (166).jpeg",
+                            Name = "Blurred (166)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 425,
+                            Description = "Description for Bird Blurred 167",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (167).jpeg",
+                            Name = "Blurred (167)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 426,
+                            Description = "Description for Bird Blurred 168",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (168).jpeg",
+                            Name = "Blurred (168)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 427,
+                            Description = "Description for Bird Blurred 169",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (169).jpeg",
+                            Name = "Blurred (169)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 428,
+                            Description = "Description for Bird Blurred 170",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (170).jpeg",
+                            Name = "Blurred (170)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 429,
+                            Description = "Description for Bird Blurred 171",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (171).jpeg",
+                            Name = "Blurred (171)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 430,
+                            Description = "Description for Bird Blurred 172",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (172).jpeg",
+                            Name = "Blurred (172)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 431,
+                            Description = "Description for Bird Blurred 173",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (173).jpeg",
+                            Name = "Blurred (173)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 432,
+                            Description = "Description for Bird Blurred 174",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (174).jpeg",
+                            Name = "Blurred (174)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 433,
+                            Description = "Description for Bird Blurred 175",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (175).jpeg",
+                            Name = "Blurred (175)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 434,
+                            Description = "Description for Bird Blurred 176",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (176).jpeg",
+                            Name = "Blurred (176)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 435,
+                            Description = "Description for Bird Blurred 177",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (177).jpeg",
+                            Name = "Blurred (177)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 436,
+                            Description = "Description for Bird Blurred 178",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (178).jpeg",
+                            Name = "Blurred (178)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 437,
+                            Description = "Description for Bird Blurred 179",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (179).jpeg",
+                            Name = "Blurred (179)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 438,
+                            Description = "Description for Bird Blurred 180",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (180).jpeg",
+                            Name = "Blurred (180)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 439,
+                            Description = "Description for Bird Blurred 181",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (181).jpeg",
+                            Name = "Blurred (181)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 440,
+                            Description = "Description for Bird Blurred 182",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (182).jpeg",
+                            Name = "Blurred (182)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 441,
+                            Description = "Description for Bird Blurred 183",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (183).jpeg",
+                            Name = "Blurred (183)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 442,
+                            Description = "Description for Bird Blurred 184",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (184).jpeg",
+                            Name = "Blurred (184)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 443,
+                            Description = "Description for Bird Blurred 185",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (185).jpeg",
+                            Name = "Blurred (185)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 444,
+                            Description = "Description for Bird Blurred 186",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (186).jpeg",
+                            Name = "Blurred (186)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 445,
+                            Description = "Description for Bird Blurred 187",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (187).jpeg",
+                            Name = "Blurred (187)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 446,
+                            Description = "Description for Bird Blurred 188",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (188).jpeg",
+                            Name = "Blurred (188)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 447,
+                            Description = "Description for Bird Blurred 189",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (189).jpeg",
+                            Name = "Blurred (189)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 448,
+                            Description = "Description for Bird Blurred 190",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (190).jpeg",
+                            Name = "Blurred (190)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 449,
+                            Description = "Description for Bird Blurred 191",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (191).jpeg",
+                            Name = "Blurred (191)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 450,
+                            Description = "Description for Bird Blurred 192",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (192).jpeg",
+                            Name = "Blurred (192)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 451,
+                            Description = "Description for Bird Blurred 193",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (193).jpeg",
+                            Name = "Blurred (193)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 452,
+                            Description = "Description for Bird Blurred 194",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (194).jpeg",
+                            Name = "Blurred (194)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 453,
+                            Description = "Description for Bird Blurred 195",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (195).jpeg",
+                            Name = "Blurred (195)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 454,
+                            Description = "Description for Bird Blurred 196",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (196).jpeg",
+                            Name = "Blurred (196)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 455,
+                            Description = "Description for Bird Blurred 197",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (197).jpeg",
+                            Name = "Blurred (197)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 456,
+                            Description = "Description for Bird Blurred 198",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (198).jpeg",
+                            Name = "Blurred (198)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 457,
+                            Description = "Description for Bird Blurred 199",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (199).jpeg",
+                            Name = "Blurred (199)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 458,
+                            Description = "Description for Bird Blurred 200",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (200).jpeg",
+                            Name = "Blurred (200)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 459,
+                            Description = "Description for Bird Blurred 201",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (201).jpeg",
+                            Name = "Blurred (201)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 460,
+                            Description = "Description for Bird Blurred 202",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (202).jpeg",
+                            Name = "Blurred (202)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 461,
+                            Description = "Description for Bird Blurred 203",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (203).jpeg",
+                            Name = "Blurred (203)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 462,
+                            Description = "Description for Bird Blurred 204",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (204).jpeg",
+                            Name = "Blurred (204)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 463,
+                            Description = "Description for Bird Blurred 205",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (205).jpeg",
+                            Name = "Blurred (205)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 464,
+                            Description = "Description for Bird Blurred 206",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (206).jpeg",
+                            Name = "Blurred (206)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 465,
+                            Description = "Description for Bird Blurred 207",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (207).jpeg",
+                            Name = "Blurred (207)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 466,
+                            Description = "Description for Bird Blurred 208",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (208).jpeg",
+                            Name = "Blurred (208)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 467,
+                            Description = "Description for Bird Blurred 209",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (209).jpeg",
+                            Name = "Blurred (209)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 468,
+                            Description = "Description for Bird Blurred 210",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (210).jpeg",
+                            Name = "Blurred (210)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 469,
+                            Description = "Description for Bird Blurred 211",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (211).jpeg",
+                            Name = "Blurred (211)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 470,
+                            Description = "Description for Bird Blurred 212",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (212).jpeg",
+                            Name = "Blurred (212)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 471,
+                            Description = "Description for Bird Blurred 213",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (213).jpeg",
+                            Name = "Blurred (213)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 472,
+                            Description = "Description for Bird Blurred 214",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (214).jpeg",
+                            Name = "Blurred (214)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 473,
+                            Description = "Description for Bird Blurred 215",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (215).jpeg",
+                            Name = "Blurred (215)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 474,
+                            Description = "Description for Bird Blurred 216",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (216).jpeg",
+                            Name = "Blurred (216)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 475,
+                            Description = "Description for Bird Blurred 217",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (217).jpeg",
+                            Name = "Blurred (217)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 476,
+                            Description = "Description for Bird Blurred 218",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (218).jpeg",
+                            Name = "Blurred (218)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 477,
+                            Description = "Description for Bird Blurred 219",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (219).jpeg",
+                            Name = "Blurred (219)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 478,
+                            Description = "Description for Bird Blurred 220",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (220).jpeg",
+                            Name = "Blurred (220)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 479,
+                            Description = "Description for Bird Blurred 221",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (221).jpeg",
+                            Name = "Blurred (221)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 480,
+                            Description = "Description for Bird Blurred 222",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (222).jpeg",
+                            Name = "Blurred (222)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 481,
+                            Description = "Description for Bird Blurred 223",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (223).jpeg",
+                            Name = "Blurred (223)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 482,
+                            Description = "Description for Bird Blurred 224",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (224).jpeg",
+                            Name = "Blurred (224)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 483,
+                            Description = "Description for Bird Blurred 225",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (225).jpeg",
+                            Name = "Blurred (225)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 484,
+                            Description = "Description for Bird Blurred 226",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (226).jpeg",
+                            Name = "Blurred (226)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 485,
+                            Description = "Description for Bird Blurred 227",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (227).jpeg",
+                            Name = "Blurred (227)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 486,
+                            Description = "Description for Bird Blurred 228",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (228).jpeg",
+                            Name = "Blurred (228)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 487,
+                            Description = "Description for Bird Blurred 229",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (229).jpeg",
+                            Name = "Blurred (229)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 488,
+                            Description = "Description for Bird Blurred 230",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (230).jpeg",
+                            Name = "Blurred (230)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 489,
+                            Description = "Description for Bird Blurred 231",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (231).jpeg",
+                            Name = "Blurred (231)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 490,
+                            Description = "Description for Bird Blurred 232",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (232).jpeg",
+                            Name = "Blurred (232)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 491,
+                            Description = "Description for Bird Blurred 233",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (233).jpeg",
+                            Name = "Blurred (233)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 492,
+                            Description = "Description for Bird Blurred 234",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (234).jpeg",
+                            Name = "Blurred (234)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 493,
+                            Description = "Description for Bird Blurred 235",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (235).jpeg",
+                            Name = "Blurred (235)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 494,
+                            Description = "Description for Bird Blurred 236",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (236).jpeg",
+                            Name = "Blurred (236)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 495,
+                            Description = "Description for Bird Blurred 237",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (237).jpeg",
+                            Name = "Blurred (237)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 496,
+                            Description = "Description for Bird Blurred 238",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (238).jpeg",
+                            Name = "Blurred (238)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 497,
+                            Description = "Description for Bird Blurred 239",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (239).jpeg",
+                            Name = "Blurred (239)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 498,
+                            Description = "Description for Bird Blurred 240",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (240).jpeg",
+                            Name = "Blurred (240)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 499,
+                            Description = "Description for Bird Blurred 241",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (241).jpeg",
+                            Name = "Blurred (241)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 500,
+                            Description = "Description for Bird Blurred 242",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (242).jpeg",
+                            Name = "Blurred (242)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 501,
+                            Description = "Description for Bird Blurred 243",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (243).jpeg",
+                            Name = "Blurred (243)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 502,
+                            Description = "Description for Bird Blurred 244",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (244).jpeg",
+                            Name = "Blurred (244)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 503,
+                            Description = "Description for Bird Blurred 245",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (245).jpeg",
+                            Name = "Blurred (245)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 504,
+                            Description = "Description for Bird Blurred 246",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (246).jpeg",
+                            Name = "Blurred (246)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 505,
+                            Description = "Description for Bird Blurred 247",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (247).jpeg",
+                            Name = "Blurred (247)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 506,
+                            Description = "Description for Bird Blurred 248",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (248).jpeg",
+                            Name = "Blurred (248)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 507,
+                            Description = "Description for Bird Blurred 249",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (249).jpeg",
+                            Name = "Blurred (249)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 508,
+                            Description = "Description for Bird Blurred 250",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (250).jpeg",
+                            Name = "Blurred (250)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 509,
+                            Description = "Description for Bird Blurred 251",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (251).jpeg",
+                            Name = "Blurred (251)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 510,
+                            Description = "Description for Bird Blurred 252",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (252).jpeg",
+                            Name = "Blurred (252)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 511,
+                            Description = "Description for Bird Blurred 253",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (253).jpeg",
+                            Name = "Blurred (253)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 512,
+                            Description = "Description for Bird Blurred 254",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (254).jpeg",
+                            Name = "Blurred (254)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 513,
+                            Description = "Description for Bird Blurred 255",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (255).jpeg",
+                            Name = "Blurred (255)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 514,
+                            Description = "Description for Bird Blurred 256",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (256).jpeg",
+                            Name = "Blurred (256)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 515,
+                            Description = "Description for Bird Blurred 257",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (257).jpeg",
+                            Name = "Blurred (257)",
+                            Stage = "Blurred"
+                        },
+                        new
+                        {
+                            Id = 516,
+                            Description = "Description for Bird Blurred 258",
+                            Image = "wwwroot/images/birddataset/Blurred/Blurred (258).jpeg",
+                            Name = "Blurred (258)",
+                            Stage = "Blurred"
                         });
                 });
 
